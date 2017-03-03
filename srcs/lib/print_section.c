@@ -43,8 +43,8 @@ void	print_section_text(struct section_64 *section, void *header)
 		ft_printf("\t");
 		tmp = i;
 		print_32bits(content, section->size, &i);
-		ft_printf(" ");
-		print_ascii_32bits(content, section->size, tmp);
+		//ft_printf(" ");
+		//print_ascii_32bits(content, section->size, tmp);
 		ft_printf("\n");
 	}
 }
