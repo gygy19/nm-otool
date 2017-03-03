@@ -38,6 +38,9 @@ INCDIRLIBFT	=	$(LIBFTDIR)/includes/
 
 SRCOTOOL	=	\
 				srcs/otool/main.c											\
+				srcs/otool/h.c												\
+				srcs/otool/t.c												\
+				srcs/otool/version.c										\
 				srcs/lib/ft_mmap.c											\
 				srcs/lib/ft_osswap.c										\
 				srcs/lib/print_hex.c										\

@@ -82,5 +82,19 @@ uint32_t		get_magic(struct mach_header_64 *map);
 char			*getptr_section(struct section_64 *section, void *header);
 void			print_section_text(struct section_64 *section, void *header);
 void			print_addr(int val);
-
+/*
+** flag h
+*/
+void			printheader_infos(void *map);
+/*
+** flag t
+*/
+void			search_segement__text(char *file, void *map, int is_64);
+void			parse_segment(void *header, struct load_command *cmd,\
+				void *ptr, int is_64);
+/*
+** version
+*/
+char			*cpu_type_name(cpu_type_t cpu_type);
+void			print_version(void *map);
 #endif
