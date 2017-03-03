@@ -57,6 +57,21 @@ typedef enum	e_flags
 }				t_flags;
 
 /*
+** Files infos
+*/
+int				isdevice(const char *file);
+int				isdir(const char *file);
+int				fileexists(const char *file);
+int				is_regular(const char *file);
+/*
+** Errors
+*/
+int				isdirectory(char *file, char *prog);
+int				nosuchfile(char *file, char *prog);
+int				permissiondenied(char *file, char *prog);
+int				notobjectfile(char *file, char *prog);
+int				printflags(char *prog);
+/*
 ** Others Libraries
 */
 void			*ft_mmap(int fd, size_t length);

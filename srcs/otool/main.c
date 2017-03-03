@@ -39,45 +39,43 @@ int		check_flags(int argc, char **argv, int *flags)
 	return (*flags > 0);
 }
 
-int		fileexists(const char *file)
-{
-	struct stat buf;
-
-	return (stat(file, &buf) == 0);
-}
-
-void	inspect_file(char *file, int flags)
+int		inspect_file(char *file, int flags, char *prog)
 {
 	void		*map;
 	struct stat	st;
 	int			fd;
 
 	if (!fileexists(file))
-		return ;
-	if ((fd = open(file, O_RDWR)) < 3)
-		return ;
+		return (nosuchfile(file, prog));
+	if (isdir(file))
+		return (isdirectory(file, prog));
+	if (!is_regular(file))
+		return (notobjectfile(file, prog));
+	if ((fd = open(file, O_RDONLY)) < 3)
+		return (permissiondenied(file, prog));
 	fstat(fd, &st);
 	if ((map = ft_mmap(fd, st.st_size)) == MAP_FAILED)
-		return ;
+		return (permissiondenied(file, prog));
+	if (((struct mach_header_64*)map)->filetype > 3
+		|| ((struct mach_header_64*)map)->filetype < 1)
+		return (notobjectfile(file, prog));
 	if (flags & flag_t)
 		search_segement__text(file, map, is_magic_64(get_magic(map)));
 	if (flags & flag_h)
 		printheader_infos(map);
+	return (0);
 }
 
 int		main(int argc, char **argv)
 {
 	int			flags;
 	int			i;
+	int			count;
 
 	i = 1;
+	count = 0;
 	if (!check_flags(argc, argv, &flags))
-	{
-		ft_printf("Usage: %s [-ht] [--version] <object file> ...\n", argv[0]);
-		ft_printf("\t-h print the mach header\n");
-		ft_printf("\t-t print the text section\n");
-		return (0);
-	}
+		return (printflags(argv[0]));
 	if (flags & flag_version)
 	{
 		print_version(argv[0]);
@@ -86,8 +84,13 @@ int		main(int argc, char **argv)
 	while (i < argc)
 	{
 		if (argv[i][0] != '-')
-			inspect_file(argv[i], flags);
+		{
+			inspect_file(argv[i], flags, argv[0]);
+			count++;
+		}
 		i++;
 	}
+	if (count == 0)
+		return (printflags(argv[0]));
 	return (0);
 }

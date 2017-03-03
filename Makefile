@@ -41,6 +41,11 @@ SRCOTOOL	=	\
 				srcs/otool/h.c												\
 				srcs/otool/t.c												\
 				srcs/otool/version.c										\
+				srcs/otool/errors.c											\
+				srcs/lib/file/is_regular.c									\
+				srcs/lib/file/file_exists.c									\
+				srcs/lib/file/isdir.c										\
+				srcs/lib/file/isdevice.c									\
 				srcs/lib/ft_mmap.c											\
 				srcs/lib/ft_osswap.c										\
 				srcs/lib/print_hex.c										\
@@ -59,6 +64,10 @@ OBJSOTOOL	=	$(addprefix $(OBJDIR), $(SRCOTOOL:.c=.o))
 
 SRCNM		=	\
 				srcs/nm/main.c												\
+				srcs/lib/file/is_regular.c									\
+				srcs/lib/file/file_exists.c									\
+				srcs/lib/file/isdir.c										\
+				srcs/lib/file/isdevice.c									\
 				srcs/lib/ft_mmap.c											\
 				srcs/lib/ft_osswap.c										\
 				srcs/lib/print_hex.c										\
