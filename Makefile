@@ -55,6 +55,7 @@ SRCOTOOL	=	\
 				srcs/lib/print_32bits.c										\
 				srcs/lib/is_magic_64.c										\
 				srcs/lib/get_magic.c										\
+				srcs/lib/getsection.c										\
 				srcs/lib/getptr_section.c
 				
 
@@ -64,6 +65,7 @@ OBJSOTOOL	=	$(addprefix $(OBJDIR), $(SRCOTOOL:.c=.o))
 
 SRCNM		=	\
 				srcs/nm/main.c												\
+				srcs/nm/errors.c											\
 				srcs/lib/file/is_regular.c									\
 				srcs/lib/file/file_exists.c									\
 				srcs/lib/file/isdir.c										\
@@ -77,6 +79,7 @@ SRCNM		=	\
 				srcs/lib/print_32bits.c										\
 				srcs/lib/is_magic_64.c										\
 				srcs/lib/get_magic.c										\
+				srcs/lib/getsection.c										\
 				srcs/lib/getptr_section.c
 
 SRCSNM		=	$(addprefix $(SRCDIR), $(SRCNM))

@@ -21,18 +21,15 @@ void	print_addr(int val)
 	tmp = ft_uitoabase(val, ADDR_BASE);
 	if (tmp != NULL && ft_strlen(tmp) > 0)
 	{
-		ft_putstr(FIRSTADDR);
 		while (i > ft_strlen(tmp))
 		{
 			ft_putchar('0');
 			i--;
 		}
 		ft_putstr(tmp);
-		free(tmp);
 	}
 	else
-	{
-		ft_putstr(FIRSTADDR);
 		ft_putstr("00000000");
-	}
+	if (tmp != NULL)
+		free(tmp);
 }

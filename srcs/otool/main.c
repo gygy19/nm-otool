@@ -30,6 +30,8 @@ int		check_flags(int argc, char **argv, int *flags)
 				*flags += flag_h;
 			if (IS_FLAG_T && !(*flags & flag_t))
 				*flags += flag_t;
+			if (IS_FLAG_A && !(*flags & flag_a))
+				*flags += flag_a;
 			o++;
 		}
 		if (IS_FLAG_VERSION && !(*flags & flag_version))
@@ -60,7 +62,7 @@ int		inspect_file(char *file, int flags, char *prog)
 		|| ((struct mach_header_64*)map)->filetype < 1)
 		return (notobjectfile(file, prog));
 	if (flags & flag_t)
-		search_segement__text(file, map, is_magic_64(get_magic(map)));
+		search_segement__text(file, map, is_magic_64(get_magic(map)), flags);
 	if (flags & flag_h)
 		printheader_infos(map);
 	return (0);

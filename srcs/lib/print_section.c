@@ -28,7 +28,17 @@ void	print_ascii_32bits(char *ptr, int size, int o)
 	}
 }
 
-void	print_section_text(struct section_64 *section, void *header)
+static void	finish_line(int currentlength)
+{
+	while (currentlength < 16)
+	{
+		ft_printf("   ");
+		currentlength++;
+	}
+}
+
+void	print_section_text(struct section_64 *section, void *header,\
+		int flags)
 {
 	char	*content;
 	size_t	i;
@@ -39,12 +49,17 @@ void	print_section_text(struct section_64 *section, void *header)
 	i = 0;
 	while (i < section->size)
 	{
+		ft_printf("%08d", CASTHEADER_X32->filetype - 1);
 		print_addr(section->addr + i);
 		ft_printf("\t");
 		tmp = i;
 		print_32bits(content, section->size, &i);
-		//ft_printf(" ");
-		//print_ascii_32bits(content, section->size, tmp);
+		if (flags & flag_a)
+		{
+			finish_line(i - tmp);
+			ft_printf("\t");
+			print_ascii_32bits(content, section->size, tmp);
+		}
 		ft_printf("\n");
 	}
 }

@@ -87,6 +87,7 @@ SRCBASE		=	\
 				bonus/ft_lstiter.c							\
 				bonus/ft_lstmap.c							\
 				bonus/ft_lstnew.c							\
+				array/ft_qsort.c							\
 				list/ft_lstaddend.c							\
 				list/ft_lstsplit.c							\
 				list/ft_putlst.c							\

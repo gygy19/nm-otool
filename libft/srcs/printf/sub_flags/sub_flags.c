@@ -106,7 +106,8 @@ int				sub_flags(t_string *string, int i)
 	i = sub(string, i, string->s, 1);
 	if (string->sub_num != NULL)
 		ft_strdel(&string->sub_num);
-	n = ft_strnew(0);
+	string->sub_num = NULL;
+	n = ft_strnew(1);
 	i = center_parse_sub(string, i, &n);
 	string->sub_num = n;
 	i = sub(string, i, string->s, 1);

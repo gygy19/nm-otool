@@ -140,6 +140,13 @@ char				*ft_convert_double_to_string(double nbr, \
 char				*ft_uitoabase(unsigned long long int nbr, char *base);
 char				*ft_uitoa(unsigned long long int c);
 
+/*
+** SORTING
+*/
+
+void				ft_qsort(void *base, size_t mmemb, char *type,\
+					int(*compar)(const void *, const void *));
+
 # define ___N0		STDERR_FILENO, "{bold}{red}ERROR{white} %s:%i:{reset}\t"
 # define ___N1		__FILE__, __LINE__
 # define ERROR(format, ...)	ft_dprintf(___N0 format "\n", ___N1, ##__VA_ARGS__)

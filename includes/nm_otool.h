@@ -26,7 +26,6 @@
 # define MMAP_PROT PROT_READ
 # define MMAP_FLAG MAP_SHARED
 # define ADDR_LEN 8
-# define FIRSTADDR "00000001"
 # define ADDR_BASE "0123456789abcdef"
 
 # define IS_X64 (is_64 == 1)
@@ -47,13 +46,17 @@
 
 # define IS_FLAG_H (argv[i][o] == 'h')
 # define IS_FLAG_T (argv[i][o] == 't')
+# define IS_FLAG_U (argv[i][o] == 'u')
+# define IS_FLAG_A (argv[i][o] == 'a')
 # define IS_FLAG_VERSION (ft_strcmp(argv[i], "--version") == 0)
 
 typedef enum	e_flags
 {
 	flag_t = 1024,
 	flag_h = 2048,
-	flag_version = 4096
+	flag_version = 4096,
+	flag_u = 8192,
+	flag_a = 16384
 }				t_flags;
 
 /*
@@ -74,10 +77,11 @@ int				printflags(char *prog);
 /*
 ** Others Libraries
 */
-void			*ft_mmap(int fd, size_t length);
-void			print_hexa(int val);
-void			print_addr(int val);
-void			print_32bits(char *ptr, size_t size, size_t *i);
+void				*ft_mmap(int fd, size_t length);
+void				print_hexa(int val);
+void				print_addr(int val);
+void				print_32bits(char *ptr, size_t size, size_t *i);
+struct section_64	*getsection(void *map, uint32_t id, int is_64);
 /*
 ** SWAP ENDIAN AND BIG ENDIAN HEADERS
 */
@@ -95,7 +99,8 @@ uint32_t		get_magic(struct mach_header_64 *map);
 ** ___TEXT SECTION
 */
 char			*getptr_section(struct section_64 *section, void *header);
-void			print_section_text(struct section_64 *section, void *header);
+void			print_section_text(struct section_64 *section, void *header,\
+				int flags);
 void			print_addr(int val);
 /*
 ** flag h
@@ -104,9 +109,10 @@ void			printheader_infos(void *map);
 /*
 ** flag t
 */
-void			search_segement__text(char *file, void *map, int is_64);
+void			search_segement__text(char *file, void *map, int is_64,\
+				int flags);
 void			parse_segment(void *header, struct load_command *cmd,\
-				void *ptr, int is_64);
+				void *ptr, int flags);
 /*
 ** version
 */
