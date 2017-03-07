@@ -44,7 +44,6 @@
 # define IS_SEGMENT_X64 (cmd->cmd == LC_SEGMENT_64)
 # define IS_SEGMENT_X32 (cmd->cmd == LC_SEGMENT)
 
-
 # define CASTLIST_X64 ((struct nlist_64*)list)
 # define CASTLIST_X32 ((struct nlist*)list)
 
@@ -55,9 +54,10 @@
 # define IS_FLAG_A (argv[i][o] == 'a')
 # define IS_FLAG_VERSION (ft_strcmp(argv[i], "--version") == 0)
 
-#define CPU_TYPE_OSX_86_64_DARWIN 7171679
+# define CPU_TYPE_OSX_86_64_DARWIN 7171679
+# define UNIVERSAL_BINARY_TYPE 50331648
 
-typedef enum	e_flags
+typedef enum		e_flags
 {
 	flag_t = 1024,
 	flag_h = 2048,
@@ -65,23 +65,23 @@ typedef enum	e_flags
 	flag_u = 8192,
 	flag_j = 16384,
 	flag_a = 32768
-}				t_flags;
+}					t_flags;
 
 /*
 ** Files infos
 */
-int				isdevice(const char *file);
-int				isdir(const char *file);
-int				fileexists(const char *file);
-int				is_regular(const char *file);
+int					isdevice(const char *file);
+int					isdir(const char *file);
+int					fileexists(const char *file);
+int					is_regular(const char *file);
 /*
 ** Errors
 */
-int				isdirectory(char *file, char *prog);
-int				nosuchfile(char *file, char *prog);
-int				permissiondenied(char *file, char *prog);
-int				notobjectfile(char *file, char *prog);
-int				printflags(char *prog);
+int					isdirectory(char *file, char *prog);
+int					nosuchfile(char *file, char *prog);
+int					permissiondenied(char *file, char *prog);
+int					notobjectfile(char *file, char *prog);
+int					printflags(char *prog);
 /*
 ** Others Libraries
 */
@@ -93,52 +93,52 @@ struct section_64	*getsection(void *map, uint32_t id, int is_64);
 /*
 ** SWAP ENDIAN AND BIG ENDIAN HEADERS
 */
-uint32_t		ft_osswapconstint16(uint16_t x);
-uint32_t		ft_osswapconstint32(uint32_t x);
-uint32_t		ft_osswapconstint64(uint64_t x);
-void			swap_mach_header_32(struct mach_header *mh);
-void			swap_mach_header_64(struct mach_header *mh);
+uint32_t			ft_osswapconstint16(uint16_t x);
+uint32_t			ft_osswapconstint32(uint32_t x);
+uint32_t			ft_osswapconstint64(uint64_t x);
+void				swap_mach_header_32(struct mach_header *mh);
+void				swap_mach_header_64(struct mach_header *mh);
 /*
 ** MAGIC HEADER
 */
-int				is_magic_64(uint32_t magic);
-uint32_t		get_magic(struct mach_header_64 *map);
+int					is_magic_64(uint32_t magic);
+uint32_t			get_magic(struct mach_header_64 *map);
 /*
 ** ___TEXT SECTION
 */
-char			*getptr_section(struct section *s32, struct section_64 *s64,\
-				void *header, int is_64);
-void			print_section_text(struct section *s32, struct section_64 *s64,\
-				void *header, int flags);
-void			print_addr(int val);
+char				*getptr_section(struct section *s32,\
+					struct section_64 *s64, void *header, int is_64);
+void				print_section_text(struct section *s32,\
+					struct section_64 *s64, void *header, int flags);
+void				print_addr(int val);
 /*
 ** flag h
 */
-void			printheader_infos(void *map);
+void				printheader_infos(void *map);
 /*
 ** flag t
 */
-void			search_segement__text(char *file, void *map, int is_64,\
-				int flags);
-void			parse_segment(void *header, struct load_command *cmd,\
-				void *ptr, int flags);
+void				search_segement__text(char *file, void *map, int is_64,\
+					int flags);
+void				parse_segment(void *header, struct load_command *cmd,\
+					void *ptr, int flags);
 /*
 ** version
 */
-char			*cpu_type_name(cpu_type_t cpu_type);
-void			print_version(void *map);
+char				*cpu_type_name(cpu_type_t cpu_type);
+void				print_version(void *map);
 /*
 ** NM
 */
-int				getflags(int st);
-int				cmpstringp(const void *p1, const void *p2);
-void			search_syms(char *file, void *map, int is_64);
-void			parse_sym32(struct load_command *cmd, void *ptr, void* map);
-void			parse_sym64(struct load_command *cmd, void *ptr, void* map);
-char			*parse_nlist64(void *map, struct symtab_command *symtab,\
-				struct nlist_64 l64);
-char			*parse_nlist32(void *map, struct symtab_command *symtab,\
-				struct nlist l32);
-char			*getname32(char *test, struct nlist l32);
-char			*getname64(char *test, void *map, struct nlist_64 l64);
+int					getflags(int st);
+int					cmpstringp(const void *p1, const void *p2);
+void				search_syms(char *file, void *map, int is_64);
+void				parse_sym32(struct load_command *cmd, void *ptr, void *map);
+void				parse_sym64(struct load_command *cmd, void *ptr, void *map);
+char				*parse_nlist64(void *map, struct symtab_command *symtab,\
+					struct nlist_64 l64);
+char				*parse_nlist32(void *map, struct symtab_command *symtab,\
+					struct nlist l32);
+char				*getname32(char *test, struct nlist l32);
+char				*getname64(char *test, void *map, struct nlist_64 l64);
 #endif

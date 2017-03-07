@@ -16,6 +16,13 @@ int		ft_strcmp(const char *s1, const char *s2)
 {
 	int res;
 
+	if ((s1 == NULL && s2 == NULL)
+		|| (ft_strlen(s1) == 0 && ft_strlen(s2) == 0))
+		return (0);
+	if (s1 == NULL || ft_strlen(s1) == 0)
+		return (0 - *(unsigned char *)s2);
+	if (s2 == NULL || ft_strlen(s2) == 0)
+		return (*(unsigned char *)s1 - 0);
 	while (*s1 == *s2)
 	{
 		if (*s1 == '\0')

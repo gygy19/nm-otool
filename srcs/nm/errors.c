@@ -41,6 +41,6 @@ int		printflags(char *prog)
 {
 	ft_printf("Usage: %s [-uj] [--version] <object file> ...\n", prog);
 	ft_printf("\t-u print ulterior used functions\n");
-	ft_printf("\t-j print simple\n");
+	ft_printf("\t-j simple print\n");
 	return (0);
 }

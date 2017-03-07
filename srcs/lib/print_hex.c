@@ -16,6 +16,7 @@ void	print_hexa(int val)
 {
 	char	*tmp;
 
+	tmp = NULL;
 	tmp = ft_uitoabase(val, "0123456789abcdef");
 	if (tmp != NULL && ft_strlen(tmp) > 0)
 	{

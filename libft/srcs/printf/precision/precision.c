@@ -16,7 +16,7 @@
 
 void			load(t_string *t)
 {
-	if (t->tmp != NULL && !ft_strcmp(t->tmp, "0"))
+	if (t->tmp != NULL && t->tmp[0] == '0')
 	{
 		if (!ft_strcmp(t->sub_num, ".") || !ft_strcmp(t->sub_num, ".0")
 			|| !ft_strcmp(t->sub_num, "0.0") || !ft_strcmp(t->sub_num, "0."))
@@ -44,7 +44,7 @@ void			precision(t_string *t)
 		t->zero = 1;
 	else
 		t->pad = ' ';
-	t->zero = ft_max(0, t->zero - ft_strlen(t->tmp));
+	t->zero = ft_max(0, t->zero - (t->tmp == NULL ? 0 : 1));
 	if (t->left == 0)
 		process_right(t);
 	else

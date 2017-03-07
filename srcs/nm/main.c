@@ -68,8 +68,9 @@ int		inspect_file(char *file, char *prog, int count)
 	fstat(fd, &st);
 	if ((map = ft_mmap(fd, st.st_size)) == MAP_FAILED)
 		return (permissiondenied(file, prog));
-	if (((struct mach_header_64*)map)->filetype > 3
-		|| ((struct mach_header_64*)map)->filetype < 1)
+	if (((struct mach_header_64*)map)->filetype != 2
+		&& ((struct mach_header_64*)map)->filetype != 1
+		&& ((struct mach_header_64*)map)->filetype != UNIVERSAL_BINARY_TYPE)
 		return (notobjectfile(file, prog));
 	search_syms(file, map, is_magic_64(get_magic(map)));
 	return (0);

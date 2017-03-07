@@ -84,6 +84,7 @@ void			restart_string_params(t_string *string)
 	string->space = 0;
 	string->zero = 0;
 	string->is_negative = 0;
+	string->tmp = NULL;
 	if (string->sub_num != NULL)
 		ft_strdel(&string->sub_num);
 	string->is_big = 0;
