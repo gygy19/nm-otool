@@ -44,6 +44,10 @@
 # define IS_SEGMENT_X64 (cmd->cmd == LC_SEGMENT_64)
 # define IS_SEGMENT_X32 (cmd->cmd == LC_SEGMENT)
 
+
+# define CASTLIST_X64 ((struct nlist_64*)list)
+# define CASTLIST_X32 ((struct nlist*)list)
+
 # define IS_FLAG_H (argv[i][o] == 'h')
 # define IS_FLAG_T (argv[i][o] == 't')
 # define IS_FLAG_U (argv[i][o] == 'u')
@@ -98,9 +102,10 @@ uint32_t		get_magic(struct mach_header_64 *map);
 /*
 ** ___TEXT SECTION
 */
-char			*getptr_section(struct section_64 *section, void *header);
-void			print_section_text(struct section_64 *section, void *header,\
-				int flags);
+char			*getptr_section(struct section *s32, struct section_64 *s64,\
+				void *header, int is_64);
+void			print_section_text(struct section *s32, struct section_64 *s64,\
+				void *header, int flags);
 void			print_addr(int val);
 /*
 ** flag h
@@ -118,4 +123,17 @@ void			parse_segment(void *header, struct load_command *cmd,\
 */
 char			*cpu_type_name(cpu_type_t cpu_type);
 void			print_version(void *map);
+/*
+** NM
+*/
+int				cmpstringp(const void *p1, const void *p2);
+void			search_syms(char *file, void *map, int is_64);
+void			parse_sym32(struct load_command *cmd, void *ptr, void* map);
+void			parse_sym64(struct load_command *cmd, void *ptr, void* map);
+char			*parse_nlist64(void *map, struct symtab_command *symtab,\
+				struct nlist_64 l64);
+char			*parse_nlist32(void *map, struct symtab_command *symtab,\
+				struct nlist l32);
+char			*getname32(char *test, struct nlist l32);
+char			*getname64(char *test, void *map, struct nlist_64 l64);
 #endif

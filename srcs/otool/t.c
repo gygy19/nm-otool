@@ -16,20 +16,20 @@ void	parse_segment(void *header, struct load_command *cmd,\
 		void *ptr, int flags)
 {
 	int							is_64;
-	struct section_64			*section;
+	void						*section;
 
 	is_64 = is_magic_64(get_magic(header));
 	if (IS_SEGMENT_X64 && IS_X64)
 	{
 		section = ptr + SIZE_SEG;
-		if (IS_SEGTEXT)
-			print_section_text(section, CASTHEADER_X64, flags);
+		if ((ft_strcmp(((struct section_64*)section)->segname, "__TEXT") == 0))
+			print_section_text(section, section, CASTHEADER_X64, flags);
 	}
 	else if (IS_SEGMENT_X32 && IS_X32)
 	{
 		section = ptr + SIZE_SEG;
-		if (IS_SEGTEXT)
-			print_section_text(section, CASTHEADER_X32, flags);
+		if ((ft_strcmp(((struct section*)section)->segname, "__TEXT") == 0))
+			print_section_text(section, section, CASTHEADER_X32, flags);
 	}
 }
 
@@ -46,6 +46,7 @@ void	search_segement__text(char *file, void *map, int is_64, int flags)
 	if (is_64 == 1)
 	{
 		ptr = CASTHEADER_X64 + HEADER_OFFSET;
+		swap_mach_header_64(CASTHEADER_X32);
 	}
 	else
 	{

@@ -12,10 +12,17 @@
 
 #include "nm_otool.h"
 
-char	*getptr_section(struct section_64 *section, void *header)
+char	*getptr_section(struct section *s32, struct section_64 *s64,\
+	void *header, int is_64)
 {
 	char	*ptr;
+	int		offset;
 
-	ptr = header + section->offset;
+	if (is_64)
+		offset = s64->offset;
+	else
+		offset = s32->offset;
+
+	ptr = header + offset;
 	return (ptr);
 }

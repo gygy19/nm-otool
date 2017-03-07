@@ -24,17 +24,16 @@ static void	cmpqsortstring(char **base, int *tmp, size_t size,\
 	i = 0;
 	while (i < size)
 	{
-		if (base[i] != NULL && base[i][0] != '\0' && *tmp != -1\
+		if (base[i] != NULL && *tmp != -1\
 			&& compar(base[i], base[*tmp]) < 0)
 			*tmp = i;
-		else if (base[i] != NULL && *tmp == -1 && base[i][0] != '\0')
+		else if (base[i] != NULL && *tmp == -1)
 			*tmp = i;
 		i++;
 	}
 }
 
-static void	asigncurrenttabtobase(char **base, char **tab,\
-			char *c1, size_t size)
+static void	asigncurrenttabtobase(char **base, char **tab, size_t size)
 {
 	size_t i;
 
@@ -42,14 +41,12 @@ static void	asigncurrenttabtobase(char **base, char **tab,\
 	while (i < size)
 	{
 		base[i] = NULL;
-		if (c1[i] != '\0')
+		if (tab[i] != NULL)
 		{
 			base[i] = tab[i];
-			base[i][0] = c1[i];
 		}
 		i++;
 	}
-	free(c1);
 	free(tab);
 }
 
@@ -58,11 +55,8 @@ static void	ft_qsort_string(char **base, size_t mmemb,\
 {
 	int		tmp;
 	size_t	count;
-	char	*c1;
 
 	if (tab == NULL)
-		return ;
-	if (!(c1 = ft_strnew(mmemb)))
 		return ;
 	count = 0;
 	while (1)
@@ -71,11 +65,10 @@ static void	ft_qsort_string(char **base, size_t mmemb,\
 		cmpqsortstring(base, &tmp, mmemb, compar);
 		if (tmp == -1)
 			break ;
-		tab[count] = base[tmp];
-		c1[count++] = base[tmp][0];
-		base[tmp][0] = '\0';
+		tab[count++] = base[tmp];
+		base[tmp] = NULL;
 	}
-	asigncurrenttabtobase(base, tab, c1, mmemb);
+	asigncurrenttabtobase(base, tab, mmemb);
 }
 
 static void	ft_qsort_integer(int *base, size_t mmemb,\
@@ -89,9 +82,13 @@ static void	ft_qsort_integer(int *base, size_t mmemb,\
 void		ft_qsort(void *base, size_t mmemb, char *type,\
 			int (*compar)(const void *, const void *))
 {
-	void	*tmp;
+	char	**tmp;
+	size_t	i;
 
+	i = 0;
 	tmp = malloc(sizeof(char*) * mmemb);
+	while (i < mmemb)
+		tmp[i++] = NULL;
 	if (strcmp(type, "int*") == 0)
 		ft_qsort_integer(base, mmemb, compar);
 	else if (strcmp(type, "char*") == 0)

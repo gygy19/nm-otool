@@ -37,28 +37,31 @@ static void	finish_line(int currentlength)
 	}
 }
 
-void	print_section_text(struct section_64 *section, void *header,\
-		int flags)
+void	print_section_text(struct section *s32, struct section_64 *s64,\
+	void *header, int flags)
 {
 	char	*content;
 	size_t	i;
 	size_t	tmp;
+	int		is_64;
 
+	is_64 = is_magic_64(get_magic(header));
 	ft_printf("Contents of (__TEXT,__text) section\n");
-	content = getptr_section(section, header);
+	content = getptr_section(s32, s64, header, is_64);
 	i = 0;
-	while (i < section->size)
+	while (i < (is_64 ? s64->size : s32->size))
 	{
-		ft_printf("%08d", CASTHEADER_X32->filetype - 1);
-		print_addr(section->addr + i);
+		if (is_64 == 1)
+			ft_printf("%08d", CASTHEADER_X32->filetype - 1);
+		print_addr((is_64 ? s64->addr : s32->addr) + i);
 		ft_printf("\t");
 		tmp = i;
-		print_32bits(content, section->size, &i);
+		print_32bits(content, (is_64 ? s64->size : s32->size), &i);
 		if (flags & flag_a)
 		{
 			finish_line(i - tmp);
 			ft_printf("\t");
-			print_ascii_32bits(content, section->size, tmp);
+			print_ascii_32bits(content, (is_64 ? s64->size : s32->size), tmp);
 		}
 		ft_printf("\n");
 	}

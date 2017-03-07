@@ -6,7 +6,7 @@
 #    By: jguyet <jguyet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/25 15:18:38 by jguyet            #+#    #+#              #
-#    Updated: 2016/05/30 23:10:37 by jguyet           ###   ########.fr        #
+#    Updated: 2017/03/06 17:42:15 by jguyet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ LENGTHNAME	=	`printf "%s" $(NAMEBASE) | wc -c`
 
 MAX_COLS	=	$$(echo "$$(tput cols)-20-$(LENGTHNAME)"|bc)
 
-CC			=	gcc
+CC			=	gcc -m32
 
 FLAGS		=	-Wall -Wextra -Werror -O3 -ggdb
 
@@ -65,6 +65,11 @@ OBJSOTOOL	=	$(addprefix $(OBJDIR), $(SRCOTOOL:.c=.o))
 
 SRCNM		=	\
 				srcs/nm/main.c												\
+				srcs/nm/parse_sym.c											\
+				srcs/nm/parse_list.c										\
+				srcs/nm/getname.c											\
+				srcs/nm/cmp.c												\
+				srcs/nm/default.c											\
 				srcs/nm/errors.c											\
 				srcs/lib/file/is_regular.c									\
 				srcs/lib/file/file_exists.c									\

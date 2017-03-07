@@ -16,6 +16,8 @@
 
 static void		conv_process(t_string *string, char *tmp)
 {
+	if (tmp == NULL)
+		return ;
 	string->base = 16;
 	string->tmp = tmp;
 	string->is_negative = 0;
