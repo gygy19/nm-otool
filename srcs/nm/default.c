@@ -12,12 +12,21 @@
 
 #include "nm_otool.h"
 
-void	search_syms(char *file, void *map, int is_64)
+static void	select_nlistfunc(struct load_command *cmd, void *ptr,\
+	void *map, int is_64)
 {
-	void						*header;
-	uint32_t					i;
-	struct load_command			*cmd;
-	void						*ptr;
+	if (is_64 == 1)
+		parse_sym64(cmd, ptr, map);
+	else
+		parse_sym32(cmd, ptr, map);
+}
+
+void		search_syms(char *file, void *map, int is_64)
+{
+	void					*header;
+	uint32_t				i;
+	struct load_command		*cmd;
+	void					*ptr;
 
 	header = map;
 	i = 0;
@@ -35,10 +44,7 @@ void	search_syms(char *file, void *map, int is_64)
 	while (WHILE_CMDS)
 	{
 		cmd = (struct load_command*)ptr;
-		if (is_64 == 1)
-			parse_sym64(cmd, ptr, map);
-		else
-			parse_sym32(cmd, ptr, map);
+		select_nlistfunc(cmd, ptr, map, is_64);
 		ptr += cmd->cmdsize;
 		i++;
 	}

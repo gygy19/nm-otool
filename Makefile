@@ -22,7 +22,7 @@ LENGTHNAME	=	`printf "%s" $(NAMEBASE) | wc -c`
 
 MAX_COLS	=	$$(echo "$$(tput cols)-20-$(LENGTHNAME)"|bc)
 
-CC			=	gcc -m32
+CC			=	gcc
 
 FLAGS		=	-Wall -Wextra -Werror -O3 -ggdb
 
@@ -71,6 +71,7 @@ SRCNM		=	\
 				srcs/nm/cmp.c												\
 				srcs/nm/default.c											\
 				srcs/nm/errors.c											\
+				srcs/nm/version.c											\
 				srcs/lib/file/is_regular.c									\
 				srcs/lib/file/file_exists.c									\
 				srcs/lib/file/isdir.c										\

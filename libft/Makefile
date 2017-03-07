@@ -18,7 +18,7 @@ LENGTHNAME	=	`printf "%s" $(NAMEBASE) | wc -c`
 
 MAX_COLS	=	$$(echo "$$(tput cols)-20-$(LENGTHNAME)"|bc)
 
-CC			=	gcc -m32
+CC			=	gcc
 
 FLAGS		=	-Wall -Wextra -Werror -O3 -ggdb
 

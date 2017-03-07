@@ -39,8 +39,8 @@ int		notobjectfile(char *file, char *prog)
 
 int		printflags(char *prog)
 {
-	ft_printf("Usage: %s [-ht] [--version] <object file> ...\n", prog);
-	ft_printf("\t-h print the mach header\n");
-	ft_printf("\t-t print the text section\n");
+	ft_printf("Usage: %s [-uj] [--version] <object file> ...\n", prog);
+	ft_printf("\t-u print ulterior used functions\n");
+	ft_printf("\t-j print simple\n");
 	return (0);
 }

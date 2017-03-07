@@ -12,7 +12,32 @@
 
 #include "nm_otool.h"
 
-void	parse_sym64(struct load_command *cmd, void *ptr, void* map)
+static void	sortandprint(struct symtab_command *symtab, char **list, int is_64)
+{
+	int i;
+	int	left;
+
+	ft_qsort(list, symtab->nsyms, "char*", cmpstringp);
+	i = 0;
+	left = 0;
+	if ((getflags(0) & flag_u))
+		left = 19;
+	else if ((getflags(0) & flag_j))
+		left = 19;
+	else if (is_64 == 0)
+		left = 8;
+	while (i < (int)symtab->nsyms)
+	{
+		if (list[i] != NULL && ft_strlen(list[i]) > 0)
+		{
+			ft_printf("%s", list[i] + left);
+		}
+		i++;
+	}
+	free(list);
+}
+
+void		parse_sym64(struct load_command *cmd, void *ptr, void *map)
 {
 	struct symtab_command	*symtab;
 	struct nlist_64			*array;
@@ -31,20 +56,10 @@ void	parse_sym64(struct load_command *cmd, void *ptr, void* map)
 		list[i] = parse_nlist64(map, symtab, array[i]);
 		i++;
 	}
-	ft_qsort(list, symtab->nsyms, "char*", cmpstringp);
-	i = 0;
-	while (i < (int)symtab->nsyms)
-	{
-		if (list[i] != NULL && ft_strlen(list[i]) > 0)
-		{
-			ft_printf("%s", list[i]);
-		}
-		i++;
-	}
-	free(list);
+	sortandprint(symtab, list, 1);
 }
 
-void	parse_sym32(struct load_command *cmd, void *ptr, void* map)
+void		parse_sym32(struct load_command *cmd, void *ptr, void *map)
 {
 	struct symtab_command	*symtab;
 	struct nlist			*array;
@@ -63,15 +78,5 @@ void	parse_sym32(struct load_command *cmd, void *ptr, void* map)
 		list[i] = parse_nlist32(map, symtab, array[i]);
 		i++;
 	}
-	ft_qsort(list, symtab->nsyms, "char*", cmpstringp);
-	i = 0;
-	while (i < (int)symtab->nsyms)
-	{
-		if (list[i] != NULL)
-		{
-			ft_printf("%s", list[i] + 8);
-		}
-		i++;
-	}
-	free(list);
+	sortandprint(symtab, list, 0);
 }

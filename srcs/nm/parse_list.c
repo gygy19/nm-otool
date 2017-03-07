@@ -12,7 +12,8 @@
 
 #include "nm_otool.h"
 
-char	*parse_nlist64(void *map, struct symtab_command *symtab, struct nlist_64 l64)
+char	*parse_nlist64(void *map, struct symtab_command *symtab,\
+	struct nlist_64 l64)
 {
 	char *test;
 
@@ -27,7 +28,8 @@ char	*parse_nlist64(void *map, struct symtab_command *symtab, struct nlist_64 l6
 	return (NULL);
 }
 
-char	*parse_nlist32(void *map, struct symtab_command *symtab, struct nlist l32)
+char	*parse_nlist32(void *map, struct symtab_command *symtab,\
+	struct nlist l32)
 {
 	char *test;
 

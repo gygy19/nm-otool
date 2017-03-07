@@ -22,7 +22,6 @@ char	*getptr_section(struct section *s32, struct section_64 *s64,\
 		offset = s64->offset;
 	else
 		offset = s32->offset;
-
 	ptr = header + offset;
 	return (ptr);
 }

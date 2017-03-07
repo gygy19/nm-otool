@@ -12,9 +12,9 @@
 
 #include "nm_otool.h"
 
-int should_swap_bytes(uint32_t magic)
+int		should_swap_bytes(uint32_t magic)
 {
-	return magic == MH_CIGAM || magic == MH_CIGAM_64;
+	return (magic == MH_CIGAM || magic == MH_CIGAM_64);
 }
 
 void	swap_mach_header_32(struct mach_header *mh)

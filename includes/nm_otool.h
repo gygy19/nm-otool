@@ -51,8 +51,11 @@
 # define IS_FLAG_H (argv[i][o] == 'h')
 # define IS_FLAG_T (argv[i][o] == 't')
 # define IS_FLAG_U (argv[i][o] == 'u')
+# define IS_FLAG_J (argv[i][o] == 'j')
 # define IS_FLAG_A (argv[i][o] == 'a')
 # define IS_FLAG_VERSION (ft_strcmp(argv[i], "--version") == 0)
+
+#define CPU_TYPE_OSX_86_64_DARWIN 7171679
 
 typedef enum	e_flags
 {
@@ -60,7 +63,8 @@ typedef enum	e_flags
 	flag_h = 2048,
 	flag_version = 4096,
 	flag_u = 8192,
-	flag_a = 16384
+	flag_j = 16384,
+	flag_a = 32768
 }				t_flags;
 
 /*
@@ -126,6 +130,7 @@ void			print_version(void *map);
 /*
 ** NM
 */
+int				getflags(int st);
 int				cmpstringp(const void *p1, const void *p2);
 void			search_syms(char *file, void *map, int is_64);
 void			parse_sym32(struct load_command *cmd, void *ptr, void* map);

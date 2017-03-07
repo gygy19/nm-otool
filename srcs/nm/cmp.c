@@ -12,7 +12,7 @@
 
 #include "nm_otool.h"
 
-int cmpstringp(const void *p1, const void *p2)
+int		cmpstringp(const void *p1, const void *p2)
 {
-    return (ft_strcmp((char*)p1 + 19, (char*)p2 + 19));
+	return (ft_strcmp((char*)p1 + 19, (char*)p2 + 19));
 }

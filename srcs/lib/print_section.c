@@ -12,7 +12,7 @@
 
 #include "nm_otool.h"
 
-void	print_ascii_32bits(char *ptr, int size, int o)
+void		print_ascii_32bits(char *ptr, int size, int o)
 {
 	int i;
 
@@ -37,7 +37,7 @@ static void	finish_line(int currentlength)
 	}
 }
 
-void	print_section_text(struct section *s32, struct section_64 *s64,\
+void		print_section_text(struct section *s32, struct section_64 *s64,\
 	void *header, int flags)
 {
 	char	*content;
