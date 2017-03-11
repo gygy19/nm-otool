@@ -12,52 +12,43 @@
 
 #include "nm_otool.h"
 
-void	parse_segment(void *header, struct load_command *cmd,\
-		void *ptr, int flags)
+void		ft_otool64(t_ofile *ofile)
 {
-	int							is_64;
-	void						*section;
+	size_t	i;
+	void	*ptr;
 
-	is_64 = is_magic_64(get_magic(header));
-	if (IS_SEGMENT_X64 && IS_X64)
+	ft_printf("Contents of (__TEXT,__text) section\n");
+	load_section_text_64(ofile);
+	if (ofile->section_text64 == NULL)
+		return ;
+	i = 0;
+	ptr = ofile->map + ofile->swap(ofile, ofile->section_text64->offset);
+	while (i < ofile->swap(ofile, ofile->section_text64->size))
 	{
-		section = ptr + SIZE_SEG;
-		if ((ft_strcmp(((struct section_64*)section)->segname, "__TEXT") == 0))
-			print_section_text(section, section, CASTHEADER_X64, flags);
-	}
-	else if (IS_SEGMENT_X32 && IS_X32)
-	{
-		section = ptr + SIZE_SEG;
-		if ((ft_strcmp(((struct section*)section)->segname, "__TEXT") == 0))
-			print_section_text(section, section, CASTHEADER_X32, flags);
+		ft_printf("%08d", ofile->swap(ofile, ofile->mh64->filetype) - 1);
+		print_addr(ofile->swap(ofile, ofile->section_text64->addr) + i);
+		ft_printf("\t");
+		print_32bits(ptr, ofile->swap(ofile, ofile->section_text64->size), &i);
+		ft_printf("\n");
 	}
 }
 
-void	search_segement__text(char *file, void *map, int is_64, int flags)
+void		ft_otool32(t_ofile *ofile)
 {
-	void						*header;
-	uint32_t					i;
-	struct load_command			*cmd;
-	void						*ptr;
+	size_t	i;
+	void	*ptr;
 
-	header = map;
+	ft_printf("Contents of (__TEXT,__text) section\n");
+	load_section_text_32(ofile);
+	if (ofile->section_text == NULL)
+		return ;
 	i = 0;
-	ft_printf("%s:\n", file);
-	if (is_64 == 1)
+	ptr = ofile->map + ofile->swap(ofile, ofile->section_text->offset);
+	while (i < ofile->swap(ofile, ofile->section_text->size))
 	{
-		ptr = CASTHEADER_X64 + HEADER_OFFSET;
-		swap_mach_header_64(CASTHEADER_X32);
-	}
-	else
-	{
-		ptr = CASTHEADER_X32 + HEADER_OFFSET;
-		swap_mach_header_32(CASTHEADER_X32);
-	}
-	while (WHILE_CMDS)
-	{
-		cmd = (struct load_command*)ptr;
-		parse_segment(header, cmd, ptr, flags);
-		ptr += cmd->cmdsize;
-		i++;
+		print_addr(ofile->swap(ofile, ofile->section_text->addr) + i);
+		ft_printf("\t");
+		print_32bits(ptr, ofile->swap(ofile, ofile->section_text->size), &i);
+		ft_printf("\n");
 	}
 }

@@ -20,7 +20,7 @@ MAX_COLS	=	$$(echo "$$(tput cols)-20-$(LENGTHNAME)"|bc)
 
 CC			=	gcc
 
-FLAGS		=	-Wall -Wextra -Werror -O3 -ggdb
+FLAGS		=	-Wall -Wextra -Werror -O3 -ggdb -m32
 
 SRCDIR		=	srcs/
 

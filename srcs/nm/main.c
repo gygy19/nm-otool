@@ -12,15 +12,6 @@
 
 #include "nm_otool.h"
 
-int		getflags(int st)
-{
-	static int	flags = 0;
-
-	if (st != 0)
-		flags = st;
-	return (flags);
-}
-
 int		check_flags(int argc, char **argv, int *flags)
 {
 	int i;
@@ -39,40 +30,45 @@ int		check_flags(int argc, char **argv, int *flags)
 				*flags += flag_u;
 			if (IS_FLAG_J && !(*flags & flag_j))
 				*flags += flag_j;
+			if (IS_FLAG_O && !(*flags & flag_o))
+				*flags += flag_o;
+			if (IS_FLAG_X && !(*flags & flag_x))
+				*flags += flag_x;
 			o++;
 		}
 		if (IS_FLAG_VERSION && !(*flags & flag_version))
 			*flags += flag_version;
 		i++;
 	}
-	getflags(*flags);
 	return (*flags > 0);
 }
 
-int		inspect_file(char *file, char *prog, int count)
+int		inspect_file(char *file, char *prog, int count, int flags)
 {
-	void		*map;
+	t_ofile		*ofile;
 	struct stat	st;
 	int			fd;
 
-	if (count > 1)
+	if (count > 1 && !(flags & flag_o))
 		ft_printf("\n%s:\n", file);
-	if (!fileexists(file))
-		return (nosuchfile(file, prog));
-	if (isdir(file))
-		return (isdirectory(file, prog));
+	if (!file_exists(file))
+		return (no_such_file(file, prog));
+	if (is_dir(file))
+		return (is_directory(file, prog));
 	if (!is_regular(file))
-		return (notobjectfile(file, prog));
+		return (not_object_file(file, prog));
 	if ((fd = open(file, O_RDONLY)) < 3)
-		return (permissiondenied(file, prog));
+		return (permission_denied(file, prog));
 	fstat(fd, &st);
-	if ((map = ft_mmap(fd, st.st_size)) == MAP_FAILED)
-		return (permissiondenied(file, prog));
-	if (((struct mach_header_64*)map)->filetype != 2
-		&& ((struct mach_header_64*)map)->filetype != 1
-		&& ((struct mach_header_64*)map)->filetype != UNIVERSAL_BINARY_TYPE)
-		return (notobjectfile(file, prog));
-	search_syms(file, map, is_magic_64(get_magic(map)));
+	if (!(ofile = process_ofile(file, fd, st, prog)))
+		return (0);
+	if (ofile->is_64 == false && ofile->is_32 == false)
+		return (not_object_file(file, prog));
+	ofile->flags = flags;
+	ofile->name = file;
+	ofile->prog = prog;
+	select_function_by_os(ofile, ft_nm64, ft_nm32);
+	free_ofile(ofile);
 	return (0);
 }
 
@@ -103,7 +99,7 @@ int		main(int argc, char **argv)
 	i = 1;
 	count = 0;
 	if (!check_flags(argc, argv, &flags) && argc == 1)
-		return (inspect_file("a.out", argv[0], count));
+		return (inspect_file("a.out", argv[0], count, flags));
 	if (flags & flag_version)
 	{
 		print_version(argv[0]);
@@ -114,11 +110,11 @@ int		main(int argc, char **argv)
 	{
 		if (argv[i][0] != '-')
 		{
-			inspect_file(argv[i], argv[0], count);
+			inspect_file(argv[i], argv[0], count, flags);
 		}
 		i++;
 	}
 	if (count == 0)
-		return (printflags(argv[0]));
+		return (print_flags(argv[0]));
 	return (0);
 }

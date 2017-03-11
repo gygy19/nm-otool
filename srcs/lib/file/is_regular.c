@@ -16,7 +16,7 @@ int		is_regular(const char *file)
 {
 	struct stat buf;
 
-	if (!fileexists(file))
+	if (!file_exists(file))
 		return (0);
 	stat(file, &buf);
 	return (S_ISREG(buf.st_mode));

@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   getptr_section.c                                   :+:      :+:    :+:   */
+/*   free_ofile.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jguyet <jguyet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/03 10:48:22 by jguyet            #+#    #+#             */
-/*   Updated: 2017/03/03 10:48:24 by jguyet           ###   ########.fr       */
+/*   Created: 2017/03/10 22:21:01 by jguyet            #+#    #+#             */
+/*   Updated: 2017/03/10 22:21:02 by jguyet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm_otool.h"
 
-char	*getptr_section(struct section *s32, struct section_64 *s64,\
-	void *header, int is_64)
+void		free_ofile(t_ofile *ofile)
 {
-	char	*ptr;
-	int		offset;
-
-	if (is_64)
-		offset = s64->offset;
-	else
-		offset = s32->offset;
-	ptr = header + offset;
-	return (ptr);
+	if (ofile->cmd != NULL)
+		free(ofile->cmd);
+	if (ofile->is_64 && ofile->sec64 != NULL)
+		free(ofile->sec64);
+	else if (ofile->is_32 && ofile->sec != NULL)
+		free(ofile->sec);
+	free(ofile);
 }

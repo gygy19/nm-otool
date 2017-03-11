@@ -12,7 +12,7 @@
 
 #include "nm_otool.h"
 
-int		fileexists(const char *file)
+int		file_exists(const char *file)
 {
 	struct stat buf;
 

@@ -43,28 +43,30 @@ int		check_flags(int argc, char **argv, int *flags)
 
 int		inspect_file(char *file, int flags, char *prog)
 {
-	void		*map;
+	t_ofile		*ofile;
 	struct stat	st;
 	int			fd;
 
-	if (!fileexists(file))
-		return (nosuchfile(file, prog));
-	if (isdir(file))
-		return (isdirectory(file, prog));
+	ft_printf("%s:\n", file);
+	if (!file_exists(file))
+		return (no_such_file(file, prog));
+	if (is_dir(file))
+		return (is_directory(file, prog));
 	if (!is_regular(file))
-		return (notobjectfile(file, prog));
+		return (not_object_file(file, prog));
 	if ((fd = open(file, O_RDONLY)) < 3)
-		return (permissiondenied(file, prog));
+		return (permission_denied(file, prog));
 	fstat(fd, &st);
-	if ((map = ft_mmap(fd, st.st_size)) == MAP_FAILED)
-		return (permissiondenied(file, prog));
-	if (((struct mach_header_64*)map)->filetype > 3
-		|| ((struct mach_header_64*)map)->filetype < 1)
-		return (notobjectfile(file, prog));
-	if (flags & flag_t)
-		search_segement__text(file, map, is_magic_64(get_magic(map)), flags);
-	if (flags & flag_h)
-		printheader_infos(map);
+	if (!(ofile = process_ofile(file, fd, st, prog)))
+		return (0);
+	if (ofile->is_64 == false && ofile->is_32 == false)
+		return (not_object_file(file, prog));
+	ofile->flags = flags;
+	if (ofile->flags & flag_h)
+		select_function_by_os(ofile, print_header_64, print_header_32);
+	if (ofile->flags & flag_t)
+		select_function_by_os(ofile, ft_otool64, ft_otool32);
+	free_ofile(ofile);
 	return (0);
 }
 
@@ -77,7 +79,7 @@ int		main(int argc, char **argv)
 	i = 1;
 	count = 0;
 	if (!check_flags(argc, argv, &flags))
-		return (printflags(argv[0]));
+		return (print_flags(argv[0]));
 	if (flags & flag_version)
 	{
 		print_version(argv[0]);
@@ -93,6 +95,6 @@ int		main(int argc, char **argv)
 		i++;
 	}
 	if (count == 0)
-		return (printflags(argv[0]));
+		return (print_flags(argv[0]));
 	return (0);
 }

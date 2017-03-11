@@ -24,7 +24,7 @@ MAX_COLS	=	$$(echo "$$(tput cols)-20-$(LENGTHNAME)"|bc)
 
 CC			=	gcc
 
-FLAGS		=	-Wall -Wextra -Werror -O3 -ggdb
+FLAGS		=	-Wall -Wextra -Werror -O3 -ggdb -m32
 
 SRCDIR		=	
 
@@ -42,21 +42,26 @@ SRCOTOOL	=	\
 				srcs/otool/t.c												\
 				srcs/otool/version.c										\
 				srcs/otool/errors.c											\
+				srcs/lib/ofile/process_ofile.c								\
+				srcs/lib/ofile/load_nsections.c								\
+				srcs/lib/ofile/select_function_by_os.c						\
+				srcs/lib/ofile/free_ofile.c									\
+				srcs/lib/ofile/ofile_sections.c								\
 				srcs/lib/file/is_regular.c									\
 				srcs/lib/file/file_exists.c									\
 				srcs/lib/file/isdir.c										\
 				srcs/lib/file/isdevice.c									\
 				srcs/lib/ft_mmap.c											\
+				srcs/lib/is_magic_32.c										\
+				srcs/lib/is_magic_64.c										\
+				srcs/lib/is_magic_universal.c								\
+				srcs/lib/get_magic.c										\
 				srcs/lib/ft_osswap.c										\
 				srcs/lib/print_hex.c										\
-				srcs/lib/swap_mach_header.c									\
 				srcs/lib/print_addr.c										\
-				srcs/lib/print_section.c									\
 				srcs/lib/print_32bits.c										\
-				srcs/lib/is_magic_64.c										\
-				srcs/lib/get_magic.c										\
-				srcs/lib/getsection.c										\
-				srcs/lib/getptr_section.c
+				srcs/lib/should_swap_bytes.c
+
 				
 
 SRCSOTOOL	=	$(addprefix $(SRCDIR), $(SRCOTOOL))
@@ -65,28 +70,32 @@ OBJSOTOOL	=	$(addprefix $(OBJDIR), $(SRCOTOOL:.c=.o))
 
 SRCNM		=	\
 				srcs/nm/main.c												\
-				srcs/nm/parse_sym.c											\
-				srcs/nm/parse_list.c										\
-				srcs/nm/getname.c											\
 				srcs/nm/cmp.c												\
-				srcs/nm/default.c											\
 				srcs/nm/errors.c											\
 				srcs/nm/version.c											\
+				srcs/nm/parse_list.c										\
+				srcs/nm/getname.c											\
+				srcs/nm/ft_nm.c												\
+				srcs/nm/x.c													\
+				srcs/lib/ofile/process_ofile.c								\
+				srcs/lib/ofile/load_nsections.c								\
+				srcs/lib/ofile/select_function_by_os.c						\
+				srcs/lib/ofile/free_ofile.c									\
+				srcs/lib/ofile/ofile_sections.c								\
 				srcs/lib/file/is_regular.c									\
 				srcs/lib/file/file_exists.c									\
 				srcs/lib/file/isdir.c										\
 				srcs/lib/file/isdevice.c									\
 				srcs/lib/ft_mmap.c											\
+				srcs/lib/is_magic_32.c										\
+				srcs/lib/is_magic_64.c										\
+				srcs/lib/is_magic_universal.c								\
+				srcs/lib/get_magic.c										\
 				srcs/lib/ft_osswap.c										\
 				srcs/lib/print_hex.c										\
-				srcs/lib/swap_mach_header.c									\
 				srcs/lib/print_addr.c										\
-				srcs/lib/print_section.c									\
 				srcs/lib/print_32bits.c										\
-				srcs/lib/is_magic_64.c										\
-				srcs/lib/get_magic.c										\
-				srcs/lib/getsection.c										\
-				srcs/lib/getptr_section.c
+				srcs/lib/should_swap_bytes.c
 
 SRCSNM		=	$(addprefix $(SRCDIR), $(SRCNM))
 

@@ -12,7 +12,7 @@
 
 #include "nm_otool.h"
 
-char	*cpu_type_name(cpu_type_t cpu_type)
+static char	*cpu_type_name(cpu_type_t cpu_type)
 {
 	if (CPU_TYPE_I386 == cpu_type)
 		return ("i386");
@@ -27,7 +27,7 @@ char	*cpu_type_name(cpu_type_t cpu_type)
 	return ("unknown");
 }
 
-void	print_version(void *map)
+void		print_version(void *map)
 {
 	struct mach_header	*header;
 

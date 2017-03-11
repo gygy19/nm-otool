@@ -23,122 +23,153 @@
 # include <libft.h>
 # include <fcntl.h>
 
+# define BOOLEAN int
+
 # define MMAP_PROT PROT_READ
 # define MMAP_FLAG MAP_SHARED
 # define ADDR_LEN 8
 # define ADDR_BASE "0123456789abcdef"
-
-# define IS_X64 (is_64 == 1)
-# define IS_X32 (is_64 == 0)
-# define HEADER_OFFSET sizeof(*map)
-# define SIZE_SEG64 sizeof(struct segment_command_64)
-# define SIZE_SEG32 sizeof(struct segment_command)
-# define SIZE_SEG (IS_X64 ? SIZE_SEG64 : SIZE_SEG32)
-# define CASTHEADER_X64 ((struct mach_header_64*)header)
-# define CASTHEADER_X32 ((struct mach_header*)header)
-# define WHILE_CMDS_X64 (i < CASTHEADER_X64->ncmds)
-# define WHILE_CMDS_X32 (i < CASTHEADER_X32->ncmds)
-# define WHILE_CMDS (IS_X64 && WHILE_CMDS_X64 || IS_X32 && WHILE_CMDS_X32)
-
-# define IS_SEGTEXT (ft_strcmp(section->segname, "__TEXT") == 0)
-# define IS_SEGMENT_X64 (cmd->cmd == LC_SEGMENT_64)
-# define IS_SEGMENT_X32 (cmd->cmd == LC_SEGMENT)
-
-# define CASTLIST_X64 ((struct nlist_64*)list)
-# define CASTLIST_X32 ((struct nlist*)list)
 
 # define IS_FLAG_H (argv[i][o] == 'h')
 # define IS_FLAG_T (argv[i][o] == 't')
 # define IS_FLAG_U (argv[i][o] == 'u')
 # define IS_FLAG_J (argv[i][o] == 'j')
 # define IS_FLAG_A (argv[i][o] == 'a')
+# define IS_FLAG_O (argv[i][o] == 'o')
+# define IS_FLAG_X (argv[i][o] == 'x')
 # define IS_FLAG_VERSION (ft_strcmp(argv[i], "--version") == 0)
 
 # define CPU_TYPE_OSX_86_64_DARWIN 7171679
 # define UNIVERSAL_BINARY_TYPE 50331648
 
-typedef enum		e_flags
+enum							e_bool
+{
+	true = 1,
+	false = 0
+};
+
+typedef enum					e_flags
 {
 	flag_t = 1024,
 	flag_h = 2048,
 	flag_version = 4096,
 	flag_u = 8192,
 	flag_j = 16384,
-	flag_a = 32768
-}					t_flags;
+	flag_a = 32768,
+	flag_o = 65536,
+	flag_x = 131072
+}								t_flags;
+
+typedef struct					s_ofile
+{
+	struct fat_header			*fat;
+	struct fat_arch				*arch32;
+	struct fat_arch				*arch64;
+	struct mach_header_64		*mh64;
+	struct mach_header			*mh;
+	struct load_command			**cmd;
+	struct segment_command_64	**seg64;
+	struct segment_command		**seg;
+	struct section_64			**sec64;
+	struct section				**sec;
+	struct section_64			*section_text64;
+	struct section				*section_text;
+	struct symtab_command		*symtab;
+	struct nlist_64				*arraylist_64;
+	struct nlist				*arraylist_32;
+	unsigned char				text_nsect;
+	unsigned char				data_nsect;
+	unsigned char				bss_nsect;
+	void						*map;
+	BOOLEAN						is_64;
+	BOOLEAN						is_32;
+	BOOLEAN						is_universal;
+	BOOLEAN						is_swap;
+	uint32_t					(*swap)();
+	BOOLEAN						error;
+	int							flags;
+	char						*name;
+	char						*prog;
+}								t_ofile;
 
 /*
-** Files infos
+** lib file
 */
-int					isdevice(const char *file);
-int					isdir(const char *file);
-int					fileexists(const char *file);
-int					is_regular(const char *file);
+int								file_exists(const char *file);
+int								is_regular(const char *file);
+int								is_device(const char *file);
+int								is_dir(const char *file);
 /*
-** Errors
+** lib ofile
 */
-int					isdirectory(char *file, char *prog);
-int					nosuchfile(char *file, char *prog);
-int					permissiondenied(char *file, char *prog);
-int					notobjectfile(char *file, char *prog);
-int					printflags(char *prog);
+t_ofile							*process_ofile(char *file, int fd,\
+								struct stat st, char *prog);
+void							free_ofile(t_ofile *ofile);
+void							select_function_by_os(t_ofile *ofile,\
+								void (*function64)(t_ofile *ofile),
+								void (*function32)(t_ofile *ofile));
+int								load_section_text_64(t_ofile *ofile);
+int								load_section_text_32(t_ofile *ofile);
+int								load_section_sym_64(t_ofile *ofile);
+int								load_section_sym_32(t_ofile *ofile);
+void							load_nsections(t_ofile *ofile);
+int								load_section_name_64(t_ofile *ofile,\
+								char *sectname, char *segname);
+int								load_section_name_32(t_ofile *ofile,\
+								char *sectname, char *segname);
 /*
-** Others Libraries
+** lib
 */
-void				*ft_mmap(int fd, size_t length);
-void				print_hexa(int val);
-void				print_addr(int val);
-void				print_32bits(char *ptr, size_t size, size_t *i);
-struct section_64	*getsection(void *map, uint32_t id, int is_64);
+void							*ft_mmap(int fd, size_t length);
+uint32_t						get_magic(struct mach_header_64 *map);
+int								is_magic_64(uint32_t magic);
+int								is_magic_32(uint32_t magic);
+int								is_magic_universal(uint32_t magic);
+int								should_swap_bytes(uint32_t magic);
+uint32_t						ft_osswapconstint16(t_ofile *ofile, uint16_t x);
+uint32_t						ft_osswapconstint32(t_ofile *ofile, uint32_t x);
+uint32_t						ft_osswapconstint64(t_ofile *ofile, uint64_t x);
+void							print_32bits(char *ptr, size_t size, size_t *i);
+void							print_addr(int val);
+void							print_hexa(int val);
 /*
-** SWAP ENDIAN AND BIG ENDIAN HEADERS
+** errors
 */
-uint32_t			ft_osswapconstint16(uint16_t x);
-uint32_t			ft_osswapconstint32(uint32_t x);
-uint32_t			ft_osswapconstint64(uint64_t x);
-void				swap_mach_header_32(struct mach_header *mh);
-void				swap_mach_header_64(struct mach_header *mh);
+int								is_directory(char *file, char *prog);
+int								no_such_file(char *file, char *prog);
+int								permission_denied(char *file, char *prog);
+int								not_object_file(char *file, char *prog);
+int								print_flags(char *prog);
 /*
-** MAGIC HEADER
+** otool
 */
-int					is_magic_64(uint32_t magic);
-uint32_t			get_magic(struct mach_header_64 *map);
+void							ft_otool64(t_ofile *ofile);
+void							ft_otool32(t_ofile *ofile);
+void							print_header_64(t_ofile *ofile);
+void							print_header_32(t_ofile *ofile);
+void							print_version(void *map);
 /*
-** ___TEXT SECTION
+**	nm
 */
-char				*getptr_section(struct section *s32,\
-					struct section_64 *s64, void *header, int is_64);
-void				print_section_text(struct section *s32,\
-					struct section_64 *s64, void *header, int flags);
-void				print_addr(int val);
-/*
-** flag h
-*/
-void				printheader_infos(void *map);
-/*
-** flag t
-*/
-void				search_segement__text(char *file, void *map, int is_64,\
-					int flags);
-void				parse_segment(void *header, struct load_command *cmd,\
-					void *ptr, int flags);
-/*
-** version
-*/
-char				*cpu_type_name(cpu_type_t cpu_type);
-void				print_version(void *map);
-/*
-** NM
-*/
-int					getflags(int st);
-int					cmpstringp(const void *p1, const void *p2);
-void				search_syms(char *file, void *map, int is_64);
-void				parse_sym32(struct load_command *cmd, void *ptr, void *map);
-void				parse_sym64(struct load_command *cmd, void *ptr, void *map);
-char				*parse_nlist64(void *map, struct symtab_command *symtab,\
-					struct nlist_64 l64);
-char				*parse_nlist32(void *map, struct symtab_command *symtab,\
-					struct nlist l32);
-char				*getname32(char *test, struct nlist l32);
-char				*getname64(char *test, void *map, struct nlist_64 l64);
+int								get_file_type(t_ofile *ofile, unsigned char type);
+int								cmp_nm(const void *p1, const void *p2);
+void							ft_nm64(t_ofile *ofile);
+void							ft_nm32(t_ofile *ofile);
+char							*parse_nlist64(t_ofile *ofile,\
+								struct nlist_64 l64);
+char							*parse_nlist32(t_ofile *ofile,\
+								struct nlist l32);
+char							*getname64(t_ofile *ofile, char *test,\
+								struct nlist_64 l64);
+char							*getname32(t_ofile *ofile, char *test,\
+								struct nlist l32);
+char							parse_n_type_64(unsigned char c,\
+								struct nlist_64 list, t_ofile *ofile);
+char							parse_n_type_32(unsigned char c,\
+								struct nlist list, t_ofile *ofile);
+char							*get_name_x_64(t_ofile *ofile, char *test,\
+								struct nlist_64 l64);
+char							*get_name_x_32(t_ofile *ofile, char *test,\
+								struct nlist l32);
+int g_cmp;
 #endif

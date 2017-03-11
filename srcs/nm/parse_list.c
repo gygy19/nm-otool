@@ -12,33 +12,35 @@
 
 #include "nm_otool.h"
 
-char	*parse_nlist64(void *map, struct symtab_command *symtab,\
-	struct nlist_64 l64)
+char	*parse_nlist64(t_ofile *ofile, struct nlist_64 l64)
 {
-	char *test;
+	char *function_name;
 
 	if (l64.n_un.n_strx >= 1 && l64.n_sect >= 0)
 	{
-		test = map + symtab->stroff + l64.n_un.n_strx;
-		if (test != NULL && ft_strlen(test) > 0)
+		function_name = ofile->map + ofile->symtab->stroff + l64.n_un.n_strx;
+		if (function_name != NULL && ft_strlen(function_name) > 0)
 		{
-			return (getname64(test, map, l64));
+			if (ofile->flags == flag_x)
+				return (get_name_x_64(ofile, function_name, l64));
+			return (getname64(ofile, function_name, l64));
 		}
 	}
 	return (NULL);
 }
 
-char	*parse_nlist32(void *map, struct symtab_command *symtab,\
-	struct nlist l32)
+char	*parse_nlist32(t_ofile *ofile, struct nlist l32)
 {
-	char *test;
+	char *function_name;
 
 	if (l32.n_un.n_strx >= 1 && l32.n_sect >= 0)
 	{
-		test = map + symtab->stroff + l32.n_un.n_strx;
-		if (test != NULL && ft_strlen(test) > 0)
+		function_name = ofile->map + ofile->symtab->stroff + l32.n_un.n_strx;
+		if (function_name != NULL && ft_strlen(function_name) > 0)
 		{
-			return (getname32(test, l32));
+			if (ofile->flags == flag_x)
+				return (get_name_x_32(ofile, function_name, l32));
+			return (getname32(ofile, function_name, l32));
 		}
 	}
 	return (NULL);

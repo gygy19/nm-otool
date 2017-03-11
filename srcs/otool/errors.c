@@ -12,32 +12,32 @@
 
 #include "nm_otool.h"
 
-int		isdirectory(char *file, char *prog)
+int		is_directory(char *file, char *prog)
 {
 	ft_printf("%s: '%s': Is a directory.\n", prog, file);
 	return (0);
 }
 
-int		nosuchfile(char *file, char *prog)
+int		no_such_file(char *file, char *prog)
 {
 	ft_printf("%s: '%s': No such file or directory.\n", prog, file);
 	return (0);
 }
 
-int		permissiondenied(char *file, char *prog)
+int		permission_denied(char *file, char *prog)
 {
 	ft_printf("%s: '%s': Permission denied.\n", prog, file);
 	return (0);
 }
 
-int		notobjectfile(char *file, char *prog)
+int		not_object_file(char *file, char *prog)
 {
 	ft_printf("%s: '%s': The file was", prog, file);
 	ft_printf(" not recognized as a valid object file.\n");
 	return (0);
 }
 
-int		printflags(char *prog)
+int		print_flags(char *prog)
 {
 	ft_printf("Usage: %s [-ht] [--version] <object file> ...\n", prog);
 	ft_printf("\t-h print the mach header\n");

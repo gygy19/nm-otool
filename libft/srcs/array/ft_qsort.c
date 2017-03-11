@@ -25,7 +25,7 @@ static void	cmpqsortstring(char **base, int *tmp, size_t size,\
 	while (i < size)
 	{
 		if (base[i] != NULL && *tmp != -1\
-			&& compar(base[i], base[*tmp]) < 0)
+			&& compar(base[*tmp], base[i]) > 0)
 			*tmp = i;
 		else if (base[i] != NULL && *tmp == -1)
 			*tmp = i;
