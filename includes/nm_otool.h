@@ -81,6 +81,7 @@ typedef struct					s_ofile
 	unsigned char				data_nsect;
 	unsigned char				bss_nsect;
 	void						*map;
+	void						*ptr;
 	BOOLEAN						is_64;
 	BOOLEAN						is_32;
 	BOOLEAN						is_universal;

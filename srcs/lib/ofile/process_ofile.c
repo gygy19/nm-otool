@@ -89,6 +89,7 @@ static void	load_ofile(t_ofile *ofile)
 
 static void	load_universal_ofile(t_ofile *ofile)
 {
+	ofile->ptr = NULL;
 	if (ofile->is_universal == false)
 		return ;
 	ofile->fat = (struct fat_header*)ofile->map;
@@ -100,6 +101,7 @@ static void	load_universal_ofile(t_ofile *ofile)
 	ofile->arch32 = ofile->map + sizeof(struct fat_header);
 	ofile->arch64 = ofile->map + sizeof(struct fat_header)\
 		+ sizeof(struct fat_arch);
+	ofile->ptr = ofile->map;
 	ofile->map = ofile->map + ofile->swap(ofile, ofile->arch64->offset);
 }
 

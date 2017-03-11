@@ -68,7 +68,9 @@ int		inspect_file(char *file, char *prog, int count, int flags)
 	ofile->name = file;
 	ofile->prog = prog;
 	select_function_by_os(ofile, ft_nm64, ft_nm32);
+	//munmap(ofile->ptr != NULL ? ofile->ptr : ofile->map, st.st_size);
 	free_ofile(ofile);
+	//close(fd);
 	return (0);
 }
 

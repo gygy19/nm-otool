@@ -104,10 +104,7 @@ char	*getname64(t_ofile *ofile, char *test, struct nlist_64 l64)
 		}
 		ft_asprintf(&name, "%s %c ", name, character);
 	}
-	if ((l64.n_type & N_TYPE) == N_INDR)
-		ft_asprintf(&name, "%s%s (indirect for %s)\n", name, test, (char*)l64.n_value);
-	else
-		ft_asprintf(&name, "%s%s\n", name, test);
+	ft_asprintf(&name, "%s%s\n", name, test);
 	return (name);
 }
 
@@ -135,13 +132,10 @@ char	*getname32(t_ofile *ofile, char *test, struct nlist l32)
 		else
 		{
 			//flag V
-			ft_asprintf(&name, "%s%08lx", name, l32.n_value);
+			ft_asprintf(&name, "%s%08lx", name, (unsigned int)l32.n_value);
 		}
 		ft_asprintf(&name, "%s %c ", name, character);
 	}
-	if ((l32.n_type & N_TYPE) == N_INDR)
-		ft_asprintf(&name, "%s%s (indirect for %s)\n", name, test, (char*)l32.n_value);
-	else
-		ft_asprintf(&name, "%s%s\n", name, test);
+	ft_asprintf(&name, "%s%s\n", name, test);
 	return (name);
 }
