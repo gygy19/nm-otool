@@ -12,11 +12,11 @@
 
 #include "nm_otool.h"
 
-int		get_file_type(t_ofile *ofile, unsigned char type)
+int		get_file_type(t_ofile *ofile)
 {
 	if (ofile->is_64)
 	{
-		if (type == 1)
+		if (ofile->mh64->filetype == 2)
 			return (1);
 	}
 	return (0);
@@ -100,7 +100,7 @@ char	*getname64(t_ofile *ofile, char *test, struct nlist_64 l64)
 		else
 		{
 			//flag V
-			ft_asprintf(&name, "%s%08lx%08lx", name, get_file_type(ofile, l64.n_type), l64.n_value);
+			ft_asprintf(&name, "%s%08lx%08lx", name, get_file_type(ofile), l64.n_value);
 		}
 		ft_asprintf(&name, "%s %c ", name, character);
 	}

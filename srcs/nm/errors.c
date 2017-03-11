@@ -14,26 +14,26 @@
 
 int		is_directory(char *file, char *prog)
 {
-	ft_printf("%s: '%s': Is a directory.\n", prog, file);
+	ft_fprintf(2, "%s: '%s': Is a directory.\n", prog, file);
 	return (0);
 }
 
 int		no_such_file(char *file, char *prog)
 {
-	ft_printf("%s: '%s': No such file or directory.\n", prog, file);
+	ft_fprintf(2, "%s: '%s': No such file or directory.\n", prog, file);
 	return (0);
 }
 
 int		permission_denied(char *file, char *prog)
 {
-	ft_printf("%s: '%s': Permission denied.\n", prog, file);
+	ft_fprintf(2, "%s: '%s': Permission denied.\n", prog, file);
 	return (0);
 }
 
 int		not_object_file(char *file, char *prog)
 {
-	ft_printf("%s: '%s': The file was", prog, file);
-	ft_printf(" not recognized as a valid object file.\n");
+	ft_fprintf(2, "%s: '%s': The file was", prog, file);
+	ft_fprintf(2, " not recognized as a valid object file.\n");
 	return (0);
 }
 

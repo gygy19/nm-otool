@@ -17,6 +17,7 @@
 # include <stdlib.h>
 
 int						ft_printf(const char *s, ...);
+int						ft_fprintf(int fd, const char *s, ...);
 int						ft_asprintf(char **ptr, const char *s, ...);
 
 # ifdef PRINTF_PROG

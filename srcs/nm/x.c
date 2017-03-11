@@ -21,7 +21,7 @@ char	*get_name_x_64(t_ofile *ofile, char *test, struct nlist_64 l64)
 	name = NULL;
 	(void)ofile;
 	(void)test;
-	ft_asprintf(&name, "%08lx%08lx %02x %02x %04x ", get_file_type(ofile, l64.n_type),
+	ft_asprintf(&name, "%08lx%08lx %02x %02x %04x ", get_file_type(ofile),
 		l64.n_value,
 		(unsigned int)(l64.n_type & 0xff),
 		(unsigned int)(l64.n_sect & 0xff),

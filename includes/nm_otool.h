@@ -151,7 +151,7 @@ void							print_version(void *map);
 /*
 **	nm
 */
-int								get_file_type(t_ofile *ofile, unsigned char type);
+int								get_file_type(t_ofile *ofile);
 int								cmp_nm(const void *p1, const void *p2);
 void							ft_nm64(t_ofile *ofile);
 void							ft_nm32(t_ofile *ofile);
