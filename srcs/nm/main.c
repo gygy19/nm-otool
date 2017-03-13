@@ -12,7 +12,19 @@
 
 #include "nm_otool.h"
 
-int		check_flags(int argc, char **argv, int *flags)
+static void	check_flags_two(int *flags, char **argv, int i, int o)
+{
+	if (IS_FLAG_U && !(*flags & flag_u))
+		*flags += flag_u;
+	if (IS_FLAG_J && !(*flags & flag_j))
+		*flags += flag_j;
+	if (IS_FLAG_O && !(*flags & flag_o))
+		*flags += flag_o;
+	if (IS_FLAG_X && !(*flags & flag_x))
+		*flags += flag_x;
+}
+
+int			check_flags(int argc, char **argv, int *flags)
 {
 	int i;
 	int o;
@@ -26,14 +38,7 @@ int		check_flags(int argc, char **argv, int *flags)
 		{
 			if (argv[i][0] != '-')
 				break ;
-			if (IS_FLAG_U && !(*flags & flag_u))
-				*flags += flag_u;
-			if (IS_FLAG_J && !(*flags & flag_j))
-				*flags += flag_j;
-			if (IS_FLAG_O && !(*flags & flag_o))
-				*flags += flag_o;
-			if (IS_FLAG_X && !(*flags & flag_x))
-				*flags += flag_x;
+			check_flags_two(flags, argv, i, o);
 			o++;
 		}
 		if (IS_FLAG_VERSION && !(*flags & flag_version))
@@ -43,7 +48,7 @@ int		check_flags(int argc, char **argv, int *flags)
 	return (*flags > 0);
 }
 
-int		inspect_file(char *file, char *prog, int count, int flags)
+int			inspect_file(char *file, char *prog, int count, int flags)
 {
 	t_ofile		*ofile;
 	struct stat	st;
@@ -68,13 +73,11 @@ int		inspect_file(char *file, char *prog, int count, int flags)
 	ofile->name = file;
 	ofile->prog = prog;
 	select_function_by_os(ofile, ft_nm64, ft_nm32);
-	//munmap(ofile->ptr != NULL ? ofile->ptr : ofile->map, st.st_size);
 	free_ofile(ofile);
-	//close(fd);
 	return (0);
 }
 
-int		getcountfiles(int argc, char **argv)
+int			getcountfiles(int argc, char **argv)
 {
 	int	i;
 	int	count;
@@ -92,7 +95,7 @@ int		getcountfiles(int argc, char **argv)
 	return (count);
 }
 
-int		main(int argc, char **argv)
+int			main(int argc, char **argv)
 {
 	int			flags;
 	int			i;

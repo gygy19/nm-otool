@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cmp.c                                              :+:      :+:    :+:   */
+/*   get_operand.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jguyet <jguyet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/07 17:33:16 by jguyet            #+#    #+#             */
-/*   Updated: 2017/03/07 17:33:17 by jguyet           ###   ########.fr       */
+/*   Created: 2017/03/13 09:21:38 by jguyet            #+#    #+#             */
+/*   Updated: 2017/03/13 09:21:39 by jguyet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm_otool.h"
+#include "asm_i386.h"
 
-int		cmp_nm(const void *p1, const void *p2)
+void			get_operand(t_ofile *ofile, char id)
 {
-	return (ft_strcmp((char*)p1 + g_cmp, (char*)p2 + g_cmp));
+	if (id == '0')
+		get_operand_zero(ofile);
+	else if (id == '1')
+		;
 }

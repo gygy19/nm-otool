@@ -26,7 +26,8 @@ char	*get_name_x_64(t_ofile *ofile, char *test, struct nlist_64 l64)
 		(unsigned int)(l64.n_type & 0xff),
 		(unsigned int)(l64.n_sect & 0xff),
 		(unsigned int)(l64.n_desc & 0xffff));
-	ft_asprintf(&name, "%s%08x %s\n", name, (unsigned int)l64.n_un.n_strx, test);
+	ft_asprintf(&name, "%s%08x %s\n", name,\
+		(unsigned int)l64.n_un.n_strx, test);
 	return (name);
 }
 
@@ -43,6 +44,7 @@ char	*get_name_x_32(t_ofile *ofile, char *test, struct nlist l32)
 		(unsigned int)(l32.n_type & 0xff),
 		(unsigned int)(l32.n_sect & 0xff),
 		(unsigned int)(l32.n_desc & 0xffff));
-	ft_asprintf(&name, "%s%08x %s\n", name, (unsigned int)l32.n_un.n_strx, test);
+	ft_asprintf(&name, "%s%08x %s\n", name,\
+		(unsigned int)l32.n_un.n_strx, test);
 	return (name);
 }

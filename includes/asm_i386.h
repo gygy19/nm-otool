@@ -36,12 +36,13 @@
 struct						s_instable
 {
 	char					name[MAX_MNEMONIC];
-	const struct instable	*indirect;
+	const struct s_instable	*indirect;
 	unsigned				adr_mode;
 	int						suffix;
 };
 
 # define TERM 0
+# define FUNCTION_PUSH "pushq	%%rbp"
 # define INVALID {"",TERM,UNKNOWN,0}
 
 /*
@@ -250,7 +251,7 @@ static const struct s_instable op0fba[8] = {
 */
 static const struct s_instable op0f[13][16] = {
 	{
-		{"", op0F00, TERM, 0}, {"", op0F01, TERM, 0},
+		{"", op0f00, TERM, 0}, {"", op0f01, TERM, 0},
 		{"lar", TERM, MR, 0}, {"lsl", TERM, MR, 0},
 		INVALID, INVALID,
 		{"clts", TERM, GO_ON, 0}, INVALID,
@@ -340,14 +341,14 @@ static const struct s_instable op0f[13][16] = {
 		{"jle", TERM, D, 1}, {"jg", TERM, D, 1}
 	},
 	{
-		{"seto", TERM, MB, 1}, {"setno", TERM, Mb, 1},
-		{"setb", TERM, MB, 1}, {"setae", TERM, Mb, 1},
-		{"sete", TERM, MB, 1}, {"setne", TERM, Mb, 1},
-		{"setbe", TERM, MB, 1}, {"seta", TERM, Mb, 1},
-		{"sets", TERM, MB, 1}, {"setns", TERM, Mb, 1},
-		{"setp", TERM, MB, 1}, {"setnp", TERM, Mb, 1},
-		{"setl", TERM, MB, 1}, {"setge", TERM, Mb, 1},
-		{"setle", TERM, MB, 1}, {"setg", TERM, Mb, 1}
+		{"seto", TERM, MB, 1}, {"setno", TERM, MB, 1},
+		{"setb", TERM, MB, 1}, {"setae", TERM, MB, 1},
+		{"sete", TERM, MB, 1}, {"setne", TERM, MB, 1},
+		{"setbe", TERM, MB, 1}, {"seta", TERM, MB, 1},
+		{"sets", TERM, MB, 1}, {"setns", TERM, MB, 1},
+		{"setp", TERM, MB, 1}, {"setnp", TERM, MB, 1},
+		{"setl", TERM, MB, 1}, {"setge", TERM, MB, 1},
+		{"setle", TERM, MB, 1}, {"setg", TERM, MB, 1}
 	},
 	{
 		{"push", TERM, LSEG, 1}, {"pop", TERM, LSEG, 1},
@@ -458,7 +459,7 @@ static const struct s_instable opd1[8] = {
 	{"rol", TERM, MV, 1}, {"ror", TERM, MV, 1},
 	{"rcl", TERM, MV, 1}, {"rcr", TERM, MV, 1},
 	{"shl", TERM, MV, 1}, {"shr", TERM, MV, 1},
-	INVALID, {"sar", TERM, Mv, 1},
+	INVALID, {"sar", TERM, MV, 1},
 };
 
 /*
@@ -475,10 +476,10 @@ static const struct s_instable opd2[8] = {
 ** Decode table for 0xD3 opcodes.
 */
 static const struct s_instable opd3[8] = {
-	{"rol", TERM, Mv, 1}, {"ror", TERM, Mv, 1},
-	{"rcl", TERM, Mv, 1}, {"rcr", TERM, Mv, 1},
-	{"shl", TERM, Mv, 1}, {"shr", TERM, Mv, 1},
-	INVALID, {"sar", TERM, Mv, 1},
+	{"rol", TERM, MV, 1}, {"ror", TERM, MV, 1},
+	{"rcl", TERM, MV, 1}, {"rcr", TERM, MV, 1},
+	{"shl", TERM, MV, 1}, {"shr", TERM, MV, 1},
+	INVALID, {"sar", TERM, MV, 1},
 };
 
 /*
@@ -515,9 +516,9 @@ static const struct s_instable opfe[8] = {
 ** Decode table for 0xFF opcodes.
 */
 static const struct s_instable opff[8] = {
-	{"inc", TERM, Mw, 1}, {"dec", TERM, Mw, 1},
-	{"call", TERM, INM, 1}, {"lcall", TERM, INMl, 1},
-	{"jmp", TERM, INM, 1}, {"ljmp", TERM, INMl, 1},
+	{"inc", TERM, MW, 1}, {"dec", TERM, MW, 1},
+	{"call", TERM, INM, 1}, {"lcall", TERM, INML, 1},
+	{"jmp", TERM, INM, 1}, {"ljmp", TERM, INML, 1},
 	{"push", TERM, M, 1}, INVALID,
 };
 
@@ -625,7 +626,7 @@ static const struct s_instable opfp3[8][8] = {
 	}
 };
 
-static const struct instable opfp4[4][8] = {
+static const struct s_instable opfp4[4][8] = {
 	{
 		{"fchs", TERM, GO_ON, 0}, {"fabs", TERM, GO_ON, 0},
 		INVALID, INVALID,
@@ -723,11 +724,11 @@ static const struct s_instable asmtab[16][16] = {
 	},
 	{
 		{"pusha", TERM, GO_ON, 1}, {"popa", TERM, GO_ON, 1},
-		{"bound", TERM, MR, 1}, {"arpl", TERM, RMw, 0},
+		{"bound", TERM, MR, 1}, {"arpl", TERM, RMW, 0},
 		{"%fs:", TERM, OVERRIDE, 0}, {"%gs:", TERM, OVERRIDE, 0},
 		{"data16", TERM, DM, 0}, {"addr16", TERM, AM, 0},
 		{"push", TERM, I, 1}, {"imul", TERM, IMUL, 1},
-		{"push", TERM, Ib, 1}, {"imul", TERM, IMUL, 1},
+		{"push", TERM, IB, 1}, {"imul", TERM, IMUL, 1},
 		{"insb", TERM, GO_ON, 0}, {"ins", TERM, GO_ON, 1},
 		{"outsb", TERM, GO_ON, 0}, {"outs", TERM, GO_ON, 1}
 	},
@@ -822,7 +823,7 @@ static const struct s_instable asmtab[16][16] = {
 		{"clc", TERM, GO_ON, 0}, {"stc", TERM, GO_ON, 0},
 		{"cli", TERM, GO_ON, 0}, {"sti", TERM, GO_ON, 0},
 		{"cld", TERM, GO_ON, 0}, {"std", TERM, GO_ON, 0},
-		{"", opfE, TERM, 0}, {"", opff, TERM, 0}
+		{"", opfe, TERM, 0}, {"", opff, TERM, 0}
 	}
 };
 

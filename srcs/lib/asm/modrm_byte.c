@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cmp.c                                              :+:      :+:    :+:   */
+/*   modrm_byte.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jguyet <jguyet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/07 17:33:16 by jguyet            #+#    #+#             */
-/*   Updated: 2017/03/07 17:33:17 by jguyet           ###   ########.fr       */
+/*   Created: 2017/03/13 09:18:32 by jguyet            #+#    #+#             */
+/*   Updated: 2017/03/13 09:18:34 by jguyet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm_otool.h"
 
-int		cmp_nm(const void *p1, const void *p2)
+void	modrm_byte(unsigned long *mode, unsigned long *reg,\
+	unsigned long *r_m, unsigned char byte)
 {
-	return (ft_strcmp((char*)p1 + g_cmp, (char*)p2 + g_cmp));
+	*r_m = byte & 0x7;
+	*reg = byte >> 3 & 0x7;
+	*mode = byte >> 6 & 0x3;
 }

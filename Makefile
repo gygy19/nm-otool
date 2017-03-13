@@ -52,6 +52,23 @@ SRCOTOOL	=	\
 				srcs/lib/file/file_exists.c									\
 				srcs/lib/file/isdir.c										\
 				srcs/lib/file/isdevice.c									\
+				srcs/lib/asm/desable_opcode.c								\
+				srcs/lib/asm/load_dp.c										\
+				srcs/lib/asm/switch_commands.c								\
+				srcs/lib/asm/get_value.c									\
+				srcs/lib/asm/modrm_byte.c									\
+				srcs/lib/asm/get_operand_zero.c								\
+				srcs/lib/asm/get_operand_one.c								\
+				srcs/lib/asm/get_operand.c									\
+				srcs/lib/asm/print_operand_zero.c							\
+				srcs/lib/asm/print_operand.c								\
+				srcs/lib/asm/search_op0f.c									\
+				srcs/lib/asm/search_opfp.c									\
+				srcs/lib/asm/symbols/bswap.c								\
+				srcs/lib/asm/symbols/mv.c									\
+				srcs/lib/asm/symbols/rmw.c									\
+				srcs/lib/asm/symbols/xinst.c								\
+				srcs/lib/asm/symbols/r.c									\
 				srcs/lib/ft_mmap.c											\
 				srcs/lib/is_magic_32.c										\
 				srcs/lib/is_magic_64.c										\
@@ -61,6 +78,7 @@ SRCOTOOL	=	\
 				srcs/lib/print_hex.c										\
 				srcs/lib/print_addr.c										\
 				srcs/lib/print_32bits.c										\
+				srcs/lib/get_function_by_pointer.c							\
 				srcs/lib/should_swap_bytes.c
 
 				
@@ -96,6 +114,7 @@ SRCNM		=	\
 				srcs/lib/print_hex.c										\
 				srcs/lib/print_addr.c										\
 				srcs/lib/print_32bits.c										\
+				srcs/lib/get_function_by_pointer.c							\
 				srcs/lib/should_swap_bytes.c
 
 SRCSNM		=	$(addprefix $(SRCDIR), $(SRCNM))

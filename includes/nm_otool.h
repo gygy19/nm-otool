@@ -30,6 +30,8 @@
 # define ADDR_LEN 8
 # define ADDR_BASE "0123456789abcdef"
 
+# define ERROR_ARGC 10000
+
 # define IS_FLAG_H (argv[i][o] == 'h')
 # define IS_FLAG_T (argv[i][o] == 't')
 # define IS_FLAG_U (argv[i][o] == 'u')
@@ -93,6 +95,33 @@ typedef struct					s_ofile
 	int							flags;
 	char						*name;
 	char						*prog;
+	const struct s_instable		*dp;
+	unsigned char				byte;
+	size_t						length;
+	size_t						left;
+	char						*sasm;
+	BOOLEAN						data16;
+	BOOLEAN						addr16;
+	BOOLEAN						got_modrm_byte;
+	unsigned long				r_m;
+	unsigned long				mode;
+	unsigned long				reg;
+	const char					*asmseg;
+	unsigned					opcode1;
+	unsigned					opcode2;
+	unsigned					opcode3;
+	unsigned					opcode4;
+	unsigned					opcode5;
+	const char					*symadd0;
+	const char					*symsub0;
+	const char					*symadd1;
+	const char					*symsub1;
+	char						*result;
+	unsigned long				value0;
+	unsigned long				value1;
+	unsigned long				value0_size;
+	unsigned long				value1_size;
+	unsigned long				wbit;
 }								t_ofile;
 
 /*
@@ -144,6 +173,29 @@ int								permission_denied(char *file, char *prog);
 int								not_object_file(char *file, char *prog);
 int								print_flags(char *prog);
 /*
+** ASM
+*/
+void							load_dp(t_ofile *ofile);
+char							*desable_opcode(t_ofile *ofile, size_t size);
+int								switch_commands(t_ofile *ofile);
+unsigned long					get_value(unsigned long size, char *sect,\
+								unsigned long length);
+void							modrm_byte(unsigned long *mode,\
+								unsigned long *reg, unsigned long *r_m,\
+								unsigned char byte);
+void							get_operand(t_ofile *ofile, char id);
+void							get_operand_zero(t_ofile *ofile);
+void							print_operand(t_ofile *ofile, char id);
+void							print_operand_zero(t_ofile *ofile);
+const struct s_instable 		*search_opfp(t_ofile *ofile);
+const struct s_instable			*search_op0f(t_ofile *ofile);
+int								asm_xinst(t_ofile *ofile);
+int								asm_mv(t_ofile *ofile);
+int								asm_rmw(t_ofile *ofile);
+int								asm_bswap(t_ofile *ofile);
+int								asm_r(t_ofile *ofile);
+
+/*
 ** otool
 */
 void							ft_otool64(t_ofile *ofile);
@@ -153,6 +205,10 @@ void							print_header_32(t_ofile *ofile);
 void							print_version(void *map);
 void							ftv_otool64(t_ofile *ofile);
 void							ftv_otool32(t_ofile *ofile);
+int								get_function_name_by_pointer_64(int ptr,\
+								t_ofile *ofile);
+int								get_function_name_by_pointer_32(int ptr,\
+								t_ofile *ofile);
 /*
 **	nm
 */

@@ -68,12 +68,12 @@ static void	load_segment_32(t_ofile *ofile)
 	}
 }
 
-static void	load_ofile(t_ofile *ofile)
+static int	load_ofile(t_ofile *ofile)
 {
 	uint32_t	magic;
 
 	if (ofile->error == true)
-		return ;
+		return (0);
 	magic = get_magic(ofile->map);
 	ofile->is_32 = is_magic_32(magic);
 	ofile->is_64 = is_magic_64(magic);
@@ -85,6 +85,9 @@ static void	load_ofile(t_ofile *ofile)
 	ofile->sec64 = NULL;
 	load_segment_64(ofile);
 	load_segment_32(ofile);
+	if (ofile->error == true)
+		return (0);
+	return (1);
 }
 
 static void	load_universal_ofile(t_ofile *ofile)
@@ -125,11 +128,11 @@ t_ofile		*process_ofile(char *file, int fd, struct stat st, char *prog)
 	ofile->is_swap = should_swap_bytes(magic);
 	ofile->swap = ft_osswapconstint32;
 	load_universal_ofile(ofile);
-	load_ofile(ofile);
-	if (ofile->error == true)
+	if (load_ofile(ofile) == false)
 	{
 		permission_denied(file, prog);
 		return (NULL);
 	}
+	close(fd);
 	return (ofile);
 }

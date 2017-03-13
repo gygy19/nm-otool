@@ -12,7 +12,19 @@
 
 #include "nm_otool.h"
 
-int		check_flags(int argc, char **argv, int *flags)
+static void	check_flags_two(int *flags, char **argv, int i, int o)
+{
+	if (IS_FLAG_H && !(*flags & flag_h))
+		*flags += flag_h;
+	if (IS_FLAG_T && !(*flags & flag_t))
+		*flags += flag_t;
+	if (IS_FLAG_A && !(*flags & flag_a))
+		*flags += flag_a;
+	if (IS_FLAG_V && !(*flags & flag_v))
+		*flags += flag_v;
+}
+
+int			check_flags(int argc, char **argv, int *flags)
 {
 	int i;
 	int o;
@@ -26,14 +38,7 @@ int		check_flags(int argc, char **argv, int *flags)
 		{
 			if (argv[i][0] != '-')
 				break ;
-			if (IS_FLAG_H && !(*flags & flag_h))
-				*flags += flag_h;
-			if (IS_FLAG_T && !(*flags & flag_t))
-				*flags += flag_t;
-			if (IS_FLAG_A && !(*flags & flag_a))
-				*flags += flag_a;
-			if (IS_FLAG_V && !(*flags & flag_v))
-				*flags += flag_v;
+			check_flags_two(flags, argv, i, o);
 			o++;
 		}
 		if (IS_FLAG_VERSION && !(*flags & flag_version))
@@ -43,26 +48,48 @@ int		check_flags(int argc, char **argv, int *flags)
 	return (*flags > 0);
 }
 
-int		inspect_file(char *file, int flags, char *prog)
+int			check_errors(char *file, char *prog, int *i, int *fd)
+{
+	if (!file_exists(file))
+	{
+		*i = ERROR_ARGC;
+		return (no_such_file(file, prog));
+	}
+	if (is_dir(file))
+	{
+		*i = ERROR_ARGC;
+		return (is_directory(file, prog));
+	}
+	if (!is_regular(file))
+	{
+		*i = ERROR_ARGC;
+		return (not_object_file(file, prog));
+	}
+	if ((*fd = open(file, O_RDONLY)) < 3)
+	{
+		*i = ERROR_ARGC;
+		return (permission_denied(file, prog));
+	}
+	return (0);
+}
+
+int			inspect_file(char *file, int flags, char *prog, int *i)
 {
 	t_ofile		*ofile;
 	struct stat	st;
 	int			fd;
 
 	ft_printf("%s:\n", file);
-	if (!file_exists(file))
-		return (no_such_file(file, prog));
-	if (is_dir(file))
-		return (is_directory(file, prog));
-	if (!is_regular(file))
-		return (not_object_file(file, prog));
-	if ((fd = open(file, O_RDONLY)) < 3)
-		return (permission_denied(file, prog));
+	if (check_errors(file, prog, i, &fd) == true)
+		return (0);
 	fstat(fd, &st);
 	if (!(ofile = process_ofile(file, fd, st, prog)))
 		return (0);
 	if (ofile->is_64 == false && ofile->is_32 == false)
+	{
+		*i = ERROR_ARGC;
 		return (not_object_file(file, prog));
+	}
 	ofile->flags = flags;
 	if (ofile->flags & flag_h)
 		select_function_by_os(ofile, print_header_64, print_header_32);
@@ -74,7 +101,7 @@ int		inspect_file(char *file, int flags, char *prog)
 	return (0);
 }
 
-int		main(int argc, char **argv)
+int			main(int argc, char **argv)
 {
 	int			flags;
 	int			i;
@@ -93,7 +120,7 @@ int		main(int argc, char **argv)
 	{
 		if (argv[i][0] != '-')
 		{
-			inspect_file(argv[i], flags, argv[0]);
+			inspect_file(argv[i], flags, argv[0], &i);
 			count++;
 		}
 		i++;

@@ -29,7 +29,7 @@ static void		s_trunc(char **s, int length, wchar_t *wtmp)
 	{
 		size = 0;
 		*s = ft_strnew(0);
-		while ((size + ft_wlen(wtmp[index])) <= length)
+		while (*s != NULL && (size + ft_wlen(wtmp[index])) <= length)
 		{
 			size += ft_wlen(wtmp[index]);
 			*s = ft_strjoin(*s, wchar_to_string(wtmp[index++]));
@@ -63,7 +63,8 @@ void			add_conv_string(t_string *t, char *s)
 	else if (ft_strlen(t->sub_num) > 0 \
 		&& t->sub_num[ft_strlen(t->sub_num) - 1] == '.' && t->is_big != 5)
 	{
-		s = ft_strnew(0);
+		if ((s = ft_strnew(0)))
+			return ;
 		len = 0;
 	}
 	if ((t->space -= len) < 0)

@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cmp.c                                              :+:      :+:    :+:   */
+/*   mv.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jguyet <jguyet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/07 17:33:16 by jguyet            #+#    #+#             */
-/*   Updated: 2017/03/07 17:33:17 by jguyet           ###   ########.fr       */
+/*   Created: 2017/03/13 09:31:19 by jguyet            #+#    #+#             */
+/*   Updated: 2017/03/13 09:31:20 by jguyet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm_otool.h"
+#include "asm_i386.h"
 
-int		cmp_nm(const void *p1, const void *p2)
+int		asm_mv(t_ofile *ofile)
 {
-	return (ft_strcmp((char*)p1 + g_cmp, (char*)p2 + g_cmp));
+	unsigned long	vbit;
+	const char		*reg_name;
+
+	vbit = VBIT(ofile->opcode2);
+	ofile->wbit = WBIT(ofile->opcode2);
+	get_operand(ofile, '0');
+	reg_name = vbit ? "%cl" : "";
+	ft_asprintf(&ofile->sasm, "%s\t%s", ofile->sasm, reg_name);
+	print_operand(ofile, '0');
+	return (1);
 }

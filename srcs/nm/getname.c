@@ -90,18 +90,15 @@ char	*getname64(t_ofile *ofile, char *test, struct nlist_64 l64)
 		character = ft_toupper(character);
 	name = ft_strdup("");
 	if ((ofile->flags & flag_o))
-	{
 		ft_asprintf(&name, "%s: ", ofile->name);
-	}
 	if (!(ofile->flags & flag_u) && !(ofile->flags & flag_j))
 	{
-		if (character == 'u' || character == 'U' || character == 'i' || character == 'I')
+		if (character == 'u' || character == 'U'\
+			|| character == 'i' || character == 'I')
 			ft_asprintf(&name, "%s                ", name);
 		else
-		{
-			//flag V
-			ft_asprintf(&name, "%s%08lx%08lx", name, get_file_type(ofile), l64.n_value);
-		}
+			ft_asprintf(&name, "%s%08lx%08lx",\
+				name, get_file_type(ofile), l64.n_value);
 		ft_asprintf(&name, "%s %c ", name, character);
 	}
 	ft_asprintf(&name, "%s%s\n", name, test);
@@ -122,18 +119,14 @@ char	*getname32(t_ofile *ofile, char *test, struct nlist l32)
 		character = ft_toupper(character);
 	name = ft_strdup("");
 	if ((ofile->flags & flag_o))
-	{
 		ft_asprintf(&name, "%s: ", ofile->name);
-	}
 	if (!(ofile->flags & flag_u) && !(ofile->flags & flag_j))
 	{
-		if (character == 'u' || character == 'U' || character == 'i' || character == 'I')
+		if (character == 'u' || character == 'U'\
+			|| character == 'i' || character == 'I')
 			ft_asprintf(&name, "%s        ", name);
 		else
-		{
-			//flag V
 			ft_asprintf(&name, "%s%08lx", name, (unsigned int)l32.n_value);
-		}
 		ft_asprintf(&name, "%s %c ", name, character);
 	}
 	ft_asprintf(&name, "%s%s\n", name, test);
