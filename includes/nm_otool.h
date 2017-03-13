@@ -37,6 +37,7 @@
 # define IS_FLAG_A (argv[i][o] == 'a')
 # define IS_FLAG_O (argv[i][o] == 'o')
 # define IS_FLAG_X (argv[i][o] == 'x')
+# define IS_FLAG_V (argv[i][o] == 'v')
 # define IS_FLAG_VERSION (ft_strcmp(argv[i], "--version") == 0)
 
 # define CPU_TYPE_OSX_86_64_DARWIN 7171679
@@ -57,7 +58,8 @@ typedef enum					e_flags
 	flag_j = 16384,
 	flag_a = 32768,
 	flag_o = 65536,
-	flag_x = 131072
+	flag_x = 131072,
+	flag_v = 262144
 }								t_flags;
 
 typedef struct					s_ofile
@@ -149,6 +151,8 @@ void							ft_otool32(t_ofile *ofile);
 void							print_header_64(t_ofile *ofile);
 void							print_header_32(t_ofile *ofile);
 void							print_version(void *map);
+void							ftv_otool64(t_ofile *ofile);
+void							ftv_otool32(t_ofile *ofile);
 /*
 **	nm
 */

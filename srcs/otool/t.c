@@ -19,6 +19,7 @@ void		ft_otool64(t_ofile *ofile)
 
 	ft_printf("Contents of (__TEXT,__text) section\n");
 	load_section_text_64(ofile);
+	load_section_name_64(ofile, "test", "test");
 	if (ofile->section_text64 == NULL)
 		return ;
 	i = 0;

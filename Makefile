@@ -40,6 +40,7 @@ SRCOTOOL	=	\
 				srcs/otool/main.c											\
 				srcs/otool/h.c												\
 				srcs/otool/t.c												\
+				srcs/otool/v.c												\
 				srcs/otool/version.c										\
 				srcs/otool/errors.c											\
 				srcs/lib/ofile/process_ofile.c								\

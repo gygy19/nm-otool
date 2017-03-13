@@ -43,6 +43,7 @@ int			load_section_name_64(t_ofile *ofile, char *sectname, char *segn)
 			j = 0;
 			while (j < (int)ofile->seg64[i]->nsects)
 			{
+				ft_printf("%s, %s\n", (j + ofile->sec64[i])->sectname, (j + ofile->sec64[i])->segname);
 				if ((ft_strcmp((j + ofile->sec64[i])->sectname, sectname) == 0)
 					&& (ft_strcmp((j + ofile->sec64[i])->segname, segn) == 0))
 				{

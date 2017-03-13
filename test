@@ -1,3675 +1,2269 @@
-
-/bin/[:
-                 U __DefaultRuneLocale
-                 U ___error
-                 U ___maskrune
-0000000100000000 T __mh_execute_header
-                 U _abort
-                 U _access
-                 U _errx
-                 U _getegid
-                 U _geteuid
-                 U _isatty
-                 U _lstat$INODE64
-                 U _stat$INODE64
-                 U _strcmp
-                 U _strtol
-                 U dyld_stub_binder
-
-/bin/bash:
-                 U __DefaultRuneLocale
-                 U ___bzero
-                 U ___error
-                 U ___maskrune
-                 U ___mb_cur_max
-                 U ___memcpy_chk
-                 U ___memmove_chk
-                 U ___snprintf_chk
-                 U ___sprintf_chk
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-                 U ___stdinp
-                 U ___stdoutp
-                 U ___strcat_chk
-                 U ___strcpy_chk
-                 U ___strncpy_chk
-                 U ___tolower
-                 U ___toupper
-                 U ___vsnprintf_chk
-0000000100000000 T __mh_execute_header
-                 U _abort
-                 U _access
-                 U _alarm
-                 U _asprintf
-                 U _atoi
-                 U _atol
-                 U _bcopy
-                 U _bsearch
-                 U _chdir
-                 U _clearerr
-                 U _close
-                 U _closedir
-                 U _compat_mode
-                 U _confstr
-                 U _connect
-                 U _dlclose
-                 U _dlerror
-                 U _dlopen
-                 U _dlsym
-                 U _dup
-                 U _dup2
-                 U _endgrent
-                 U _endpwent
-                 U _endservent
-                 U _environ
-                 U _execve
-                 U _exit
-                 U _fclose
-                 U _fcntl
-                 U _fdopen
-                 U _feof
-                 U _ferror
-                 U _fflush
-                 U _fgets
-                 U _fileno
-                 U _fopen
-                 U _fork
-                 U _fprintf
-                 U _fputc
-                 U _fputs
-                 U _free
-                 U _freeaddrinfo
-                 U _fstat$INODE64
-                 U _fwrite
-                 U _gai_strerror
-                 U _getaddrinfo
-                 U _getcwd
-                 U _getdtablesize
-                 U _getegid
-                 U _geteuid
-                 U _getgid
-                 U _getgrent
-                 U _getgroups
-                 U _gethostname
-                 U _getpeername
-                 U _getpgrp
-                 U _getpid
-                 U _getppid
-                 U _getpwent
-                 U _getpwnam
-                 U _getpwuid
-                 U _getrlimit
-                 U _getrusage
-                 U _getservent
-                 U _gettimeofday
-                 U _getuid
-                 U _ioctl
-                 U _isatty
-                 U _kill
-                 U _killpg
-                 U _localtime
-                 U _lseek
-                 U _lstat$INODE64
-                 U _malloc
-                 U _mblen
-                 U _mbrlen
-                 U _mbrtowc
-                 U _mbsinit
-                 U _mbstowcs
-                 U _mbtowc
-                 U _memchr
-                 U _memcmp
-                 U _memcpy
-                 U _memmove
-                 U _memset
-                 U _memset_pattern16
-                 U _mmap
-                 U _munmap
-                 U _open
-                 U _opendir$INODE64
-                 U _pathconf
-                 U _pipe
-                 U _printf
-                 U _putc
-                 U _putchar
-                 U _puts
-                 U _qsort
-                 U _raise
-                 U _read
-                 U _readdir$INODE64
-                 U _readlink
-                 U _realloc
-                 U _regcomp
-                 U _regexec
-                 U _regfree
-                 U _select$1050
-                 U _setgid
-                 U _setgrent
-                 U _setlocale
-                 U _setpgid
-                 U _setpwent
-                 U _setregid
-                 U _setreuid
-                 U _setrlimit
-                 U _setservent
-                 U _setuid
-                 U _setvbuf
-                 U _sigaction
-                 U _siglongjmp
-                 U _sigprocmask
-                 U _sigsetjmp
-                 U _sleep
-                 U _socket
-                 U _stat$INODE64
-                 U _stpcpy
-                 U _strcasecmp
-                 U _strchr
-                 U _strcmp
-                 U _strcoll
-                 U _strcpy
-                 U _strdup
-                 U _strerror
-                 U _strftime
-                 U _strlen
-                 U _strncasecmp
-                 U _strncmp
-                 U _strncpy
-                 U _strpbrk
-                 U _strrchr
-                 U _strsignal
-                 U _strstr
-                 U _strtod
-                 U _strtol
-                 U _strtoul
-                 U _sysconf
-                 U _tcgetattr
-                 U _tcgetpgrp
-                 U _tcsetattr
-                 U _tcsetpgrp
-                 U _tgetent
-                 U _tgetflag
-                 U _tgetnum
-                 U _tgetstr
-                 U _tgoto
-                 U _time
-                 U _tputs
-                 U _ttyname
-                 U _tzset
-                 U _umask
-                 U _unlink
-                 U _vfprintf
-                 U _waitpid
-                 U _wcrtomb
-                 U _wcschr
-                 U _wcscmp
-                 U _wcscoll
-                 U _wcscpy
-                 U _wcslen
-                 U _wcsncmp
-                 U _wcsrtombs
-                 U _wctob
-                 U _wctype
-                 U _wcwidth
-                 U _write
-                 U dyld_stub_binder
-
-/bin/cat:
-                 U __DefaultRuneLocale
-                 U ___error
-                 U ___maskrune
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-                 U ___stdinp
-                 U ___stdoutp
-                 U ___strlcpy_chk
-0000000100000000 T __mh_execute_header
-                 U _clearerr
-                 U _close
-                 U _connect
-                 U _err
-                 U _exit
-                 U _fclose
-                 U _fdopen
-                 U _feof
-                 U _ferror
-                 U _fileno
-                 U _fprintf
-                 U _fstat$INODE64
-                 U _fwrite
-                 U _getc
-                 U _getopt
-                 U _malloc
-                 U _open
-                 U _optind
-                 U _putchar
-                 U _read
-                 U _setbuf
-                 U _setlocale
-                 U _shutdown
-                 U _socket
-                 U _strcmp
-                 U _warn
-                 U _write
-                 U dyld_stub_binder
-
-/bin/chmod:
-                 U ___error
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-0000000100000000 T __mh_execute_header
-                 U _acl_add_flag_np
-                 U _acl_add_perm
-                 U _acl_copy_entry
-                 U _acl_create_entry
-                 U _acl_create_entry_np
-                 U _acl_delete_entry
-                 U _acl_delete_flag_np
-                 U _acl_delete_perm
-                 U _acl_dup
-                 U _acl_free
-                 U _acl_get_entry
-                 U _acl_get_fd_np
-                 U _acl_get_file
-                 U _acl_get_flag_np
-                 U _acl_get_flagset_np
-                 U _acl_get_perm_np
-                 U _acl_get_permset
-                 U _acl_get_qualifier
-                 U _acl_get_tag_type
-                 U _acl_init
-                 U _acl_set_fd_np
-                 U _acl_set_file
-                 U _acl_set_flagset_np
-                 U _acl_set_permset
-                 U _acl_set_qualifier
-                 U _acl_set_tag_type
-                 U _acl_to_text
-                 U _bcmp
-                 U _calloc
-                 U _chmod
-                 U _chmodx_np
-                 U _close
-                 U _err
-                 U _errx
-                 U _exit
-                 U _filesec_free
-                 U _filesec_init
-                 U _filesec_set_property
-                 U _free
-                 U _fts_open$INODE64
-                 U _fts_read$INODE64
-                 U _fts_set$INODE64
-                 U _fwrite
-                 U _getmode
-                 U _getopt
-                 U _lchmod
-                 U _malloc
-                 U _mbr_identifier_to_uuid
-                 U _open
-                 U _optind
-                 U _printf
-                 U _putchar
-                 U _puts
-                 U _read
-                 U _setmode
-                 U _strchr
-                 U _strcmp
-                 U _strerror
-                 U _strlen
-                 U _strmode
-                 U _strncmp
-                 U _strncpy
-                 U _strsep
-                 U _strtol
-                 U _warn
-                 U _warnx
-                 U dyld_stub_binder
-
-/bin/cp:
-                 U ___error
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-                 U ___strlcat_chk
-                 U ___strlcpy_chk
-                 U ___strncat_chk
-0000000100000000 T __mh_execute_header
-                 U _chflags
-                 U _chmod
-                 U _chown
-                 U _close
-                 U _compat_mode
-                 U _copyfile
-                 U _err
-                 U _errx
-                 U _exit
-                 U _fchflags
-                 U _fchmod
-                 U _fchown
-                 U _fcntl
-                 U _fcopyfile
-                 U _fprintf
-                 U _fstat$INODE64
-                 U _fstatfs$INODE64
-                 U _fts_close$INODE64
-                 U _fts_open$INODE64
-                 U _fts_read$INODE64
-                 U _fts_set$INODE64
-                 U _futimes
-                 U _fwrite
-                 U _getchar
-                 U _getopt
-                 U _lchflags
-                 U _lchmod
-                 U _lchown
-                 U _lstat$INODE64
-                 U _lutimes
-                 U _mkdir
-                 U _mkfifo
-                 U _mknod
-                 U _open
-                 U _optind
-                 U _printf
-                 U _read
-                 U _readlink
-                 U _signal
-                 U _stat$INODE64
-                 U _strcmp
-                 U _strerror
-                 U _strlen
-                 U _strrchr
-                 U _symlink
-                 U _umask
-                 U _unlink
-                 U _utimes
-                 U _warn
-                 U _warnx
-                 U _write
-                 U dyld_stub_binder
-
-/bin/csh:
-                 U __DefaultRuneLocale
-                 U ___assert_rtn
-                 U ___bzero
-                 U ___error
-                 U ___maskrune
-                 U ___mb_cur_max
-                 U ___memmove_chk
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___tolower
-                 U ___toupper
-                 U __exit
-0000000100000000 T __mh_execute_header
-                 U _abort
-                 U _access
-                 U _alarm
-                 U _atof
-                 U _atoi
-                 U _catclose
-                 U _catgets
-                 U _catopen
-                 U _cfgetispeed
-                 U _cfgetospeed
-                 U _cfsetispeed
-                 U _cfsetospeed
-                 U _chdir
-                 U _close
-                 U _closedir
-                 U _creat
-                 U _crypt
-                 U _ctime
-                 U _dup
-                 U _dup2
-                 U _endgrent
-                 U _endpwent
-                 U _endutxent
-                 U _environ
-                 U _execv
-                 U _exit
-                 U _fcntl
-                 U _fork
-                 U _free
-                 U _fstat$INODE64
-                 U _getcwd
-                 U _getegid
-                 U _getenv
-                 U _geteuid
-                 U _getgid
-                 U _getgrent
-                 U _getgrgid
-                 U _getgroups
-                 U _gethostbyname
-                 U _gethostname
-                 U _getpeername
-                 U _getpgrp
-                 U _getpid
-                 U _getpwent
-                 U _getpwnam
-                 U _getpwuid
-                 U _getrlimit
-                 U _getrusage
-                 U _gettimeofday
-                 U _getuid
-                 U _getutxent
-                 U _iconv
-                 U _iconv_close
-                 U _iconv_open
-                 U _inet_addr
-                 U _inet_ntoa
-                 U _ioctl
-                 U _isatty
-                 U _kill
-                 U _killpg
-                 U _localtime
-                 U _longjmp
-                 U _lseek
-                 U _lstat$INODE64
-                 U _malloc
-                 U _mblen
-                 U _mbtowc
-                 U _memchr
-                 U _memcmp
-                 U _memcpy
-                 U _memmove
-                 U _memset
-                 U _memset_pattern16
-                 U _mkstemp
-                 U _nl_langinfo
-                 U _open
-                 U _opendir$INODE64
-                 U _pipe
-                 U _qsort
-                 U _read
-                 U _readdir$INODE64
-                 U _readlink
-                 U _realloc
-                 U _rewinddir$INODE64
-                 U _setgrent
-                 U _setjmp
-                 U _setlocale
-                 U _setpgid
-                 U _setpriority
-                 U _setpwent
-                 U _setrlimit
-                 U _setutxent
-                 U _sigaction
-                 U _signal
-                 U _sigprocmask
-                 U _sigsuspend
-                 U _sleep
-                 U _stat$INODE64
-                 U _strchr
-                 U _strcmp
-                 U _strcoll
-                 U _strcpy
-                 U _strerror
-                 U _strlen
-                 U _strncmp
-                 U _strncpy
-                 U _strrchr
-                 U _strtol
-                 U _strtoul
-                 U _sysconf
-                 U _tcgetattr
-                 U _tcgetpgrp
-                 U _tcsetattr
-                 U _tcsetpgrp
-                 U _tgetent
-                 U _tgetflag
-                 U _tgetnum
-                 U _tgetstr
-                 U _tgoto
-                 U _time
-                 U _tputs
-                 U _ttyname
-                 U _umask
-                 U _unlink
-                 U _vfork
-                 U _wait3
-                 U _waitpid
-                 U _wcscat
-                 U _wcschr
-                 U _wcscmp
-                 U _wcscoll
-                 U _wcscpy
-                 U _wcslen
-                 U _wcsncmp
-                 U _wcsncpy
-                 U _wcsrchr
-                 U _wctomb
-                 U _wcwidth
-                 U _write
-                 U dyld_stub_binder
-
-/bin/date:
-                 U ___bzero
-                 U ___error
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-                 U ___stdoutp
-0000000100000000 T __mh_execute_header
-                 U _atoi
-                 U _bind
-                 U _close
-                 U _compat_mode
-                 U _connect
-                 U _err
-                 U _errx
-                 U _exit
-                 U _fflush
-                 U _fprintf
-                 U _free
-                 U _gethostname
-                 U _getlogin
-                 U _getopt
-                 U _getservbyname
-                 U _getsockopt
-                 U _gettimeofday
-                 U _localtime
-                 U _malloc
-                 U _mktime
-                 U _optarg
-                 U _optind
-                 U _puts
-                 U _pututxline
-                 U _recvfrom
-                 U _select$1050
-                 U _send
-                 U _setenv
-                 U _setlocale
-                 U _settimeofday
-                 U _socket
-                 U _strftime
-                 U _strlen
-                 U _strncasecmp
-                 U _strncpy
-                 U _strptime
-                 U _strspn
-                 U _strtol
-                 U _strtoq
-                 U _syslog
-                 U _time
-                 U _warn
-                 U _warnc
-                 U _warnx
-                 U dyld_stub_binder
-
-/bin/dd:
-                 U ___bzero
-                 U ___error
-                 U ___snprintf_chk
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___tolower
-                 U ___toupper
-                 U __exit
-0000000100000000 T __mh_execute_header
-                 U _atexit
-                 U _bsearch
-                 U _err
-                 U _errx
-                 U _exit
-                 U _fstat$INODE64
-                 U _ftruncate
-                 U _gettimeofday
-                 U _ioctl
-                 U _lseek
-                 U _malloc
-                 U _memmove
-                 U _memset
-                 U _open
-                 U _read
-                 U _setlocale
-                 U _signal
-                 U _strchr
-                 U _strcmp
-                 U _strdup
-                 U _strerror
-                 U _strlen
-                 U _strsep
-                 U _strtoq
-                 U _swab
-                 U _warn
-                 U _warnx
-                 U _write
-                 U dyld_stub_binder
-
-/bin/df:
-                 U ___error
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-0000000100000000 T __mh_execute_header
-                 U _compat_mode
-                 U _errx
-                 U _exit
-                 U _fprintf
-                 U _free
-                 U _getbsize
-                 U _getmntinfo$INODE64
-                 U _getopt
-                 U _humanize_number
-                 U _malloc
-                 U _memcpy
-                 U _optarg
-                 U _optind
-                 U _printf
-                 U _putenv
-                 U _puts
-                 U _stat$INODE64
-                 U _statfs$INODE64
-                 U _strchr
-                 U _strcmp
-                 U _strdup
-                 U _strlen
-                 U _strncpy
-                 U _sysctl
-                 U _trunc
-                 U _warn
-                 U _warnx
-                 U dyld_stub_binder
-
-/bin/domainname:
-                 U ___stderrp
-0000000100000000 T __mh_execute_header
-                 U _err
-                 U _exit
-                 U _fwrite
-                 U _getdomainname
-                 U _getopt
-                 U _optind
-                 U _puts
-                 U _setdomainname
-                 U _strlen
-                 U dyld_stub_binder
-
-/bin/echo:
-                 U ___error
-0000000100000000 T __mh_execute_header
-                 U _exit
-                 U _malloc
-                 U _strcmp
-                 U _strerror
-                 U _strlen
-                 U _write
-                 U _writev
-                 U dyld_stub_binder
-
-/bin/ed:
-                 U __DefaultRuneLocale
-                 U ___error
-                 U ___maskrune
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-                 U ___stdinp
-                 U ___stdoutp
-                 U ___strcat_chk
-                 U ___strcpy_chk
-0000000100000000 T __mh_execute_header
-                 U _clearerr
-                 U _close
-                 U _compat_mode
-                 U _exit
-                 U _fclose
-                 U _fdopen
-                 U _feof
-                 U _ferror
-                 U _fflush
-                 U _fopen
-                 U _fprintf
-                 U _fputc
-                 U _fputs
-                 U _fread
-                 U _free
-                 U _fseeko
-                 U _ftello
-                 U _fwrite
-                 U _getc
-                 U _getchar
-                 U _getenv
-                 U _getopt
-                 U _ioctl
-                 U _isatty
-                 U _longjmp
-                 U _malloc
-                 U _memchr
-                 U _memcpy
-                 U _mkstemp
-                 U _optarg
-                 U _optind
-                 U _pclose
-                 U _perror
-                 U _popen
-                 U _printf
-                 U _putchar
-                 U _puts
-                 U _realloc
-                 U _regcomp
-                 U _regerror
-                 U _regexec
-                 U _regfree
-                 U _setbuffer
-                 U _setjmp
-                 U _setlocale
-                 U _setvbuf
-                 U _signal
-                 U _strchr
-                 U _strcmp
-                 U _strcpy
-                 U _strerror
-                 U _strlen
-                 U _strtol
-                 U _system
-                 U _umask
-                 U _unlink
-                 U dyld_stub_binder
-
-/bin/expr:
-                 U __DefaultRuneLocale
-                 U ___error
-                 U ___maskrune
-                 U ___sprintf_chk
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-0000000100000000 T __mh_execute_header
-                 U _errx
-                 U _free
-                 U _malloc
-                 U _memchr
-                 U _memcpy
-                 U _printf
-                 U _puts
-                 U _regcomp
-                 U _regerror
-                 U _regexec
-                 U _regfree
-                 U _setlocale
-                 U _strcmp
-                 U _strcoll
-                 U _strdup
-                 U _strlen
-                 U _strtoimax
-                 U dyld_stub_binder
-
-/bin/hostname:
-                 U ___stderrp
-0000000100000000 T __mh_execute_header
-                 U _err
-                 U _exit
-                 U _fwrite
-                 U _gethostname
-                 U _getopt
-                 U _optind
-                 U _puts
-                 U _sethostname
-                 U _strchr
-                 U _strlen
-                 U dyld_stub_binder
-
-/bin/htop:
-000000010000e860 T _Action_pickFromVector
-000000010000ea00 T _Action_setBindings
-000000010000e9e0 T _Action_setSortKey
-000000010000e9b0 T _Action_setUserOnly
-000000010000dba0 t _AffinityPanel_eventHandler
-000000010000dd70 T _AffinityPanel_getAffinity
-000000010000dc20 T _AffinityPanel_new
-000000010000e270 T _Affinity_add
-000000010000e250 T _Affinity_delete
-000000010000e200 T _Affinity_new
-0000000100002c60 t _AllCPUsMeter_done
-0000000100002b10 t _AllCPUsMeter_init
-0000000100002cd0 t _AllCPUsMeter_updateMode
-000000010000d920 t _AvailableColumnsPanel_delete
-000000010000d940 t _AvailableColumnsPanel_eventHandler
-000000010000da30 T _AvailableColumnsPanel_new
-00000001000013f0 t _AvailableMetersPanel_delete
-0000000100001410 t _AvailableMetersPanel_eventHandler
-00000001000015c0 T _AvailableMetersPanel_new
-00000001000061c0 t _BarMeterMode_draw
-00000001000084b0 t _BatteryMeter_setValues
-00000001000117e0 T _Battery_getData
-00000001000061a0 t _BlankMeter_display
-00000001000061b0 t _BlankMeter_setValues
-                 U _CFArrayGetCount
-                 U _CFArrayGetValueAtIndex
-                 U _CFDictionaryGetValue
-                 U _CFNumberGetValue
-                 U _CFRelease
-                 U _CFRetain
-                 U _CFStringCompare
-                 U _COLS
-00000001000025c0 t _CPUMeter_display
-00000001000029c0 t _CPUMeter_init
-0000000100002a60 t _CPUMeter_setValues
-0000000100003660 T _CRT_disableDelay
-00000001000035b0 T _CRT_done
-0000000100003690 T _CRT_enableDelay
-00000001000035d0 T _CRT_fatalError
-00000001000116e0 T _CRT_handleSIGSEGV
-00000001000033d0 t _CRT_handleSIGTERM
-0000000100002fa0 T _CRT_init
-0000000100003620 T _CRT_readKey
-00000001000033f0 T _CRT_setColors
-0000000100001890 t _CategoriesPanel_delete
-00000001000018b0 t _CategoriesPanel_eventHandler
-00000001000017b0 T _CategoriesPanel_makeMetersPage
-0000000100001ab0 T _CategoriesPanel_new
-0000000100001c70 t _CheckItem_delete
-0000000100001bd0 t _CheckItem_display
-0000000100001d30 T _CheckItem_get
-0000000100001c90 T _CheckItem_newByRef
-0000000100001cd0 T _CheckItem_newByVal
-0000000100001d10 T _CheckItem_set
-0000000100001d50 t _ClockMeter_setValues
-0000000100001dc0 t _ColorsPanel_delete
-0000000100001de0 t _ColorsPanel_eventHandler
-0000000100001fa0 T _ColorsPanel_new
-0000000100002140 t _ColumnsPanel_delete
-0000000100002160 t _ColumnsPanel_eventHandler
-0000000100002480 T _ColumnsPanel_fieldNameToIndex
-0000000100002390 T _ColumnsPanel_new
-0000000100002500 T _ColumnsPanel_update
-0000000100010cc0 T _DarwinProcess_getCmdLine
-0000000100010bf0 T _DarwinProcess_new
-0000000100010e70 T _DarwinProcess_setFromKInfoProc
-0000000100010fd0 T _DarwinProcess_setFromLibprocPidinfo
-0000000100010c50 T _DarwinProcess_setStartTime
-0000000100003c80 t _DisplayOptionsPanel_delete
-0000000100003ca0 t _DisplayOptionsPanel_eventHandler
-0000000100003d70 T _DisplayOptionsPanel_new
-0000000100002e40 t _DualColCPUsMeter_draw
-000000010000fe30 T _EnvScreen_delete
-000000010000ff30 T _EnvScreen_draw
-000000010000ff50 T _EnvScreen_new
-000000010000fe50 T _EnvScreen_scan
-0000000100004160 T _FunctionBar_delete
-0000000100004380 T _FunctionBar_draw
-00000001000043a0 T _FunctionBar_drawAttr
-0000000100004040 T _FunctionBar_new
-0000000100003ff0 T _FunctionBar_newEnterEsc
-0000000100004320 T _FunctionBar_setLabel
-0000000100004550 T _FunctionBar_synthesizeEvent
-0000000100006880 t _GraphMeterMode_draw
-0000000100004630 T _Hashtable_delete
-0000000100004800 T _Hashtable_foreach
-00000001000047c0 T _Hashtable_get
-00000001000045e0 T _Hashtable_new
-00000001000046b0 T _Hashtable_put
-0000000100004740 T _Hashtable_remove
-0000000100004e50 T _Header_addMeterByClass
-0000000100004b00 T _Header_addMeterByName
-0000000100004c20 T _Header_calculateHeight
-0000000100004920 T _Header_delete
-0000000100005000 T _Header_draw
-0000000100004880 T _Header_new
-0000000100004970 T _Header_populateFromSettings
-0000000100004f50 T _Header_readMeterMode
-0000000100004eb0 T _Header_readMeterName
-0000000100004f70 T _Header_reinit
-0000000100004bd0 T _Header_setMode
-0000000100004e90 T _Header_size
-0000000100004ce0 T _Header_writeBackToSettings
-000000010000dde0 t _HostnameMeter_setValues
-                 U _IOPSCopyPowerSourcesInfo
-                 U _IOPSCopyPowerSourcesList
-                 U _IOPSGetPowerSourceDescription
-000000010000e7c0 T _IncSet_activate
-000000010000e3c0 T _IncSet_delete
-000000010000e800 T _IncSet_drawBar
-000000010000e7a0 T _IncSet_getListItemValue
-000000010000e3f0 T _IncSet_handleKey
-000000010000e2c0 T _IncSet_new
-000000010000e830 T _IncSet_synthesizeEvent
-00000001000101d0 T _InfoScreen_addLine
-0000000100010250 T _InfoScreen_appendLine
-0000000100010060 T _InfoScreen_done
-0000000100010090 T _InfoScreen_drawTitled
-000000010000ffa0 T _InfoScreen_init
-0000000100010300 T _InfoScreen_run
-0000000100006ca0 t _LEDMeterMode_draw
-                 U _LINES
-0000000100005830 T _ListItem_append
-00000001000057c0 T _ListItem_compare
-00000001000057a0 t _ListItem_delete
-0000000100005730 t _ListItem_display
-00000001000058c0 T _ListItem_getRef
-00000001000057e0 T _ListItem_new
-00000001000058d0 t _LoadAverageMeter_display
-00000001000059c0 t _LoadAverageMeter_setValues
-0000000100005a20 t _LoadMeter_display
-0000000100005aa0 t _LoadMeter_setValues
-00000001000038b0 T _MainPanel_delete
-00000001000038f0 t _MainPanel_eventHandler
-00000001000037d0 T _MainPanel_foreachProcess
-00000001000037b0 T _MainPanel_getValue
-0000000100003bc0 T _MainPanel_new
-0000000100003700 T _MainPanel_pidSearch
-0000000100003790 T _MainPanel_selectedPid
-0000000100003c70 T _MainPanel_setState
-00000001000036a0 T _MainPanel_updateTreeFunctions
-0000000100005b10 t _MemoryMeter_display
-0000000100005d00 t _MemoryMeter_setValues
-0000000100006020 T _Meter_delete
-0000000100005f40 T _Meter_humanUnit
-0000000100005db0 T _Meter_new
-0000000100006080 T _Meter_setCaption
-0000000100005ec0 T _Meter_setMode
-00000001000060b0 T _Meter_toListItem
-0000000100006fb0 t _MetersPanel_delete
-0000000100006fd0 t _MetersPanel_eventHandler
-0000000100007450 T _MetersPanel_new
-0000000100006f50 T _MetersPanel_setMoving
-000000010000de00 T _OpenFilesScreen_delete
-000000010000e180 T _OpenFilesScreen_draw
-000000010000e1a0 T _OpenFilesScreen_new
-000000010000de20 T _OpenFilesScreen_scan
-0000000100007a60 T _Panel_add
-0000000100007590 T _Panel_delete
-0000000100007960 T _Panel_done
-0000000100007c30 T _Panel_draw
-0000000100007ab0 T _Panel_get
-00000001000079b0 T _Panel_getHeader
-0000000100007b20 T _Panel_getSelected
-0000000100007bc0 T _Panel_getSelectedIndex
-00000001000078d0 T _Panel_init
-0000000100007a80 T _Panel_insert
-00000001000079f0 T _Panel_move
-0000000100007b80 T _Panel_moveSelectedDown
-0000000100007b50 T _Panel_moveSelectedUp
-00000001000077f0 T _Panel_new
-00000001000082c0 T _Panel_onKey
-0000000100007a20 T _Panel_prune
-0000000100007ad0 T _Panel_remove
-0000000100007a00 T _Panel_resize
-00000001000075d0 T _Panel_selectByTyping
-0000000100007aa0 T _Panel_set
-00000001000079c0 T _Panel_setHeader
-0000000100007be0 T _Panel_setSelected
-00000001000079a0 T _Panel_setSelectionColor
-0000000100007bd0 T _Panel_size
-00000001000106d0 T _Platform_getLoadAverage
-0000000100010750 T _Platform_getMaxPid
-0000000100010a20 T _Platform_getProcessEnv
-0000000100010660 T _Platform_getUptime
-0000000100010650 T _Platform_setBindings
-0000000100010760 T _Platform_setCPUValues
-0000000100010910 T _Platform_setMemoryValues
-00000001000109b0 T _Platform_setSwapValues
-0000000100009b20 T _ProcessList_add
-00000001000111e0 T _ProcessList_allocateCPULoadInfo
-0000000100009ce0 t _ProcessList_buildTree
-00000001000114b0 T _ProcessList_delete
-0000000100009a30 T _ProcessList_done
-0000000100009f10 T _ProcessList_expandTree
-0000000100011190 T _ProcessList_freeCPULoadInfo
-0000000100009ba0 T _ProcessList_get
-0000000100011150 T _ProcessList_getHostInfo
-0000000100011270 T _ProcessList_getKInfoProcs
-000000010000a140 T _ProcessList_getProcess
-0000000100011230 T _ProcessList_getVMStats
-00000001000114d0 T _ProcessList_goThroughEntries
-00000001000099a0 T _ProcessList_init
-0000000100009e80 T _ProcessList_keyAt
-0000000100011350 T _ProcessList_new
-0000000100009a70 T _ProcessList_printHeader
-000000010000a010 T _ProcessList_rebuildPanel
-0000000100009b50 T _ProcessList_remove
-000000010000a180 T _ProcessList_scan
-0000000100009a60 T _ProcessList_setPanel
-0000000100009bc0 T _ProcessList_size
-0000000100009bd0 T _ProcessList_sort
-0000000100009920 T _Process_changePriorityBy
-00000001000088b0 T _Process_colorNumber
-00000001000095f0 T _Process_compare
-0000000100010bd0 T _Process_delete
-0000000100009530 T _Process_display
-00000001000095e0 T _Process_done
-0000000100008670 T _Process_humanNumber
-0000000100009840 T _Process_init
-0000000100010c40 T _Process_isThread
-0000000100008be0 T _Process_outputRate
-0000000100009980 T _Process_pidCompare
-0000000100008a20 T _Process_printTime
-0000000100009930 T _Process_sendSignal
-0000000100009890 T _Process_setPriority
-0000000100008590 T _Process_setupColumnWidths
-0000000100009880 T _Process_toggleTag
-0000000100008d00 T _Process_writeField
-000000010000a4f0 T _RichString_append
-000000010000a7a0 T _RichString_appendn
-000000010000a360 T _RichString_findChar
-000000010000a3c0 T _RichString_prune
-000000010000a400 T _RichString_setAttr
-000000010000a250 T _RichString_setAttrn
-000000010000a7c0 T _RichString_write
-000000010000a530 t _RichString_writeFrom
-000000010000a8d0 T _ScreenManager_add
-000000010000a8a0 T _ScreenManager_delete
-000000010000a800 T _ScreenManager_new
-000000010000a970 T _ScreenManager_remove
-000000010000a990 T _ScreenManager_resize
-000000010000aac0 T _ScreenManager_run
-000000010000a8c0 T _ScreenManager_size
-000000010000bf00 t _Settings_defaultMeters
-000000010000b110 T _Settings_delete
-000000010000c0c0 T _Settings_invertSortOrder
-000000010000b590 T _Settings_new
-000000010000b880 t _Settings_read
-000000010000c0e0 t _Settings_readMeterModes
-000000010000b160 T _Settings_write
-000000010000c1c0 T _SignalsPanel_new
-0000000100002db0 t _SingleColCPUsMeter_draw
-000000010000c2b0 T _String_cat
-000000010000c3e0 T _String_eq
-000000010000c5b0 T _String_freeArray
-000000010000c5f0 T _String_getToken
-000000010000c410 T _String_split
-000000010000c340 T _String_trim
-000000010000c6e0 t _SwapMeter_display
-000000010000c800 t _SwapMeter_setValues
-000000010000c8b0 t _TasksMeter_display
-000000010000caa0 t _TasksMeter_setValues
-0000000100006720 t _TextMeterMode_draw
-000000010000cd50 T _TraceScreen_delete
-000000010000cda0 T _TraceScreen_draw
-000000010000d150 T _TraceScreen_forkTracer
-000000010000d0d0 T _TraceScreen_new
-000000010000d020 T _TraceScreen_onKey
-000000010000ce30 T _TraceScreen_updateTrace
-000000010000cb60 t _UptimeMeter_setValues
-000000010000d2b0 T _UsersTable_delete
-000000010000d330 T _UsersTable_foreach
-000000010000d2d0 T _UsersTable_getRef
-000000010000d280 T _UsersTable_new
-000000010000d840 T _Vector_add
-000000010000d3b0 T _Vector_delete
-000000010000d8b0 T _Vector_indexOf
-000000010000d610 T _Vector_insert
-000000010000d580 T _Vector_insertionSort
-000000010000d780 T _Vector_moveDown
-000000010000d750 T _Vector_moveUp
-000000010000d340 T _Vector_new
-000000010000d410 T _Vector_prune
-000000010000d460 T _Vector_quickSort
-000000010000d6f0 T _Vector_remove
-000000010000d7b0 T _Vector_set
-000000010000d830 T _Vector_size
-000000010000d6a0 T _Vector_take
-                 U __DefaultRuneLocale
-                 U ___CFConstantStringClassReference
-                 U ___bzero
-                 U ___error
-                 U ___maskrune
-                 U ___snprintf_chk
-                 U ___sprintf_chk
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-                 U ___stdoutp
-0000000100000000 T __mh_execute_header
-                 U _abort
-                 U _access
-000000010000ee60 t _actionExpandCollapseOrSortColumn
-000000010000f080 t _actionExpandOrCollapse
-000000010000f0b0 t _actionFilterByUser
-000000010000f1b0 t _actionFollow
-000000010000f3f0 t _actionHelp
-000000010000edc0 t _actionHigherPriority
-000000010000ed50 t _actionIncFilter
-000000010000eda0 t _actionIncSearch
-000000010000ee40 t _actionInvertSortOrder
-000000010000efe0 t _actionKill
-000000010000ee00 t _actionLowerPriority
-000000010000f2e0 t _actionLsof
-000000010000fd60 t _actionQuit
-000000010000fda0 t _actionRedraw
-000000010000ec30 t _actionResize
-000000010000efc0 t _actionSetAffinity
-000000010000eea0 t _actionSetSortColumn
-000000010000f1f0 t _actionSetup
-000000010000fd00 t _actionShowEnvScreen
-000000010000eca0 t _actionSortByCPU
-000000010000ec60 t _actionSortByMemory
-000000010000ec80 t _actionSortByTime
-000000010000f340 t _actionStrace
-000000010000f3b0 t _actionTag
-000000010000fcd0 t _actionTagAllChildren
-000000010000ece0 t _actionToggleKernelThreads
-000000010000ed00 t _actionToggleProgramPath
-000000010000ed20 t _actionToggleTreeView
-000000010000ecc0 t _actionToggleUserlandThreads
-000000010000fc80 t _actionUntagAll
-000000010000fd70 t _addUserToVector
-                 U _atoi
-                 U _backtrace
-                 U _backtrace_symbols_fd
-                 U _beep
-                 U _btowc
-                 U _calloc
-                 U _cbreak
-                 U _ceil
-                 U _curs_set
-                 U _define_key
-                 U _difftime
-                 U _dup2
-                 U _endwin
-                 U _err
-                 U _execlp
-                 U _exit
-0000000100010620 t _fail
-                 U _fclose
-                 U _fcntl
-                 U _fdopen
-                 U _feof
-                 U _fgetc
-                 U _fgets
-                 U _fileno
-                 U _fopen
-                 U _fork
-                 U _fprintf
-                 U _fputc
-                 U _fputs
-                 U _fread
-                 U _free
-                 U _fwrite
-                 U _getenv
-                 U _geteuid
-                 U _gethostname
-                 U _getloadavg
-                 U _getmouse
-                 U _getopt_long
-                 U _getpriority
-                 U _getpwnam
-                 U _getpwuid
-                 U _gettimeofday
-                 U _getuid
-                 U _halfdelay
-                 U _has_colors
-                 U _host_info
-                 U _host_processor_info
-                 U _host_statistics
-                 U _init_pair
-                 U _initscr
-                 U _intrflush
-                 U _keypad
-                 U _kill
-                 U _localtime_r
-                 U _log10
-                 U _lstat$INODE64
-                 U _mach_host_self
-0000000100005150 T _main
-                 U _malloc
-                 U _mbstowcs
-                 U _memcpy
-                 U _memset
-                 U _mkdir
-                 U _mouseinterval
-                 U _mousemask
-                 U _munmap
-                 U _mvprintw
-                 U _nanosleep
-                 U _napms
-                 U _nl_langinfo
-                 U _nocbreak
-                 U _nodelay
-                 U _noecho
-                 U _nonl
-                 U _optarg
-                 U _pclose
-                 U _pipe
-                 U _popen
-                 U _proc_pidinfo
-                 U _puts
-000000010000d480 t _quickSort
-                 U _realloc
-                 U _select$1050
-                 U _seteuid
-                 U _setlocale
-                 U _setpriority
-                 U _signal
-                 U _sscanf
-                 U _start_color
-                 U _stdscr
-                 U _strcasestr
-                 U _strchr
-                 U _strcmp
-                 U _strdup
-                 U _strerror
-                 U _strftime
-                 U _strlen
-                 U _strncasecmp
-                 U _strncpy
-                 U _strrchr
-                 U _strtok_r
-                 U _sysctl
-000000010000fdc0 t _tagAllChildren
-                 U _time
-                 U _ungetch
-                 U _unlink
-                 U _use_default_colors
-                 U _vm_page_size
-                 U _vwprintw
-                 U _wadd_wchnstr
-                 U _waddch
-                 U _waddnstr
-                 U _waitpid
-                 U _wattr_off
-                 U _wattr_on
-                 U _wattrset
-                 U _wclear
-                 U _wgetch
-                 U _whline
-                 U _wmove
-                 U _wrefresh
-                 U _write
-                 U _wvline
-00000001000105a0 T _xCalloc
-0000000100010570 T _xMalloc
-00000001000105c0 T _xRealloc
-00000001000105f0 T _xStrdup
-                 U dyld_stub_binder
-
-/bin/kill:
-                 U __DefaultRuneLocale
-                 U ___maskrune
-                 U ___stderrp
-                 U ___stdoutp
-0000000100000000 T __mh_execute_header
-                 U _errx
-                 U _exit
-                 U _fprintf
-                 U _fputc
-                 U _fputs
-                 U _kill
-                 U _puts
-                 U _strcasecmp
-                 U _strcmp
-                 U _strncasecmp
-                 U _strtol
-                 U _sys_signame
-                 U _warn
-                 U _warnx
-                 U dyld_stub_binder
-
-/bin/ksh:
-                 U __DefaultRuneLocale
-                 U ___bzero
-                 U ___error
-                 U ___fpclassifyl
-                 U ___maskrune
-                 U ___mb_cur_max
-                 U ___memccpy_chk
-                 U ___memcpy_chk
-                 U ___memset_chk
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___strcat_chk
-                 U ___strcpy_chk
-                 U ___strlcpy_chk
-                 U ___strncpy_chk
-                 U ___tolower
-                 U ___toupper
-                 U __exit
-                 U __longjmp
-0000000100000000 T __mh_execute_header
-                 U __setjmp
-                 U _abort
-                 U _accept
-                 U _access
-                 U _acoshl
-                 U _acosl
-                 U _alarm
-                 U _asinhl
-                 U _asinl
-                 U _atan2l
-                 U _atanhl
-                 U _atanl
-                 U _atexit
-                 U _bind
-                 U _catclose
-                 U _catgets
-                 U _catopen
-                 U _cbrtl
-                 U _ceill
-                 U _cfgetospeed
-                 U _chdir
-                 U _chmod
-                 U _close
-                 U _closedir
-                 U _confstr
-                 U _connect
-                 U _copysignl
-                 U _coshl
-                 U _cosl
-                 U _dlclose
-                 U _dlerror
-                 U _dlopen
-                 U _dlsym
-                 U _dup
-                 U _environ
-                 U _erfcl
-                 U _erfl
-                 U _execlp
-                 U _execv
-                 U _execve
-                 U _exit
-                 U _exp2l
-                 U _expl
-                 U _expm1l
-                 U _fabsl
-                 U _fchdir
-                 U _fchmod
-                 U _fcntl
-                 U _fdiml
-                 U _finite
-                 U _floorl
-                 U _fmal
-                 U _fmaxl
-                 U _fminl
-                 U _fmodl
-                 U _fork
-                 U _freeaddrinfo
-                 U _frexp
-                 U _frexpl
-                 U _fstat$INODE64
-                 U _ftruncate
-                 U _getaddrinfo
-                 U _getdomainname
-                 U _getegid
-                 U _geteuid
-                 U _getfsstat$INODE64
-                 U _getgid
-                 U _getgroups
-                 U _gethostid
-                 U _gethostname
-                 U _getlogin
-                 U _getpagesize
-                 U _getpgrp
-                 U _getpid
-                 U _getppid
-                 U _getpwnam
-                 U _getpwuid
-                 U _getrlimit
-                 U _gettimeofday
-                 U _getuid
-                 U _gmtime
-                 U _hypotl
-                 U _iconv
-                 U _iconv_close
-                 U _iconv_open
-                 U _ilogbl
-                 U _ioctl
-                 U _isalnum
-                 U _isalpha
-                 U _isatty
-                 U _isdigit
-                 U _islower
-                 U _isprint
-                 U _isspace
-                 U _isupper
-                 U _iswalpha
-                 U _iswlower
-                 U _iswupper
-                 U _isxdigit
-                 U _j0
-                 U _j1
-                 U _jn
-                 U _kill
-                 U _killpg
-                 U _lchmod
-                 U _ldexp
-                 U _ldexpl
-                 U _lgammal
-                 U _listen
-                 U _localeconv
-                 U _localtime
-                 U _log10l
-                 U _log1pl
-                 U _log2l
-                 U _logbl
-                 U _logl
-                 U _lseek
-                 U _lstat$INODE64
-                 U _madvise
-                 U _mblen
-                 U _mbrtowc
-                 U _mbtowc
-                 U _memchr
-                 U _memcmp
-                 U _memcpy
-                 U _memmove
-                 U _memset
-                 U _memset_pattern16
-                 U _mkdir
-                 U _mmap
-                 U _mount
-                 U _munmap
-                 U _nanosleep
-                 U _nearbyintl
-                 U _nextafterl
-                 U _nexttowardl
-                 U _nice
-                 U _nl_langinfo
-                 U _open
-                 U _opendir$INODE64
-                 U _pathconf
-                 U _pause
-                 U _pipe
-                 U _poll
-                 U _posix_spawn
-                 U _posix_spawnattr_destroy
-                 U _posix_spawnattr_init
-                 U _posix_spawnattr_setflags
-                 U _posix_spawnattr_setpgroup
-                 U _pow
-                 U _powl
-                 U _qsort
-                 U _rand
-                 U _read
-                 U _readdir$INODE64
-                 U _readlink
-                 U _remainderl
-                 U _rename
-                 U _rewinddir$INODE64
-                 U _rintl
-                 U _roundl
-                 U _sbrk
-                 U _scalb
-                 U _scalbnl
-                 U _select$1050
-                 U _semctl
-                 U _semget
-                 U _semop
-                 U _setgid
-                 U _sethostname
-                 U _setitimer
-                 U _setlocale
-                 U _setpgid
-                 U _setregid
-                 U _setreuid
-                 U _setrlimit
-                 U _setsid
-                 U _setuid
-                 U _shutdown
-                 U _sigaction
-                 U _sigpending
-                 U _sigprocmask
-                 U _sigvec
-                 U _sinhl
-                 U _sinl
-                 U _socket
-                 U _socketpair
-                 U _sqrtl
-                 U _srand
-                 U _stat$INODE64
-                 U _strcasecmp
-                 U _strchr
-                 U _strcmp
-                 U _strcoll
-                 U _strcpy
-                 U _strerror
-                 U _strlen
-                 U _strncmp
-                 U _strncpy
-                 U _strrchr
-                 U _strstr
-                 U _strxfrm
-                 U _sync
-                 U _sysconf
-                 U _tanhl
-                 U _tanl
-                 U _tcgetattr
-                 U _tcgetpgrp
-                 U _tcsetattr
-                 U _tcsetpgrp
-                 U _tgammal
-                 U _time
-                 U _times
-                 U _tolower
-                 U _toupper
-                 U _towctrans
-                 U _towlower
-                 U _towupper
-                 U _truncl
-                 U _ttyname
-                 U _tzname
-                 U _tzset
-                 U _umask
-                 U _uname
-                 U _unlink
-                 U _utime
-                 U _utimes
-                 U _vfork
-                 U _wait
-                 U _waitpid
-                 U _wcrtomb
-                 U _wctomb
-                 U _wctrans
-                 U _wctype
-                 U _wcwidth
-                 U _write
-                 U _y0
-                 U _y1
-                 U _yn
-                 U dyld_stub_binder
-
-/bin/launchctl:
-                 U _NSGetNextSearchPathEnumeration
-                 U _NSStartSearchPathEnumeration
-                 U __NSGetEnviron
-                 U ___error
-                 U ___snprintf_chk
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-                 U ___stdoutp
-                 U ___strcat_chk
-                 U ___strlcpy_chk
-                 U ___udivti3
-0000000100000000 T __mh_execute_header
-                 U __os_alloc_once
-                 U __os_alloc_once_table
-                 U __os_assert_log
-                 U __os_assumes_log
-                 U __os_avoid_tail_call
-                 U __os_crash
-                 U __xpc_bool_true
-                 U __xpc_type_array
-                 U __xpc_type_bool
-                 U __xpc_type_dictionary
-                 U __xpc_type_double
-                 U __xpc_type_fd
-                 U __xpc_type_int64
-                 U __xpc_type_mach_send
-                 U __xpc_type_string
-                 U _asprintf
-                 U _au_sflagstostr
-                 U _audit_session_port
-                 U _auditon
-                 U _bootstrap_get_root
-                 U _bootstrap_port
-                 U _bootstrap_strerror
-                 U _close
-                 U _csops
-                 U _csops_audittoken
-                 U _csr_check
-                 U _dispatch_once_f
-                 U _dlopen
-                 U _dlsym
-                 U _exit
-                 U _fprintf
-                 U _fputc
-                 U _fputs
-                 U _free
-                 U _fstat$INODE64
-                 U _fwrite
-                 U _getcwd
-                 U _getenv
-                 U _getopt
-                 U _getopt_long
-                 U _getpid
-                 U _getppid
-                 U _getprogname
-                 U _getuid
-                 U _host_get_exception_ports
-                 U _host_get_special_port
-                 U _isatty
-                 U _kevent
-                 U _kill
-                 U _kqueue
-                 U _launch_data_free
-                 U _launch_data_get_errno
-                 U _launch_msg
-                 U _mach_error_string
-                 U _mach_host_self
-                 U _mach_port_deallocate
-                 U _mach_port_type
-                 U _mach_task_self_
-                 U _mach_timebase_info
-                 U _malloc
-                 U _memcpy
-                 U _memset
-                 U _mmap
-                 U _munmap
-                 U _objc_autoreleaseReturnValue
-                 U _objc_release
-                 U _objc_retain
-                 U _objc_retainAutorelease
-                 U _objc_retainAutoreleasedReturnValue
-                 U _objc_storeStrong
-                 U _open
-                 U _optarg
-                 U _opterr
-                 U _optind
-                 U _posix_spawnattr_destroy
-                 U _posix_spawnattr_init
-                 U _posix_spawnattr_setauditsessionport_np
-                 U _posix_spawnattr_setexceptionports_np
-                 U _posix_spawnattr_setflags
-                 U _posix_spawnattr_setspecialport_np
-                 U _posix_spawnp
-                 U _proc_get_dirty
-                 U _proc_pidinfo
-                 U _proc_pidpath
-                 U _read
-                 U _reboot3
-                 U _responsibility_get_responsible_for_pid
-                 U _sandbox_check
-                 U _sandbox_container_path_for_pid
-                 U _setenv
-                 U _signal
-                 U _sleep
-                 U _statfs$INODE64
-                 U _strcasecmp
-                 U _strchr
-                 U _strcmp
-                 U _strdup
-                 U _strerror
-                 U _strlen
-                 U _strncasecmp
-                 U _strncmp
-                 U _strrchr
-                 U _strsep
-                 U _strsignal
-                 U _strtol
-                 U _strtold
-                 U _strtoll
-                 U _strtoul
-                 U _swap_fat_arch
-                 U _swap_fat_header
-                 U _swap_mach_header
-                 U _swap_mach_header_64
-                 U _swap_section
-                 U _swap_section_64
-                 U _swap_segment_command
-                 U _swap_segment_command_64
-                 U _sys_signame
-                 U _sysctlbyname
-                 U _task_for_pid
-                 U _task_get_exception_ports
-                 U _task_get_special_port
-                 U _task_set_exception_ports
-                 U _task_set_special_port
-                 U _vasprintf
-                 U _vproc_swap_integer
-                 U _vproc_swap_string
-                 U _waitpid
-                 U _xpc_array_apply_f
-                 U _xpc_array_create
-                 U _xpc_array_get_count
-                 U _xpc_array_get_value
-                 U _xpc_array_set_fd
-                 U _xpc_array_set_int64
-                 U _xpc_array_set_string
-                 U _xpc_create_from_plist
-                 U _xpc_data_create
-                 U _xpc_data_get_bytes_ptr
-                 U _xpc_data_get_length
-                 U _xpc_dictionary_apply_f
-                 U _xpc_dictionary_copy_mach_send
-                 U _xpc_dictionary_create
-                 U _xpc_dictionary_get_bool
-                 U _xpc_dictionary_get_count
-                 U _xpc_dictionary_get_data
-                 U _xpc_dictionary_get_int64
-                 U _xpc_dictionary_get_string
-                 U _xpc_dictionary_get_uint64
-                 U _xpc_dictionary_get_value
-                 U _xpc_dictionary_set_bool
-                 U _xpc_dictionary_set_fd
-                 U _xpc_dictionary_set_int64
-                 U _xpc_dictionary_set_mach_send
-                 U _xpc_dictionary_set_string
-                 U _xpc_dictionary_set_uint64
-                 U _xpc_dictionary_set_value
-                 U _xpc_double_get_value
-                 U _xpc_get_type
-                 U _xpc_int64_create
-                 U _xpc_int64_get_value
-                 U _xpc_null_create
-                 U _xpc_pipe_create_from_port
-                 U _xpc_pipe_routine
-                 U _xpc_strerror
-                 U _xpc_string_create
-                 U _xpc_string_get_string_ptr
-                 U dyld_stub_binder
-
-/bin/link:
-                 U ___error
-                 U ___snprintf_chk
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-                 U ___stdoutp
-                 U ___strlcpy_chk
-0000000100000000 T __mh_execute_header
-                 U _basename
-                 U _err
-                 U _exit
-                 U _fflush
-                 U _fprintf
-                 U _fwrite
-                 U _getchar
-                 U _getopt
-                 U _link
-                 U _lstat$INODE64
-                 U _optind
-                 U _printf
-                 U _rindex
-                 U _rmdir
-                 U _stat$INODE64
-                 U _strcmp
-                 U _symlink
-                 U _unlink
-                 U _warn
-                 U dyld_stub_binder
-
-/bin/ln:
-                 U ___error
-                 U ___snprintf_chk
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-                 U ___stdoutp
-                 U ___strlcpy_chk
-0000000100000000 T __mh_execute_header
-                 U _basename
-                 U _err
-                 U _exit
-                 U _fflush
-                 U _fprintf
-                 U _fwrite
-                 U _getchar
-                 U _getopt
-                 U _link
-                 U _lstat$INODE64
-                 U _optind
-                 U _printf
-                 U _rindex
-                 U _rmdir
-                 U _stat$INODE64
-                 U _strcmp
-                 U _symlink
-                 U _unlink
-                 U _warn
-                 U dyld_stub_binder
-
-/bin/ls:
-                 U __DefaultRuneLocale
-                 U ___assert_rtn
-                 U ___bzero
-                 U ___error
-                 U ___maskrune
-                 U ___snprintf_chk
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-                 U ___stdoutp
-                 U ___tolower
-0000000100000000 T __mh_execute_header
-                 U _acl_free
-                 U _acl_get_entry
-                 U _acl_get_flag_np
-                 U _acl_get_flagset_np
-                 U _acl_get_link_np
-                 U _acl_get_perm_np
-                 U _acl_get_permset
-                 U _acl_get_qualifier
-                 U _acl_get_tag_type
-                 U _atoi
-                 U _calloc
-                 U _compat_mode
-                 U _err
-                 U _exit
-                 U _fflagstostr
-                 U _fprintf
-                 U _fputs
-                 U _free
-                 U _fts_children$INODE64
-                 U _fts_close$INODE64
-                 U _fts_open$INODE64
-                 U _fts_read$INODE64
-                 U _fts_set$INODE64
-                 U _fwrite
-                 U _getbsize
-                 U _getenv
-                 U _getopt
-                 U _getpid
-                 U _getuid
-                 U _getxattr
-                 U _group_from_gid
-                 U _humanize_number
-                 U _ioctl
-                 U _isatty
-                 U _kill
-                 U _listxattr
-                 U _localtime
-                 U _malloc
-                 U _mbr_identifier_translate
-                 U _mbrtowc
-                 U _memchr
-                 U _nl_langinfo
-                 U _optind
-                 U _printf
-                 U _putchar
-                 U _readlink
-                 U _realloc
-                 U _reallocf
-                 U _setenv
-                 U _setlocale
-                 U _signal
-                 U _sscanf
-                 U _strcoll
-                 U _strcpy
-                 U _strdup
-                 U _strerror
-                 U _strftime
-                 U _strlen
-                 U _strmode
-                 U _tgetent
-                 U _tgetstr
-                 U _tgoto
-                 U _time
-                 U _tputs
-                 U _user_from_uid
-                 U _uuid_unparse_upper
-                 U _warn
-                 U _warnx
-                 U _wcwidth
-                 U _write
-                 U dyld_stub_binder
-
-/bin/mkdir:
-                 U ___error
-                 U ___stderrp
-0000000100000000 T __mh_execute_header
-                 U _chmod
-                 U _dirname
-                 U _errx
-                 U _exit
-                 U _free
-                 U _fwrite
-                 U _getmode
-                 U _getopt
-                 U _mkdir
-                 U _mkpath_np
-                 U _optarg
-                 U _optind
-                 U _printf
-                 U _setmode
-                 U _warn
-                 U _warnc
-                 U dyld_stub_binder
-
-/bin/mv:
-                 U ___error
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-                 U ___strcpy_chk
-                 U __exit
-0000000100000000 T __mh_execute_header
-                 U _access
-                 U _close
-                 U _compat_mode
-                 U _errx
-                 U _execl
-                 U _exit
-                 U _fchflags
-                 U _fchmod
-                 U _fchown
-                 U _fcntl
-                 U _fcopyfile
-                 U _fork
-                 U _fprintf
-                 U _free
-                 U _fstatfs$INODE64
-                 U _fwrite
-                 U _getchar
-                 U _getopt
-                 U _group_from_gid
-                 U _lstat$INODE64
-                 U _malloc
-                 U _memmove
-                 U _open
-                 U _optind
-                 U _printf
-                 U _read
-                 U _realpath$DARWIN_EXTSN
-                 U _rename
-                 U _stat$INODE64
-                 U _statfs$INODE64
-                 U _strcmp
-                 U _strlen
-                 U _strmode
-                 U _unlink
-                 U _user_from_uid
-                 U _utimes
-                 U _vfork
-                 U _waitpid
-                 U _warn
-                 U _warnx
-                 U _write
-                 U dyld_stub_binder
-
-/bin/pax:
-                 U ___bzero
-                 U ___error
-                 U ___memcpy_chk
-                 U ___memmove_chk
-                 U ___snprintf_chk
-                 U ___sprintf_chk
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-                 U ___stdinp
-                 U ___stdoutp
-                 U ___strlcpy_chk
-0000000100000000 T __mh_execute_header
-                 U _access
-                 U _asprintf
-                 U _atoi
-                 U _basename
-                 U _bsearch
-                 U _calloc
-                 U _chdir
-                 U _chmod
-                 U _chown
-                 U _close
-                 U _copyfile
-                 U _dirname
-                 U _dup2
-                 U _endgrent
-                 U _endpwent
-                 U _err
-                 U _errx
-                 U _execlp
-                 U _exit
-                 U _fchdir
-                 U _fclose
-                 U _fcopyfile
-                 U _fdopen
-                 U _feof
-                 U _ferror
-                 U _fflush
-                 U _fgetln
-                 U _fgets
-                 U _fileno
-                 U _fnmatch
-                 U _fopen
-                 U _fork
-                 U _fprintf
-                 U _fputc
-                 U _fputs
-                 U _free
-                 U _fstat$INODE64
-                 U _ftruncate
-                 U _fts_close$INODE64
-                 U _fts_open$INODE64
-                 U _fts_read$INODE64
-                 U _fts_set$INODE64
-                 U _getchar
-                 U _getcwd
-                 U _getenv
-                 U _geteuid
-                 U _getgrgid
-                 U _getgrnam
-                 U _getopt
-                 U _getopt_long
-                 U _getpid
-                 U _getpwnam
-                 U _getpwuid
-                 U _getrlimit
-                 U _isatty
-                 U _issetugid
-                 U _kill
-                 U _link
-                 U _localtime
-                 U _lseek
-                 U _lstat$INODE64
-                 U _malloc
-                 U _memcpy
-                 U _memmove
-                 U _mkdir
-                 U _mkfifo
-                 U _mknod
-                 U _mkstemp
-                 U _mktime
-                 U _nl_langinfo
-                 U _open
-                 U _optarg
-                 U _optind
-                 U _pipe
-                 U _putc
-                 U _read
-                 U _readlink
-                 U _realloc
-                 U _realpath$DARWIN_EXTSN
-                 U _regcomp
-                 U _regerror
-                 U _regexec
-                 U _regfree
-                 U _rmdir
-                 U _setgroupent
-                 U _setpassent
-                 U _setrlimit
-                 U _sigaction
-                 U _sigprocmask
-                 U _sscanf
-                 U _stat$INODE64
-                 U _strchr
-                 U _strcmp
-                 U _strcspn
-                 U _strdup
-                 U _strerror
-                 U _strftime
-                 U _strlen
-                 U _strmode
-                 U _strncasecmp
-                 U _strncmp
-                 U _strncpy
-                 U _strrchr
-                 U _strspn
-                 U _strstr
-                 U _strtoq
-                 U _strtoul
-                 U _symlink
-                 U _time
-                 U _unlink
-                 U _utimes
-                 U _vfprintf
-                 U _vis
-                 U _waitpid
-                 U _write
-                 U dyld_stub_binder
-
-/bin/ps:
-                 U ___error
-                 U ___snprintf_chk
-                 U ___sprintf_chk
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-                 U ___stdoutp
-                 U ___strlcat_chk
-                 U ___strlcpy_chk
-0000000100000000 T __mh_execute_header
-                 U _access
-                 U _asprintf
-                 U _atoi
-                 U _bsearch
-                 U _compat_mode
-                 U _devname
-                 U _err
-                 U _errx
-                 U _exit
-                 U _fprintf
-                 U _fputs
-                 U _free
-                 U _getenv
-                 U _getgrgid
-                 U _getgrnam
-                 U _getopt
-                 U _getprogname
-                 U _getpwnam
-                 U _getpwuid
-                 U _gettimeofday
-                 U _getuid
-                 U _ioctl
-                 U _isatty
-                 U _localtime
-                 U _mach_port_deallocate
-                 U _mach_task_self_
-                 U _malloc
-                 U _memchr
-                 U _memcpy
-                 U _nl_langinfo
-                 U _optarg
-                 U _optind
-                 U _perror
-                 U _printf
-                 U _proc_pidinfo
-                 U _putchar
-                 U _qsort
-                 U _realloc
-                 U _setlocale
-                 U _sleep
-                 U _stat$INODE64
-                 U _strchr
-                 U _strcmp
-                 U _strcpy
-                 U _strdup
-                 U _strftime
-                 U _strlen
-                 U _strncmp
-                 U _strsep
-                 U _strtol
-                 U _strtoul
-                 U _strvis
-                 U _sysctl
-                 U _task_for_pid
-                 U _task_info
-                 U _task_threads
-                 U _thread_info
-                 U _time
-                 U _ttyname
-                 U _user_from_uid
-                 U _vm_deallocate
-                 U _vm_region_64
-                 U _warn
-                 U _warnx
-                 U dyld_stub_binder
-
-/bin/pwd:
-                 U ___error
-                 U ___stderrp
-0000000100000000 T __mh_execute_header
-                 U _err
-                 U _exit
-                 U _fwrite
-                 U _getcwd
-                 U _getenv
-                 U _getopt
-                 U _optind
-                 U _puts
-                 U _stat$INODE64
-                 U dyld_stub_binder
-
-/bin/rcp:
-                 U __DefaultRuneLocale
-                 U ___error
-                 U ___maskrune
-                 U ___snprintf_chk
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-                 U __exit
-0000000100000000 T __mh_execute_header
-                 U _asprintf
-                 U _chmod
-                 U _close
-                 U _closedir
-                 U _err
-                 U _errx
-                 U _execl
-                 U _exit
-                 U _fchmod
-                 U _fdopen
-                 U _fflush
-                 U _fprintf
-                 U _fputc
-                 U _free
-                 U _fstat$INODE64
-                 U _ftruncate
-                 U _fwrite
-                 U _getopt
-                 U _getpwuid
-                 U _getservbyname
-                 U _getuid
-                 U _malloc
-                 U _mkdir
-                 U _open
-                 U _opendir$INODE64
-                 U _optind
-                 U _rcmd_af
-                 U _read
-                 U _readdir$INODE64
-                 U _realloc
-                 U _seteuid
-                 U _setsockopt
-                 U _setuid
-                 U _signal
-                 U _stat$INODE64
-                 U _strchr
-                 U _strcmp
-                 U _strerror
-                 U _strlen
-                 U _strrchr
-                 U _strtol
-                 U _umask
-                 U _utimes
-                 U _vfork
-                 U _vfprintf
-                 U _vwarnx
-                 U _waitpid
-                 U _warn
-                 U _warnx
-                 U _write
-                 U dyld_stub_binder
-
-/bin/rm:
-                 U ___error
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-0000000100000000 T __mh_execute_header
-                 U _access
-                 U _chflags
-                 U _compat_mode
-                 U _err
-                 U _errx
-                 U _exit
-                 U _fflagstostr
-                 U _fflush
-                 U _fprintf
-                 U _free
-                 U _fts_close$INODE64
-                 U _fts_open$INODE64
-                 U _fts_read$INODE64
-                 U _fts_set$INODE64
-                 U _getchar
-                 U _geteuid
-                 U _getopt
-                 U _group_from_gid
-                 U _isatty
-                 U _lstat$INODE64
-                 U _optind
-                 U _puts
-                 U _removefile
-                 U _rindex
-                 U _rmdir
-                 U _strcmp
-                 U _strerror
-                 U _strmode
-                 U _strrchr
-                 U _undelete
-                 U _unlink
-                 U _user_from_uid
-                 U _warn
-                 U _warnx
-                 U dyld_stub_binder
-
-/bin/rmdir:
-                 U ___stderrp
-0000000100000000 T __mh_execute_header
-                 U _exit
-                 U _fwrite
-                 U _getopt
-                 U _optind
-                 U _rmdir
-                 U _strlen
-                 U _strrchr
-                 U _warn
-                 U dyld_stub_binder
-
-/bin/sh:
-                 U __DefaultRuneLocale
-                 U ___bzero
-                 U ___error
-                 U ___maskrune
-                 U ___mb_cur_max
-                 U ___memcpy_chk
-                 U ___memmove_chk
-                 U ___snprintf_chk
-                 U ___sprintf_chk
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-                 U ___stdinp
-                 U ___stdoutp
-                 U ___strcat_chk
-                 U ___strcpy_chk
-                 U ___strncpy_chk
-                 U ___tolower
-                 U ___toupper
-                 U ___vsnprintf_chk
-0000000100000000 T __mh_execute_header
-                 U _abort
-                 U _access
-                 U _alarm
-                 U _asprintf
-                 U _atoi
-                 U _atol
-                 U _bcopy
-                 U _bsearch
-                 U _chdir
-                 U _clearerr
-                 U _close
-                 U _closedir
-                 U _compat_mode
-                 U _confstr
-                 U _connect
-                 U _dlclose
-                 U _dlerror
-                 U _dlopen
-                 U _dlsym
-                 U _dup
-                 U _dup2
-                 U _endgrent
-                 U _endpwent
-                 U _endservent
-                 U _environ
-                 U _execv
-                 U _execve
-                 U _exit
-                 U _fclose
-                 U _fcntl
-                 U _fdopen
-                 U _feof
-                 U _ferror
-                 U _fflush
-                 U _fgets
-                 U _fileno
-                 U _fopen
-                 U _fork
-                 U _fprintf
-                 U _fputc
-                 U _fputs
-                 U _free
-                 U _freeaddrinfo
-                 U _fstat$INODE64
-                 U _fwrite
-                 U _gai_strerror
-                 U _getaddrinfo
-                 U _getcwd
-                 U _getdtablesize
-                 U _getegid
-                 U _geteuid
-                 U _getgid
-                 U _getgrent
-                 U _getgroups
-                 U _gethostname
-                 U _getpeername
-                 U _getpgrp
-                 U _getpid
-                 U _getppid
-                 U _getpwent
-                 U _getpwnam
-                 U _getpwuid
-                 U _getrlimit
-                 U _getrusage
-                 U _getservent
-                 U _gettimeofday
-                 U _getuid
-                 U _ioctl
-                 U _isatty
-                 U _kill
-                 U _killpg
-                 U _localtime
-                 U _lseek
-                 U _lstat$INODE64
-                 U _malloc
-                 U _mblen
-                 U _mbrlen
-                 U _mbrtowc
-                 U _mbsinit
-                 U _mbstowcs
-                 U _mbtowc
-                 U _memchr
-                 U _memcmp
-                 U _memcpy
-                 U _memmove
-                 U _memset
-                 U _memset_pattern16
-                 U _mmap
-                 U _munmap
-                 U _open
-                 U _opendir$INODE64
-                 U _pathconf
-                 U _pipe
-                 U _printf
-                 U _putc
-                 U _putchar
-                 U _puts
-                 U _qsort
-                 U _raise
-                 U _read
-                 U _readdir$INODE64
-                 U _readlink
-                 U _realloc
-                 U _regcomp
-                 U _regexec
-                 U _regfree
-                 U _select$1050
-                 U _setgid
-                 U _setgrent
-                 U _setlocale
-                 U _setpgid
-                 U _setpwent
-                 U _setregid
-                 U _setreuid
-                 U _setrlimit
-                 U _setservent
-                 U _setuid
-                 U _setvbuf
-                 U _sigaction
-                 U _siglongjmp
-                 U _sigprocmask
-                 U _sigsetjmp
-                 U _sleep
-                 U _socket
-                 U _stat$INODE64
-                 U _stpcpy
-                 U _strcasecmp
-                 U _strchr
-                 U _strcmp
-                 U _strcoll
-                 U _strcpy
-                 U _strdup
-                 U _strerror
-                 U _strftime
-                 U _strlen
-                 U _strncasecmp
-                 U _strncmp
-                 U _strncpy
-                 U _strpbrk
-                 U _strrchr
-                 U _strsignal
-                 U _strstr
-                 U _strtod
-                 U _strtol
-                 U _strtoul
-                 U _sysconf
-                 U _tcgetattr
-                 U _tcgetpgrp
-                 U _tcsetattr
-                 U _tcsetpgrp
-                 U _tgetent
-                 U _tgetflag
-                 U _tgetnum
-                 U _tgetstr
-                 U _tgoto
-                 U _time
-                 U _tputs
-                 U _ttyname
-                 U _tzset
-                 U _umask
-                 U _unlink
-                 U _vfprintf
-                 U _waitpid
-                 U _wcrtomb
-                 U _wcschr
-                 U _wcscmp
-                 U _wcscoll
-                 U _wcscpy
-                 U _wcslen
-                 U _wcsncmp
-                 U _wcsrtombs
-                 U _wctob
-                 U _wctype
-                 U _wcwidth
-                 U _write
-                 U dyld_stub_binder
-
-/bin/sleep:
-                 U __DefaultRuneLocale
-                 U ___maskrune
-0000000100000000 T __mh_execute_header
-                 U _nanosleep
-                 U _strcmp
-                 U _strtol
-                 U _write
-                 U dyld_stub_binder
-
-/bin/stty:
-                 U ___snprintf_chk
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-0000000100000000 T __mh_execute_header
-                 U _atoi
-                 U _bsearch
-                 U _cfgetispeed
-                 U _cfgetospeed
-                 U _cfmakeraw
-                 U _cfsetispeed
-                 U _cfsetospeed
-                 U _compat_mode
-                 U _err
-                 U _errx
-                 U _exit
-                 U _fstat$INODE64
-                 U _fwrite
-                 U _getopt
-                 U _ioctl
-                 U _isatty
-                 U _open
-                 U _optarg
-                 U _opterr
-                 U _optind
-                 U _printf
-                 U _putchar
-                 U _puts
-                 U _sscanf
-                 U _strchr
-                 U _strcmp
-                 U _strlen
-                 U _strncmp
-                 U _strsep
-                 U _strspn
-                 U _strtol
-                 U _tcgetattr
-                 U _tcsetattr
-                 U _warn
-                 U _warnx
-                 U dyld_stub_binder
-
-/bin/sync:
-./ft_nm: '/bin/sync': The file was not recognized as a valid object file.
-
-/bin/syslog.py:
-./ft_nm: '/bin/syslog.py': The file was not recognized as a valid object file.
-
-/bin/tcsh:
-                 U __DefaultRuneLocale
-                 U ___assert_rtn
-                 U ___bzero
-                 U ___error
-                 U ___maskrune
-                 U ___mb_cur_max
-                 U ___memmove_chk
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___tolower
-                 U ___toupper
-                 U __exit
-0000000100000000 T __mh_execute_header
-                 U _abort
-                 U _access
-                 U _alarm
-                 U _atof
-                 U _atoi
-                 U _catclose
-                 U _catgets
-                 U _catopen
-                 U _cfgetispeed
-                 U _cfgetospeed
-                 U _cfsetispeed
-                 U _cfsetospeed
-                 U _chdir
-                 U _close
-                 U _closedir
-                 U _creat
-                 U _crypt
-                 U _ctime
-                 U _dup
-                 U _dup2
-                 U _endgrent
-                 U _endpwent
-                 U _endutxent
-                 U _environ
-                 U _execv
-                 U _exit
-                 U _fcntl
-                 U _fork
-                 U _free
-                 U _fstat$INODE64
-                 U _getcwd
-                 U _getegid
-                 U _getenv
-                 U _geteuid
-                 U _getgid
-                 U _getgrent
-                 U _getgrgid
-                 U _getgroups
-                 U _gethostbyname
-                 U _gethostname
-                 U _getpeername
-                 U _getpgrp
-                 U _getpid
-                 U _getpwent
-                 U _getpwnam
-                 U _getpwuid
-                 U _getrlimit
-                 U _getrusage
-                 U _gettimeofday
-                 U _getuid
-                 U _getutxent
-                 U _iconv
-                 U _iconv_close
-                 U _iconv_open
-                 U _inet_addr
-                 U _inet_ntoa
-                 U _ioctl
-                 U _isatty
-                 U _kill
-                 U _killpg
-                 U _localtime
-                 U _longjmp
-                 U _lseek
-                 U _lstat$INODE64
-                 U _malloc
-                 U _mblen
-                 U _mbtowc
-                 U _memchr
-                 U _memcmp
-                 U _memcpy
-                 U _memmove
-                 U _memset
-                 U _memset_pattern16
-                 U _mkstemp
-                 U _nl_langinfo
-                 U _open
-                 U _opendir$INODE64
-                 U _pipe
-                 U _qsort
-                 U _read
-                 U _readdir$INODE64
-                 U _readlink
-                 U _realloc
-                 U _rewinddir$INODE64
-                 U _setgrent
-                 U _setjmp
-                 U _setlocale
-                 U _setpgid
-                 U _setpriority
-                 U _setpwent
-                 U _setrlimit
-                 U _setutxent
-                 U _sigaction
-                 U _signal
-                 U _sigprocmask
-                 U _sigsuspend
-                 U _sleep
-                 U _stat$INODE64
-                 U _strchr
-                 U _strcmp
-                 U _strcoll
-                 U _strcpy
-                 U _strerror
-                 U _strlen
-                 U _strncmp
-                 U _strncpy
-                 U _strrchr
-                 U _strtol
-                 U _strtoul
-                 U _sysconf
-                 U _tcgetattr
-                 U _tcgetpgrp
-                 U _tcsetattr
-                 U _tcsetpgrp
-                 U _tgetent
-                 U _tgetflag
-                 U _tgetnum
-                 U _tgetstr
-                 U _tgoto
-                 U _time
-                 U _tputs
-                 U _ttyname
-                 U _umask
-                 U _unlink
-                 U _vfork
-                 U _wait3
-                 U _waitpid
-                 U _wcscat
-                 U _wcschr
-                 U _wcscmp
-                 U _wcscoll
-                 U _wcscpy
-                 U _wcslen
-                 U _wcsncmp
-                 U _wcsncpy
-                 U _wcsrchr
-                 U _wctomb
-                 U _wcwidth
-                 U _write
-                 U dyld_stub_binder
-
-/bin/test:
-                 U __DefaultRuneLocale
-                 U ___error
-                 U ___maskrune
-0000000100000000 T __mh_execute_header
-                 U _abort
-                 U _access
-                 U _errx
-                 U _getegid
-                 U _geteuid
-                 U _isatty
-                 U _lstat$INODE64
-                 U _stat$INODE64
-                 U _strcmp
-                 U _strtol
-                 U dyld_stub_binder
-
-/bin/unlink:
-                 U ___error
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-0000000100000000 T __mh_execute_header
-                 U _access
-                 U _chflags
-                 U _compat_mode
-                 U _err
-                 U _errx
-                 U _exit
-                 U _fflagstostr
-                 U _fflush
-                 U _fprintf
-                 U _free
-                 U _fts_close$INODE64
-                 U _fts_open$INODE64
-                 U _fts_read$INODE64
-                 U _fts_set$INODE64
-                 U _getchar
-                 U _geteuid
-                 U _getopt
-                 U _group_from_gid
-                 U _isatty
-                 U _lstat$INODE64
-                 U _optind
-                 U _puts
-                 U _removefile
-                 U _rindex
-                 U _rmdir
-                 U _strcmp
-                 U _strerror
-                 U _strmode
-                 U _strrchr
-                 U _undelete
-                 U _unlink
-                 U _user_from_uid
-                 U _warn
-                 U _warnx
-                 U dyld_stub_binder
-
-/bin/wait4path:
-                 U ___error
-                 U ___stderrp
-0000000100000000 T __mh_execute_header
-                 U _exit
-                 U _fprintf
-                 U _kevent
-                 U _kqueue
-                 U _stat$INODE64
-                 U _strerror
-                 U dyld_stub_binder
-
-/bin/zsh:
-                 U __DefaultRuneLocale
-                 U ___bzero
-                 U ___error
-                 U ___maskrune
-                 U ___mb_cur_max
-                 U ___memcpy_chk
-                 U ___sprintf_chk
-                 U ___stack_chk_fail
-                 U ___stack_chk_guard
-                 U ___stderrp
-                 U ___stdinp
-                 U ___stdoutp
-                 U ___strcat_chk
-                 U ___strcpy_chk
-                 U ___strncat_chk
-                 U ___tolower
-                 U ___toupper
-                 U __exit
-0000000100000000 T __mh_execute_header
-                 U __mktemp
-                 U _access
-0000000100030abb T _acquire_pgrp
-0000000100031f52 T _add
-000000010003b418 T _add_dep
-000000010002f26c T _addbgstatus
-000000010003992f T _addbuiltins
-000000010004034a T _addenv
-000000010002d9a6 T _addfilelist
-000000010002056b T _addhashnode
-0000000100020594 T _addhashnode2
-0000000100021d96 T _addhistnode
-000000010002476a T _addhistnum
-0000000100039cd4 T _addhookdef
-0000000100039e25 T _addhookdeffunc
-0000000100039d15 T _addhookdefs
-0000000100039e40 T _addhookfunc
-00000001000656f0 T _addlockfd
-0000000100039f4a T _addparamdef
-000000010006437f T _addprepromptfn
-000000010002dc77 T _addproc
-0000000100064409 T _addtimedfn
-000000010006410f T _adduserdir
-00000001000399fe T _addwrapper
-000000010006523b T _adjustwinsize
-                 U _alarm
-0000000100054d1b T _allocate_colour_buffer
-0000000100057f8c T _appstr
-0000000100064672 T _arrdup
-0000000100044bc3 T _arrfixenv
-000000010003ec4b T _arrgetfn
-0000000100044143 T _arrhashsetfn
-00000001000640e7 T _arrlen
-000000010003ec63 T _arrsetfn
-000000010003ecb4 T _arrvargetfn
-000000010003eccf T _arrvarsetfn
-0000000100040398 T _assignaparam
-00000001000407d8 T _assigngetset
-000000010003fb81 T _assignsparam
-0000000100043654 T _assignstrvalue
-                 U _atoi
-000000010006673f T _attachtty
-000000010003c9e7 T _autofeatures
-0000000100057eb3 T _bicat
-0000000100008469 T _bin_alias
-000000010000afd5 T _bin_break
-0000000100001fe2 T _bin_cd
-0000000100001c9e T _bin_dirs
-000000010000b475 T _bin_dot
-000000010000b7dc T _bin_emulate
-000000010000137b T _bin_enable
-0000000100006d87 T _bin_eval
-0000000100008892 T _bin_false
-0000000100002f10 T _bin_fc
-000000010002f353 T _bin_fg
-00000001000050f2 T _bin_functions
-000000010000ac95 T _bin_getopts
-0000000100008027 T _bin_hash
-0000000100030250 T _bin_kill
-000000010000dede T _bin_let
-000000010006c39d T _bin_log
-000000010000e229 T _bin_notavail
-000000010000889d T _bin_print
-0000000100001c45 T _bin_pwd
-000000010000bd2a T _bin_read
-00000001000016e5 T _bin_set
-000000010003e0af T _bin_setopt
-000000010000a920 T _bin_shift
-00000001000309c8 T _bin_suspend
-000000010000d7a3 T _bin_test
-000000010000d9a1 T _bin_times
-000000010000db74 T _bin_trap
-000000010000888a T _bin_true
-000000010000de82 T _bin_ttyctl
-00000001000041c0 T _bin_typeset
-000000010000df49 T _bin_umask
-0000000100007386 T _bin_unhash
-0000000100006e39 T _bin_unset
-000000010000779a T _bin_whence
-00000001000479af T _bin_zcompile
-000000010003b49a T _bin_zmodload
-0000000100039807 T _boot_zshQsmain
-0000000100027a46 T _bufferwords
-00000001000644ca T _callhookfunc
-0000000100026caa T _casemodify
-0000000100002c0e T _cd_able_vars
-0000000100026766 T _chabspath
-                 U _chdir
-000000010002c1db T _check_cursh_sig
-0000000100025560 T _checkcurline
-000000010001a098 T _checkglobqual
-00000001000660fd T _checkrmall
-00000001000269ab T _chrealpath
-0000000100065904 T _chuck
-000000010003980f T _cleanup_zshQsmain
-                 U _clearerr
-000000010002e1fb T _clearjobtab
-0000000100050ad0 T _clearpatterndisables
-                 U _close
-                 U _closedir
-0000000100011eac T _closem
-00000001000547c5 T _cmdpop
-000000010005479a T _cmdpush
-0000000100044c9e T _colonarrgetfn
-0000000100044cc7 T _colonarrsetfn
-0000000100067f04 T _colonsplit
-000000010000fde3 T _cond_match
-000000010000fd64 T _cond_str
-000000010000fda1 T _cond_val
-00000001000431d1 T _convbase
-0000000100045cdf T _convbase_ptr
-0000000100043ecc T _convbase_underscore
-00000001000431dd T _convfloat
-0000000100043fa9 T _convfloat_underscore
-0000000100040bef T _copyparam
-000000010003f1b0 T _copyparamtable
-00000001000343e4 T _countlinknodes
-000000010005454d T _countprompt
-0000000100021b89 T _createaliasnode
-00000001000216ee T _createaliastable
-0000000100021955 T _createaliastables
-0000000100000b6c T _createbuiltintable
-0000000100020bd3 T _createcmdnamtable
-0000000100021bb2 T _createhisttable
-0000000100021ee3 T _createnameddirtable
-000000010003dd9e T _createoptiontable
-0000000100040858 T _createparam
-000000010003f51f T _createparamtable
-0000000100021598 T _createreswdtable
-00000001000210d1 T _createshfunctable
-0000000100040b12 T _createspecialhash
-0000000100031d75 T _ctxtlex
-000000010003e7ec T _dashgetfn
-0000000100047331 T _decrdumpcount
-0000000100040ae8 T _delenv
-00000001000398f8 T _deletebuiltin
-0000000100039c11 T _deleteconddef
-000000010002daa5 T _deletefilelist
-000000010002053e T _deletehashtable
-0000000100039d8a T _deletehookdef
-0000000100039e74 T _deletehookdeffunc
-0000000100039de3 T _deletehookdefs
-0000000100039ea0 T _deletehookfunc
-000000010002d8ac T _deletejob
-000000010003a319 T _deletemathfunc
-000000010003a122 T _deleteparamdef
-000000010003f2c6 T _deleteparamtable
-0000000100039a54 T _deletewrapper
-00000001000643c4 T _delprepromptfn
-0000000100064482 T _deltimedfn
-                 U _difftime
-00000001000208f6 T _disablehashnode
-                 U _dlclose
-                 U _dlerror
-                 U _dlopen
-                 U _dlsym
-000000010003e4b5 T _dosetopt
-00000001000135f8 T _doshfunc
-0000000100057406 T _dotrap
-000000010006bc84 T _dowatch
-0000000100025548 T _down_histent
-000000010006b09b T _dquotedztrdup
-00000001000491f4 T _dump_autoload
-                 U _dup
-                 U _dup2
-000000010004718c T _dupeprog
-0000000100057cb4 T _dupstring
-0000000100057f06 T _dupstrpfx
-0000000100057e60 T _dyncat
-0000000100047711 T _eccopyredirs
-00000001000474c1 T _ecgetarr
-0000000100047561 T _ecgetlist
-0000000100047608 T _ecgetredirs
-00000001000473b1 T _ecgetstr
-000000010004744e T _ecrawstr
-00000001000454b4 T _egidgetfn
-00000001000454c1 T _egidsetfn
-0000000100046715 T _empty_eprog
-0000000100020b3a T _emptyhashtable
-0000000100021cf0 T _emptyhisttable
-000000010003dfc7 T _emulate
-0000000100020900 T _enablehashnode
-00000001000397fc T _enables_zshQsmain
-0000000100045e45 T _endparamscope
-0000000100050a81 T _endpatternscope
-                 U _endpwent
-0000000100056dc4 T _endtrapscope
-0000000100039b91 T _ensurefeature
-                 U _environ
-000000010006a02f T _equalsplit
-0000000100059173 T _equalsubstr
-00000001000458f2 T _errnogetfn
-00000001000458ba T _errnosetfn
-000000010004544c T _euidgetfn
-0000000100045459 T _euidsetfn
-0000000100006c40 T _eval_autoload
-000000010000eb74 T _evalcond
-0000000100031a5c T _exalias
-0000000100000d0f T _execbuiltin
-00000001000356ac T _execcase
-00000001000345de T _execfor
-00000001000354f7 T _execif
-0000000100010843 T _execlist
-0000000100010759 T _execode
-00000001000353c7 T _execrepeat
-000000010001426b T _execrestore
-0000000100014140 T _execsave
-0000000100034bc2 T _execselect
-00000001000106cd T _execstring
-0000000100011e63 T _execsubst
-0000000100035a8d T _exectry
-                 U _execve
-00000001000351cb T _execwhile
-                 U _exit
-000000010002e48c T _expandjobtab
-00000001000435b1 T _export_param
-000000010002ae49 T _fallback_compctlread
-                 U _fchdir
-                 U _fchmod
-                 U _fchown
-                 U _fclose
-                 U _fcntl
-                 U _fdopen
-00000001000397f1 T _features_zshQsmain
-000000010003d000 T _featuresarray
-                 U _feof
-                 U _ferror
-0000000100042de4 T _fetchvalue
-                 U _fflush
-                 U _fgetc
-                 U _fgets
-000000010001d2f4 T _file_type
-                 U _fileno
-000000010005832a T _filesub
-0000000100058d7e T _filesubstr
-0000000100010105 T _findcmd
-0000000100063418 T _finddir
-000000010002f00b T _findjobnam
-000000010002c0f6 T _findproc
-0000000100062d71 T _findpwd
-0000000100068858 T _findword
-0000000100039817 T _finish_zshQsmain
-0000000100002c64 T _fixdir
-000000010004522e T _floatsecondsgetfn
-0000000100045272 T _floatsecondssetfn
-                 U _fmod
-                 U _fopen
-                 U _fork
-00000001000633b1 T _fprintdir
-                 U _fprintf
-                 U _fputc
-                 U _fputs
-                 U _fread
-                 U _free
-0000000100054f4b T _free_colour_buffer
-0000000100069ffc T _freearray
-000000010004729e T _freeeprog
-00000001000385ed T _freeheap
-0000000100021e4f T _freehistdata
-0000000100021e29 T _freehistnode
-000000010002db24 T _freejob
-0000000100034392 T _freelinklist
-000000010001f1fa T _freematchlist
-000000010003ef0c T _freeparamnode
-000000010005087c T _freepatprog
-00000001000651b8 T _freestr
-                 U _fseek
-                 U _fstat$INODE64
-                 U _ftell
-                 U _fwrite
-000000010002d69f T _get_clktck
-000000010005921c T _get_strarg
-000000010002c1c5 T _get_usage
-0000000100063f08 T _get_username
-00000001000443a9 T _getaparam
-0000000100043312 T _getarrvalue
-0000000100039aae T _getconddef
-                 U _getcwd
-                 U _getegid
-                 U _getenv
-                 U _geteuid
-000000010003d1b5 T _getfeatureenables
-0000000100013159 T _getfpfunc
-                 U _getgid
-                 U _getgrnam
-0000000100020758 T _gethashnode
-00000001000207bc T _gethashnode2
-0000000100011f28 T _gethere
-0000000100025378 T _gethistent
-000000010004446c T _gethkparam
-0000000100039c87 T _gethookdef
-                 U _gethostname
-0000000100044404 T _gethparam
-0000000100040d60 T _getindex
-00000001000434a6 T _getintvalue
-000000010004431f T _getiparam
-000000010002edda T _getjob
-0000000100061274 T _getjobtext
-0000000100069071 T _getkeystring
-00000001000342c3 T _getlinknode
-                 U _getlogin
-000000010001e380 T _getmatch
-000000010001f120 T _getmatcharr
-000000010001f1cf T _getmatchlist
-000000010003a234 T _getmathfunc
-000000010006427d T _getnameddir
-000000010004435c T _getnparam
-0000000100043520 T _getnumvalue
-00000001000120fc T _getoutput
-0000000100012a2f T _getoutputfile
-000000010005ff78 T _getpermtext
-                 U _getpgrp
-                 U _getpid
-                 U _getppid
-0000000100012ca9 T _getproc
-                 U _getpwent
-                 U _getpwnam
-                 U _getpwuid
-0000000100066302 T _getquery
-00000001000452cb T _getrawseconds
-0000000100061398 T _getredirs
-                 U _getrlimit
-                 U _getrusage
-0000000100064657 T _getshfunc
-0000000100030883 T _getsigname
-00000001000307eb T _getsignum
-0000000100040310 T _getsparam
-000000010004275c T _getstrvalue
-000000010006584b T _gettempfile
-0000000100065758 T _gettempname
-                 U _gettimeofday
-00000001000308bb T _gettrapnode
-000000010006a72a T _gettygrp
-00000001000651c2 T _gettyinfo
-                 U _getuid
-0000000100042dd8 T _getvalue
-0000000100045480 T _gidgetfn
-000000010004548d T _gidsetfn
-0000000100058c96 T _globlist
-000000010003d69c T _handlefeatures
-00000001000658df T _has_token
-000000010001d371 T _hasbraces
-00000001000103e3 T _hashcmd
-0000000100020efb T _hashdir
-00000001000204ca T _hasher
-000000010003ed63 T _hashgetfn
-000000010003ed6d T _hashsetfn
-000000010002c192 T _hasprocs
-000000010006ad2c T _hasspecial
-0000000100050ae9 T _haswilds
-000000010002dd6e T _havefiles
-0000000100022535 T _hbegin
-00000001000390ab T _hcalloc
-00000001000266de T _hcomsearch
-0000000100022880 T _hend
-00000001000224af T _herrflush
-0000000100026692 T _hgetline
-00000001000222a0 T _hist_context_restore
-000000010002215c T _hist_context_save
-00000001000223b2 T _hist_in_word
-00000001000265a5 T _histbackword
-00000001000459a5 T _histcharsgetfn
-00000001000459e6 T _histcharssetfn
-0000000100026367 T _histfileIsLocked
-0000000100021c90 T _histhasher
-0000000100025126 T _histreduceblanks
-0000000100025308 T _histremovedups
-0000000100045861 T _histsizegetfn
-0000000100045871 T _histsizesetfn
-0000000100027452 T _histsplitwords
-0000000100021d0e T _histstrcmp
-00000001000344f3 T _hlinklist2array
-000000010006903b T _hmkarray
-0000000100055eb5 T _holdintr
-0000000100045aba T _homegetfn
-0000000100045aca T _homesetfn
-0000000100038bb0 T _hrealloc
-00000001000265e5 T _hwrep
-00000001000223d0 T _iaddtoline
-                 U _iconv
-                 U _iconv_close
-                 U _iconv_open
-0000000100045534 T _ifsgetfn
-0000000100045544 T _ifssetfn
-00000001000245e4 T _ihwbegin
-000000010002464d T _ihwend
-00000001000491eb T _incrdumpcount
-000000010002c01d T _inerrflush
-000000010002b69b T _ingetc
-000000010002c08e T _ingetptr
-000000010002a761 T _init_bltinmods
-0000000100000cc9 T _init_builtins
-000000010006b2b8 T _init_dirsav
-000000010004797e T _init_eprog
-0000000100028f1a T _init_io
-000000010002f0af T _init_jobs
-000000010002a661 T _init_misc
-0000000100046641 T _init_parse
-00000001000465fa T _init_parse_status
-00000001000291ea T _init_shout
-0000000100029dbc T _init_signals
-0000000100029272 T _init_term
-                 U _initgroups
-00000001000273f3 T _inithist
-000000010002e3a6 T _initjob
-0000000100031e2e T _initlextabs
-000000010006a055 T _inittyptab
-000000010002c04e T _inpop
-000000010002c06e T _inpopalias
-000000010002bd32 T _inpush
-0000000100034295 T _insertlinklist
-00000001000341d3 T _insertlinknode
-0000000100055bac T _install_handler
-000000010003df53 T _installemulation
-000000010003ec07 T _intgetfn
-0000000100055e71 T _intr
-00000001000451a1 T _intsecondsgetfn
-00000001000451f6 T _intsecondssetfn
-000000010003ec1b T _intvargetfn
-000000010003ec28 T _intvarsetfn
-000000010002bbfb T _inungetc
-                 U _ioctl
-                 U _isatty
-000000010001056b T _iscom
-000000010004014c T _isident
-000000010000eb11 T _isprint_ascii
-0000000100062e2e T _ispwd
-00000001000105c8 T _isreallycom
-0000000100010672 T _isrelative
-0000000100067366 T _itype_end
-0000000100045900 T _keyboardhackgetfn
-0000000100045920 T _keyboardhacksetfn
-                 U _kill
-000000010005626a T _killjb
-                 U _killpg
-00000001000564c9 T _killrunjobs
-0000000100045737 T _langsetfn
-0000000100045569 T _lc_allsetfn
-000000010006b2dc T _lchdir
-0000000100045753 T _lcsetfn
-0000000100030db3 T _lex_context_restore
-0000000100030ca8 T _lex_context_save
-0000000100031f1b T _lexinit
-0000000100034488 T _linknodebydatum
-00000001000344ad T _linknodebystring
-000000010003a480 T _load_module
-0000000100012f65 T _loadautofn
-                 U _localtime
-00000001000257ee T _lockhistfile
-0000000100028532 T _loop
-                 U _lseek
-                 U _lstat$INODE64
-0000000100000b60 T _main
-000000010006a58f T _makebangspecial
-000000010006a540 T _makecommaspecial
-000000010002c09c T _makerunning
-                 U _malloc
-00000001000547ec T _match_colour
-000000010005496d T _match_highlight
-000000010001e338 T _matchpat
-00000001000367bb T _matheval
-0000000100036b54 T _mathevalarg
-0000000100036b3a T _mathevali
-000000010002f17a T _maybeshrinkjobtab
-00000001000624f4 T _mb_metacharinit
-00000001000689d8 T _mb_metacharlenconv
-000000010006a970 T _mb_metacharlenconv_r
-000000010006aac0 T _mb_metastrlen
-000000010006219c T _mb_niceformat
-000000010005033a T _mb_patmatchindex
-000000010004fd6f T _mb_patmatchrange
-                 U _mbrlen
-                 U _mbrtowc
-                 U _memchr
-                 U _memcmp
-                 U _memcpy
-                 U _memmove
-                 U _memset
-                 U _memset_pattern16
-0000000100064ff5 T _metafy
-00000001000624ce T _metalen
-0000000100069005 T _mkarray
-0000000100006d05 T _mkautofn
-                 U _mkstemp
-                 U _mmap
-000000010006b957 T _mode_to_octal
-0000000100059349 T _modify
-00000001000398a9 T _module_linked
-000000010003a394 T _module_loaded
-00000001000654fa T _movefd
-000000010002547c T _movehistent
-                 U _munmap
-                 U _nanosleep
-0000000100038216 T _new_heaps
-00000001000204ee T _newhashtable
-0000000100034182 T _newlinklist
-0000000100039338 T _newmoduletable
-000000010003ede2 T _newparamtable
-0000000100034425 T _newsizedlist
-0000000100044e59 T _newuniqtable
-                 U _nice
-00000001000629e0 T _nicechar
-000000010006a94f T _nicedup
-000000010006a92d T _nicedupstring
-                 U _nl_langinfo
-0000000100055f2c T _noholdintr
-000000010002ac51 T _noop_function
-000000010002ac57 T _noop_function_int
-00000001000666e2 T _noquery
-0000000100044c63 T _nullintsetfn
-000000010003edb4 T _nullsethashfn
-000000010003ebfa T _nullstrsetfn
-000000010003eddc T _nullunsetfn
-00000001000382cb T _old_heaps
-0000000100035c60 T _op
-                 U _open
-                 U _opendir$INODE64
-000000010003e41d T _optlookup
-000000010003e798 T _optlookupc
-0000000100054a8d T _output_highlight
-00000001000467a4 T _par_event
-000000010003f30d T _paramvalarr
-0000000100046f1b T _parse_cond
-0000000100046501 T _parse_context_restore
-0000000100046428 T _parse_context_save
-0000000100046734 T _parse_event
-0000000100046da5 T _parse_list
-000000010000ffb8 T _parse_string
-000000010003280c T _parse_subscript
-00000001000328e8 T _parse_subst_string
-000000010002893d T _parseopts
-0000000100031fe9 T _parsestr
-0000000100032048 T _parsestrnoerr
-0000000100050891 T _pat_enables
-000000010004ca7e T _patcompile
-000000010004c9d4 T _patcompstart
-000000010004d5a2 T _patgetglobflags
-0000000100062b2c T _pathprog
-000000010004fd63 T _patmatchlen
-000000010005043b T _patmatchrange
-000000010004d869 T _pattern_range_to_string
-000000010004da4e T _pattry
-000000010004e3ff T _pattrylen
-000000010004da82 T _pattryrefs
-000000010004da2e T _pattrystart
-                 U _pipe
-000000010002da4b T _pipecleanfilelist
-000000010003872e T _popheap
-000000010002642a T _pophiststack
-000000010004516e T _poundgetfn
-                 U _pow
-0000000100057ffc T _prefork
-00000001000255ba T _prepnexthistent
-00000001000646d2 T _preprompt
-000000010006326d T _print_if_link
-                 U _printf
-0000000100002ed5 T _printif
-000000010002cc5b T _printjob
-000000010003e92b T _printoptionlist
-000000010003e85b T _printoptionstates
-000000010003ef5b T _printparamnode
-0000000100064ed3 T _printprompt4
-0000000100002e75 T _printqt
-000000010006b944 T _privasserted
-000000010005255c T _promptexpand
-000000010003844c T _pushheap
-00000001000277c5 T _pushhiststack
-                 U _putc
-                 U _putchar
-00000001000629b2 T _putraw
-                 U _puts
-00000001000629c9 T _putshout
-00000001000544c4 T _putstr
-                 U _qsort
-0000000100057377 T _queue_traps
-00000001000273e4 T _quietgethist
-0000000100011be5 T _quote_tokenized_output
-000000010006ae60 T _quotedzputs
-0000000100063670 T _quotestring
-0000000100058b8b T _quotesubst
-                 U _rand
-0000000100045185 T _randomgetfn
-0000000100045195 T _randomsetfn
-000000010004d800 T _range_type
-                 U _read
-00000001000665de T _read_loop
-0000000100065de6 T _read_poll
-                 U _readdir$INODE64
-0000000100025b3a T _readhistfile
-                 U _readlink
-00000001000123a8 T _readoutput
-                 U _realloc
-                 U _realpath$DARWIN_EXTSN
-000000010006565a T _redup
-000000010003981f T _register_module
-0000000100030a81 T _release_pgrp
-0000000100026bdb T _rembutext
-0000000100026c35 T _remlpaths
-000000010003432c T _remnode
-000000010001f3c1 T _remnulargs
-0000000100020818 T _removehashnode
-000000010003a1ef T _removemathfunc
-0000000100056864 T _removetrap
-000000010003098c T _removetrapnode
-0000000100026b98 T _remtext
-0000000100026af2 T _remtpath
-                 U _rename
-000000010003afb3 T _require_module
-00000001000273fd T _resizehistents
-000000010006b7be T _restoredir
-0000000100050a5c T _restorepatterndisables
-                 U _rewind
-00000001000343fb T _rolllist
-0000000100029eca T _run_init_scripts
-0000000100039ed0 T _runhookdef
-000000010001404b T _runshfunc
-00000001000281cf T _saveandpophiststack
-0000000100024814 T _savehistfile
-0000000100045891 T _savehistsizegetfn
-00000001000458a1 T _savehistsizesetfn
-00000001000509d9 T _savepatterndisables
-000000010003f2eb T _scancountparams
-0000000100020b12 T _scanhashtable
-000000010002ed64 T _scanjobs
-000000010002090a T _scanmatchtable
-                 U _select$1050
-0000000100034fae T _selectlist
-0000000100068bdb T _sepjoin
-0000000100068de9 T _sepsplit
-0000000100054f70 T _set_colour_attribute
-0000000100054ca2 T _set_default_colour_sequences
-0000000100001ede T _set_pwd_env
-0000000100043aa8 T _setarrvalue
-0000000100065d06 T _setblock_fd
-0000000100065dc8 T _setblock_stdin
-000000010006a6d7 T _setcbreak
-                 U _setegid
-                 U _setenv
-                 U _seteuid
-000000010003d2d1 T _setfeatureenables
-                 U _setgid
-0000000100046fc8 T _setheredoc
-00000001000445a0 T _sethparam
-000000010003fb72 T _setiparam
-000000010002e505 T _setjobpwd
-00000001000100cd T _setlimits
-                 U _setlocale
-00000001000447ad T _setnparam
-0000000100043d71 T _setnumvalue
-                 U _setpgid
-                 U _setpwent
-00000001000452ee T _setrawseconds
-                 U _setrlimit
-000000010004531c T _setsecondstype
-0000000100043648 T _setstrvalue
-00000001000565b5 T _settrap
-00000001000651fc T _settyinfo
-                 U _setuid
-0000000100011d1d T _setunderscore
-00000001000397e9 T _setup_zshQsmain
-00000001000295f8 T _setupvals
-                 U _setvbuf
-000000010002e6fe T _shelltime
-0000000100012f39 T _shfunc_set_sticky
-000000010002b506 T _shingetline
-000000010001f39f T _shtokenize
-                 U _sigaction
-                 U _signal
-0000000100055ee9 T _signal_block
-0000000100055f0f T _signal_mask
-0000000100055f86 T _signal_setmask
-0000000100055fac T _signal_suspend
-0000000100055f60 T _signal_unblock
-                 U _sigprocmask
-                 U _sigsuspend
-0000000100058d1f T _singsub
-00000001000659d9 T _skipparens
-                 U _sleep
-000000010002a0f6 T _source
-000000010002a53b T _sourcehome
-0000000100068034 T _spacesplit
-000000010002e57b T _spawnjob
-0000000100066894 T _spckword
-                 U _srand
-0000000100045e36 T _startparamscope
-0000000100050a0b T _startpatternscope
-0000000100056d7b T _starttrapscope
-                 U _stat$INODE64
-000000010003eb38 T _stdunsetfn
-0000000100013571 T _sticky_emulation_differs
-0000000100012e90 T _sticky_emulation_dup
-000000010002c2a3 T _storepipestats
-0000000100054106 T _stradd
-                 U _strcasecmp
-                 U _strchr
-                 U _strcmp
-                 U _strcoll
-                 U _strcpy
-                 U _strdup
-0000000100057fd5 T _strend
-                 U _strerror
-                 U _strftime
-000000010003eac4 T _strgetfn
-0000000100022518 T _strinbeg
-0000000100022850 T _strinend
-00000001000133dc T _stripkshdef
-                 U _strlen
-0000000100057779 T _strmetasort
-                 U _strncmp
-                 U _strncpy
-000000010006b237 T _strpfx
-                 U _strrchr
-000000010003eade T _strsetfn
-000000010006b266 T _strsfx
-                 U _strspn
-                 U _strstr
-                 U _strtod
-                 U _strtoul
-000000010006598a T _strucpy
-00000001000659a8 T _struncpy
-000000010003ebbf T _strvargetfn
-000000010003ebdc T _strvarsetfn
-000000010002be91 T _stuff
-000000010002719f T _subst
-0000000100068f2c T _subst_string_by_func
-0000000100063fde T _subst_string_by_hook
-0000000100063614 T _substnamedir
-000000010003839b T _switch_heaps
-                 U _symlink
-                 U _sysconf
-0000000100029250 T _tccap_get_name
-                 U _tcgetattr
-                 U _tcgetpgrp
-                 U _tcsetattr
-                 U _tcsetpgrp
-0000000100045b95 T _termgetfn
-0000000100045c10 T _terminfogetfn
-0000000100045c32 T _terminfosetfn
-0000000100045ba5 T _termsetfn
-000000010000d6a0 T _testlex
-                 U _tgetent
-                 U _tgetflag
-                 U _tgetnum
-                 U _tgetstr
-                 U _tgoto
-0000000100044d2f T _tiedarrgetfn
-0000000100044d5a T _tiedarrsetfn
-0000000100044e09 T _tiedarrunsetfn
-                 U _time
-                 U _times
-000000010001f21a T _tokenize
-                 U _tputs
-0000000100057d60 T _tricat
-00000001000486b5 T _try_dump_file
-0000000100048f6c T _try_source_file
-00000001000542ab T _tsetcap
-00000001000454e8 T _ttyidlegetfn
-                 U _ttyname
-000000010006296b T _tulower
-0000000100065919 T _tuupper
-0000000100034303 T _ugetnode
-0000000100045418 T _uidgetfn
-0000000100045425 T _uidsetfn
-0000000100034270 T _uinsertlinknode
-                 U _umask
-                 U _uname
-0000000100045b6b T _underscoregetfn
-0000000100044b8a T _uniqarray
-                 U _unlink
-000000010003c7b3 T _unload_module
-000000010003cec9 T _unload_named_module
-000000010002637a T _unlockhistfile
-0000000100062c67 T _unmeta
-0000000100064f93 T _unmetafy
-000000010005739f T _unqueue_traps
-                 U _unsetenv
-00000001000444d4 T _unsetparam
-00000001000449b7 T _unsetparam_pm
-0000000100056796 T _unsettrap
-0000000100011b52 T _untokenize
-0000000100025355 T _up_histent
-000000010002c41b T _update_job
-000000010003436c T _uremnode
-000000010004727e T _useeprog
-000000010004535b T _usernamegetfn
-0000000100045365 T _usernamesetfn
-                 U _wait3
-0000000100055ff6 T _wait_for_processes
-000000010002ddb4 T _waitforpid
-000000010002df26 T _waitjobs
-                 U _wcrtomb
-000000010006260f T _wcs_nicechar
-000000010006a677 T _wcs_zarrdup
-0000000100057d24 T _wcs_ztrdup
-                 U _wcscpy
-000000010006a5d2 T _wcsiblank
-0000000100068a40 T _wcsitype
-                 U _wcslen
-                 U _wcwidth
-                 U _wmemchr
-                 U _wmemcpy
-0000000100045b36 T _wordcharsgetfn
-0000000100045b46 T _wordcharssetfn
-00000001000683d0 T _wordcount
-                 U _write
-000000010006666a T _write_loop
-000000010001d9f2 T _xpandbraces
-000000010001d7f1 T _xpandredir
-0000000100062dd5 T _xsymlink
-0000000100038518 T _zalloc
-000000010006a617 T _zarrdup
-0000000100066216 T _zbeep
-000000010000e988 T _zchdir
-000000010006554e T _zclose
-0000000100065720 T _zcloselockfd
-000000010000ffa6 T _zcontext_restore
-000000010000fea8 T _zcontext_restore_partial
-000000010000fe99 T _zcontext_save
-000000010000fe13 T _zcontext_save_partial
-000000010006195c T _zerr
-0000000100061d85 T _zerrmsg
-0000000100061b4b T _zerrnam
-000000010000b224 T _zexit
-0000000100038855 T _zfree
-000000010000eaaa T _zgetcwd
-000000010000e648 T _zgetdir
-0000000100045cd5 T _zgetenv
-000000010001a1a5 T _zglob
-0000000100038943 T _zhalloc
-0000000100055bde T _zhandler
-0000000100038866 T _zheapptr
-0000000100057de0 T _zhtricat
-0000000100045155 T _zhuniqarray
-000000010003421b T _zinsertlinknode
-0000000100067de8 T _zjoin
-000000010002ac5d T _zleentry
-0000000100044c69 T _zlevarsetfn
-0000000100034570 T _zlinklist2array
-00000001000341a4 T _znewlinklist
-000000010000e60a T _zopenmax
-0000000100045c7e T _zputenv
-00000001000625aa T _zputs
-000000010006a7dc T _zreaddir
-00000001000391b9 T _zrealloc
-0000000100010043 T _zsetlimit
-0000000100039327 T _zsfree
-000000010002ae62 T _zsh_main
-00000001000390d0 T _zshcalloc
-0000000100030e67 T _zshlex
-0000000100033b58 T _zshlex_raw_add
-0000000100033be5 T _zshlex_raw_back
-0000000100033c1a T _zshlex_raw_back_to_mark
-0000000100033c01 T _zshlex_raw_mark
-0000000100065fed T _zsleep
-0000000100066084 T _zsleep_random
-0000000100057467 T _zstrcmp
-0000000100064103 T _zstrtol
-0000000100065a3b T _zstrtol_underscore
-000000010006a766 T _ztrcmp
-0000000100057cec T _ztrdup
-000000010006a749 T _ztrdup_metafy
-0000000100057f49 T _ztrduppfx
-0000000100067791 T _ztrftime
-0000000100062ad4 T _ztrlen
-0000000100065960 T _ztrncpy
-000000010006a7b6 T _ztrsub
-0000000100061c0a T _zwarn
-0000000100061ccf T _zwarnnam
-0000000100062afd T _zwcwidth
-                 U dyld_stub_binder
+../malloc/libftmalloc.a:
+(__TEXT,__text) section
+_malloc:
+0000000000000c30	pushq	%rbp
+0000000000000c31	movq	%rsp, %rbp
+0000000000000c34	subq	$0x30, %rsp
+0000000000000c38	movq	%rdi, -0x10(%rbp)
+0000000000000c3c	cmpq	$0x1, -0x10(%rbp)
+0000000000000c41	jae	0xc54
+0000000000000c47	movq	$0x0, -0x8(%rbp)
+0000000000000c4f	jmp	0xcb5
+0000000000000c54	callq	0x11f0
+0000000000000c59	leaq	0x23f0(%rip), %rdi
+0000000000000c60	movq	%rax, -0x20(%rbp)
+0000000000000c64	callq	0x2dee
+0000000000000c69	movq	-0x10(%rbp), %rdi
+0000000000000c6d	movl	%eax, -0x24(%rbp)
+0000000000000c70	callq	0x10b0
+0000000000000c75	movq	%rax, -0x18(%rbp)
+0000000000000c79	cmpq	$0x0, %rax
+0000000000000c7d	jne	0xc90
+0000000000000c83	movq	$0x0, -0x8(%rbp)
+0000000000000c8b	jmp	0xcb5
+0000000000000c90	leaq	0x23b9(%rip), %rdi
+0000000000000c97	movq	-0x18(%rbp), %rax
+0000000000000c9b	movw	$0x0, 0x18(%rax)
+0000000000000ca1	callq	0x2df4
+0000000000000ca6	movq	-0x18(%rbp), %rdi
+0000000000000caa	movq	0x10(%rdi), %rdi
+0000000000000cae	movq	%rdi, -0x8(%rbp)
+0000000000000cb2	movl	%eax, -0x28(%rbp)
+0000000000000cb5	movq	-0x8(%rbp), %rax
+0000000000000cb9	addq	$0x30, %rsp
+0000000000000cbd	popq	%rbp
+0000000000000cbe	retq
+0000000000000cbf	nop
+_free:
+0000000000000cc0	pushq	%rbp
+0000000000000cc1	movq	%rsp, %rbp
+0000000000000cc4	subq	$0x20, %rsp
+0000000000000cc8	movq	%rdi, -0x8(%rbp)
+0000000000000ccc	cmpq	$0x0, -0x8(%rbp)
+0000000000000cd1	jne	0xcdc
+0000000000000cd7	jmp	0xd11
+0000000000000cdc	callq	0x11f0
+0000000000000ce1	leaq	0x2368(%rip), %rdi
+0000000000000ce8	movq	%rax, -0x10(%rbp)
+0000000000000cec	callq	0x2dee
+0000000000000cf1	movl	$0x1, %esi
+0000000000000cf6	movq	-0x8(%rbp), %rdi
+0000000000000cfa	movl	%eax, -0x14(%rbp)
+0000000000000cfd	callq	0x18f0
+0000000000000d02	leaq	0x2347(%rip), %rdi
+0000000000000d09	callq	0x2df4
+0000000000000d0e	movl	%eax, -0x18(%rbp)
+0000000000000d11	addq	$0x20, %rsp
+0000000000000d15	popq	%rbp
+0000000000000d16	retq
+0000000000000d17	nopw	(%rax,%rax)
+_realloc:
+0000000000000d20	pushq	%rbp
+0000000000000d21	movq	%rsp, %rbp
+0000000000000d24	subq	$0x30, %rsp
+0000000000000d28	movq	%rdi, -0x10(%rbp)
+0000000000000d2c	movq	%rsi, -0x18(%rbp)
+0000000000000d30	cmpq	$0x0, -0x10(%rbp)
+0000000000000d35	jne	0xd4d
+0000000000000d3b	movq	-0x18(%rbp), %rdi
+0000000000000d3f	callq	0xc30
+0000000000000d44	movq	%rax, -0x8(%rbp)
+0000000000000d48	jmp	0xd8d
+0000000000000d4d	callq	0x11f0
+0000000000000d52	leaq	0x22f7(%rip), %rdi
+0000000000000d59	movq	%rax, -0x28(%rbp)
+0000000000000d5d	callq	0x2dee
+0000000000000d62	movq	-0x10(%rbp), %rdi
+0000000000000d66	movq	-0x18(%rbp), %rsi
+0000000000000d6a	movl	%eax, -0x2c(%rbp)
+0000000000000d6d	callq	0x1ef0
+0000000000000d72	leaq	0x22d7(%rip), %rdi
+0000000000000d79	movq	%rax, -0x20(%rbp)
+0000000000000d7d	callq	0x2df4
+0000000000000d82	movq	-0x20(%rbp), %rsi
+0000000000000d86	movq	%rsi, -0x8(%rbp)
+0000000000000d8a	movl	%eax, -0x30(%rbp)
+0000000000000d8d	movq	-0x8(%rbp), %rax
+0000000000000d91	addq	$0x30, %rsp
+0000000000000d95	popq	%rbp
+0000000000000d96	retq
+0000000000000d97	nopw	(%rax,%rax)
+_show_alloc_mem:
+0000000000000da0	pushq	%rbp
+0000000000000da1	movq	%rsp, %rbp
+0000000000000da4	subq	$0x10, %rsp
+0000000000000da8	movq	$0x0, -0x8(%rbp)
+0000000000000db0	callq	0x2540
+0000000000000db5	addq	-0x8(%rbp), %rax
+0000000000000db9	movq	%rax, -0x8(%rbp)
+0000000000000dbd	callq	0x25d0
+0000000000000dc2	addq	-0x8(%rbp), %rax
+0000000000000dc6	movq	%rax, -0x8(%rbp)
+0000000000000dca	callq	0x2660
+0000000000000dcf	leaq	0x2080(%rip), %rdi
+0000000000000dd6	addq	-0x8(%rbp), %rax
+0000000000000dda	movq	%rax, -0x8(%rbp)
+0000000000000dde	callq	0x29b0
+0000000000000de3	movq	-0x8(%rbp), %rdi
+0000000000000de7	callq	0x28d0
+0000000000000dec	leaq	0x206c(%rip), %rdi
+0000000000000df3	callq	0x29b0
+0000000000000df8	addq	$0x10, %rsp
+0000000000000dfc	popq	%rbp
+0000000000000dfd	retq
+0000000000000dfe	nop
+_show_hexa_mem:
+0000000000000e00	pushq	%rbp
+0000000000000e01	movq	%rsp, %rbp
+0000000000000e04	xorl	%edi, %edi
+0000000000000e06	callq	0x22e0
+0000000000000e0b	cmpl	$0x0, %eax
+0000000000000e0e	jle	0xe33
+0000000000000e14	leaq	0x204d(%rip), %rdi
+0000000000000e1b	callq	0x29b0
+0000000000000e20	leaq	0x2068(%rip), %rdi
+0000000000000e27	callq	0x29b0
+0000000000000e2c	xorl	%edi, %edi
+0000000000000e2e	callq	0x2bb0
+0000000000000e33	movl	$0x1, %edi
+0000000000000e38	callq	0x22e0
+0000000000000e3d	cmpl	$0x0, %eax
+0000000000000e40	jle	0xe68
+0000000000000e46	leaq	0x2061(%rip), %rdi
+0000000000000e4d	callq	0x29b0
+0000000000000e52	leaq	0x207d(%rip), %rdi
+0000000000000e59	callq	0x29b0
+0000000000000e5e	movl	$0x1, %edi
+0000000000000e63	callq	0x2bb0
+0000000000000e68	movl	$0x2, %edi
+0000000000000e6d	callq	0x22e0
+0000000000000e72	cmpl	$0x0, %eax
+0000000000000e75	jle	0xe9d
+0000000000000e7b	leaq	0x2072(%rip), %rdi
+0000000000000e82	callq	0x29b0
+0000000000000e87	leaq	0x2048(%rip), %rdi
+0000000000000e8e	callq	0x29b0
+0000000000000e93	movl	$0x2, %edi
+0000000000000e98	callq	0x2bb0
+0000000000000e9d	popq	%rbp
+0000000000000e9e	retq
+0000000000000e9f	nop
+_ft_mmap:
+0000000000000ea0	pushq	%rbp
+0000000000000ea1	movq	%rsp, %rbp
+0000000000000ea4	subq	$0x20, %rsp
+0000000000000ea8	movl	$0xffffffff, %r8d
+0000000000000eae	xorl	%eax, %eax
+0000000000000eb0	movl	%eax, %r9d
+0000000000000eb3	movq	%rdi, -0x8(%rbp)
+0000000000000eb7	movq	%rsi, -0x10(%rbp)
+0000000000000ebb	movl	%edx, -0x14(%rbp)
+0000000000000ebe	movl	%ecx, -0x18(%rbp)
+0000000000000ec1	movq	-0x8(%rbp), %rdi
+0000000000000ec5	movq	-0x10(%rbp), %rsi
+0000000000000ec9	movl	-0x14(%rbp), %edx
+0000000000000ecc	movl	-0x18(%rbp), %eax
+0000000000000ecf	orl	$0x1000, %eax
+0000000000000ed4	orl	$0x2, %eax
+0000000000000ed7	movl	%eax, %ecx
+0000000000000ed9	callq	0x2ddc
+0000000000000ede	addq	$0x20, %rsp
+0000000000000ee2	popq	%rbp
+0000000000000ee3	retq
+0000000000000ee4	nop
+0000000000000ee5	nop
+0000000000000ee6	nop
+0000000000000ee7	nop
+0000000000000ee8	nop
+0000000000000ee9	nop
+0000000000000eea	nop
+0000000000000eeb	nop
+0000000000000eec	nop
+0000000000000eed	nop
+0000000000000eee	nop
+0000000000000eef	nop
+_get_shield_new_map:
+0000000000000ef0	pushq	%rbp
+0000000000000ef1	movq	%rsp, %rbp
+0000000000000ef4	subq	$0x30, %rsp
+0000000000000ef8	movl	%edi, -0xc(%rbp)
+0000000000000efb	movq	%rsi, -0x18(%rbp)
+0000000000000eff	movq	$0x0, -0x20(%rbp)
+0000000000000f07	movl	-0xc(%rbp), %edi
+0000000000000f0a	movq	-0x18(%rbp), %rsi
+0000000000000f0e	movl	%esi, %eax
+0000000000000f10	movl	%eax, %esi
+0000000000000f12	callq	0x1450
+0000000000000f17	movq	%rax, -0x20(%rbp)
+0000000000000f1b	cmpq	$0x0, %rax
+0000000000000f1f	jne	0xf32
+0000000000000f25	movq	$0x0, -0x8(%rbp)
+0000000000000f2d	jmp	0xfb4
+0000000000000f32	xorl	%esi, %esi
+0000000000000f34	movq	-0x20(%rbp), %rdi
+0000000000000f38	callq	0x19d0
+0000000000000f3d	movq	-0x20(%rbp), %rdi
+0000000000000f41	movq	(%rdi), %rdi
+0000000000000f44	movq	%rax, 0x10(%rdi)
+0000000000000f48	movq	-0x18(%rbp), %rax
+0000000000000f4c	movq	-0x20(%rbp), %rdi
+0000000000000f50	movq	(%rdi), %rdi
+0000000000000f53	movq	%rax, 0x8(%rdi)
+0000000000000f57	cmpl	$0x2, -0xc(%rbp)
+0000000000000f5b	jne	0xf6e
+0000000000000f61	xorl	%eax, %eax
+0000000000000f63	movl	%eax, %ecx
+0000000000000f65	movq	%rcx, -0x28(%rbp)
+0000000000000f69	jmp	0xf82
+0000000000000f6e	movq	-0x20(%rbp), %rax
+0000000000000f72	movl	0x18(%rax), %edi
+0000000000000f75	callq	0x1e70
+0000000000000f7a	imulq	$0x64, %rax, %rax
+0000000000000f7e	movq	%rax, -0x28(%rbp)
+0000000000000f82	movq	-0x28(%rbp), %rax
+0000000000000f86	movq	-0x20(%rbp), %rcx
+0000000000000f8a	movq	%rax, 0x28(%rcx)
+0000000000000f8e	movq	-0x20(%rbp), %rax
+0000000000000f92	movl	0x18(%rax), %edi
+0000000000000f95	callq	0x1e70
+0000000000000f9a	movq	-0x20(%rbp), %rcx
+0000000000000f9e	movq	0x28(%rcx), %rdx
+0000000000000fa2	subq	%rax, %rdx
+0000000000000fa5	movq	%rdx, 0x28(%rcx)
+0000000000000fa9	movq	-0x20(%rbp), %rax
+0000000000000fad	movq	(%rax), %rax
+0000000000000fb0	movq	%rax, -0x8(%rbp)
+0000000000000fb4	movq	-0x8(%rbp), %rax
+0000000000000fb8	addq	$0x30, %rsp
+0000000000000fbc	popq	%rbp
+0000000000000fbd	retq
+0000000000000fbe	nop
+_check_free_place:
+0000000000000fc0	pushq	%rbp
+0000000000000fc1	movq	%rsp, %rbp
+0000000000000fc4	subq	$0x30, %rsp
+0000000000000fc8	movl	%edi, -0xc(%rbp)
+0000000000000fcb	movq	%rsi, -0x18(%rbp)
+0000000000000fcf	callq	0x11f0
+0000000000000fd4	movq	%rax, -0x20(%rbp)
+0000000000000fd8	cmpq	$0x0, -0x20(%rbp)
+0000000000000fdd	je	0x1094
+0000000000000fe3	movq	-0x20(%rbp), %rax
+0000000000000fe7	cmpl	$0x0, 0x1c(%rax)
+0000000000000feb	jne	0x1083
+0000000000000ff1	movq	-0x20(%rbp), %rax
+0000000000000ff5	movl	0x18(%rax), %ecx
+0000000000000ff8	cmpl	-0xc(%rbp), %ecx
+0000000000000ffb	jne	0x1083
+0000000000001001	movq	-0x20(%rbp), %rax
+0000000000001005	movq	0x28(%rax), %rax
+0000000000001009	cmpq	-0x18(%rbp), %rax
+000000000000100d	jb	0x1083
+0000000000001013	movq	-0x20(%rbp), %rdi
+0000000000001017	movq	-0x18(%rbp), %rsi
+000000000000101b	callq	0x1de0
+0000000000001020	movq	%rax, -0x28(%rbp)
+0000000000001024	cmpq	$0x0, -0x28(%rbp)
+0000000000001029	je	0x107e
+000000000000102f	movq	-0x28(%rbp), %rax
+0000000000001033	cmpq	$0x0, 0x10(%rax)
+0000000000001038	jne	0x1056
+000000000000103e	movq	-0x20(%rbp), %rdi
+0000000000001042	movq	-0x28(%rbp), %rax
+0000000000001046	movswl	(%rax), %esi
+0000000000001049	callq	0x19d0
+000000000000104e	movq	-0x28(%rbp), %rdi
+0000000000001052	movq	%rax, 0x10(%rdi)
+0000000000001056	movq	-0x20(%rbp), %rax
+000000000000105a	movl	0x18(%rax), %edi
+000000000000105d	callq	0x1e70
+0000000000001062	movq	-0x20(%rbp), %rcx
+0000000000001066	movq	0x28(%rcx), %rdx
+000000000000106a	subq	%rax, %rdx
+000000000000106d	movq	%rdx, 0x28(%rcx)
+0000000000001071	movq	-0x28(%rbp), %rax
+0000000000001075	movq	%rax, -0x8(%rbp)
+0000000000001079	jmp	0x10a4
+000000000000107e	jmp	0x1083
+0000000000001083	movq	-0x20(%rbp), %rax
+0000000000001087	movq	0x8(%rax), %rax
+000000000000108b	movq	%rax, -0x20(%rbp)
+000000000000108f	jmp	0xfd8
+0000000000001094	movl	-0xc(%rbp), %edi
+0000000000001097	movq	-0x18(%rbp), %rsi
+000000000000109b	callq	0xef0
+00000000000010a0	movq	%rax, -0x8(%rbp)
+00000000000010a4	movq	-0x8(%rbp), %rax
+00000000000010a8	addq	$0x30, %rsp
+00000000000010ac	popq	%rbp
+00000000000010ad	retq
+00000000000010ae	nop
+_get_shield:
+00000000000010b0	pushq	%rbp
+00000000000010b1	movq	%rsp, %rbp
+00000000000010b4	subq	$0x20, %rsp
+00000000000010b8	movq	%rdi, -0x10(%rbp)
+00000000000010bc	movq	$0x0, -0x18(%rbp)
+00000000000010c4	movq	-0x10(%rbp), %rdi
+00000000000010c8	callq	0x1150
+00000000000010cd	movl	%eax, -0x1c(%rbp)
+00000000000010d0	movl	-0x1c(%rbp), %edi
+00000000000010d3	callq	0x14f0
+00000000000010d8	cmpl	$0x0, %eax
+00000000000010db	jne	0x10f6
+00000000000010e1	movl	-0x1c(%rbp), %edi
+00000000000010e4	movq	-0x10(%rbp), %rsi
+00000000000010e8	callq	0xef0
+00000000000010ed	movq	%rax, -0x18(%rbp)
+00000000000010f1	jmp	0x1106
+00000000000010f6	movl	-0x1c(%rbp), %edi
+00000000000010f9	movq	-0x10(%rbp), %rsi
+00000000000010fd	callq	0xfc0
+0000000000001102	movq	%rax, -0x18(%rbp)
+0000000000001106	cmpq	$0x0, -0x18(%rbp)
+000000000000110b	je	0x111d
+0000000000001111	movq	-0x10(%rbp), %rax
+0000000000001115	movq	-0x18(%rbp), %rcx
+0000000000001119	movq	%rax, 0x8(%rcx)
+000000000000111d	cmpq	$0x0, -0x18(%rbp)
+0000000000001122	jne	0x1135
+0000000000001128	movq	$0x0, -0x8(%rbp)
+0000000000001130	jmp	0x113d
+0000000000001135	movq	-0x18(%rbp), %rax
+0000000000001139	movq	%rax, -0x8(%rbp)
+000000000000113d	movq	-0x8(%rbp), %rax
+0000000000001141	addq	$0x20, %rsp
+0000000000001145	popq	%rbp
+0000000000001146	retq
+0000000000001147	nopw	(%rax,%rax)
+_get_zone_type_by_size:
+0000000000001150	pushq	%rbp
+0000000000001151	movq	%rsp, %rbp
+0000000000001154	subq	$0x30, %rsp
+0000000000001158	movq	%rdi, -0x10(%rbp)
+000000000000115c	movq	-0x10(%rbp), %rdi
+0000000000001160	movq	%rdi, -0x18(%rbp)
+0000000000001164	callq	0x2dd6
+0000000000001169	movl	$0x64, %ecx
+000000000000116e	movl	$0x4, %edx
+0000000000001173	movl	%edx, -0x1c(%rbp)
+0000000000001176	cltd
+0000000000001177	movl	-0x1c(%rbp), %esi
+000000000000117a	idivl	%esi
+000000000000117c	imull	$0x64, %eax, %eax
+000000000000117f	cltd
+0000000000001180	idivl	%ecx
+0000000000001182	movslq	%eax, %rdi
+0000000000001185	movq	-0x18(%rbp), %r8
+0000000000001189	cmpq	%rdi, %r8
+000000000000118c	ja	0x119e
+0000000000001192	movl	$0x0, -0x4(%rbp)
+0000000000001199	jmp	0x11dc
+000000000000119e	movq	-0x10(%rbp), %rax
+00000000000011a2	movq	%rax, -0x28(%rbp)
+00000000000011a6	callq	0x2dd6
+00000000000011ab	movl	$0x64, %ecx
+00000000000011b0	imull	$0xa, %eax, %eax
+00000000000011b3	imull	$0x64, %eax, %eax
+00000000000011b6	cltd
+00000000000011b7	idivl	%ecx
+00000000000011b9	movslq	%eax, %rsi
+00000000000011bc	movq	-0x28(%rbp), %rdi
+00000000000011c0	cmpq	%rsi, %rdi
+00000000000011c3	ja	0x11d5
+00000000000011c9	movl	$0x1, -0x4(%rbp)
+00000000000011d0	jmp	0x11dc
+00000000000011d5	movl	$0x2, -0x4(%rbp)
+00000000000011dc	movl	-0x4(%rbp), %eax
+00000000000011df	addq	$0x30, %rsp
+00000000000011e3	popq	%rbp
+00000000000011e4	retq
+00000000000011e5	nop
+00000000000011e6	nop
+00000000000011e7	nop
+00000000000011e8	nop
+00000000000011e9	nop
+00000000000011ea	nop
+00000000000011eb	nop
+00000000000011ec	nop
+00000000000011ed	nop
+00000000000011ee	nop
+00000000000011ef	nop
+_getallmaps:
+00000000000011f0	pushq	%rbp
+00000000000011f1	movq	%rsp, %rbp
+00000000000011f4	subq	$0x20, %rsp
+00000000000011f8	cmpq	$0x0, 0x1e48(%rip)
+0000000000001200	jne	0x12c3
+0000000000001206	leaq	0x1e43(%rip), %rdi
+000000000000120d	xorl	%eax, %eax
+000000000000120f	movl	%eax, %esi
+0000000000001211	callq	0x2de8
+0000000000001216	xorl	%ecx, %ecx
+0000000000001218	movl	%ecx, %edi
+000000000000121a	movl	$0x30, %ecx
+000000000000121f	movl	%ecx, %esi
+0000000000001221	movl	$0x3, %edx
+0000000000001226	xorl	%ecx, %ecx
+0000000000001228	movl	%eax, -0x14(%rbp)
+000000000000122b	callq	0xea0
+0000000000001230	movq	$-0x1, %rsi
+0000000000001237	movq	%rax, -0x10(%rbp)
+000000000000123b	cmpq	%rsi, -0x10(%rbp)
+000000000000123f	jne	0x1252
+0000000000001245	movq	$0x0, -0x8(%rbp)
+000000000000124d	jmp	0x12ce
+0000000000001252	movq	-0x10(%rbp), %rax
+0000000000001256	movq	%rax, 0x1deb(%rip)
+000000000000125d	movq	0x1de4(%rip), %rax
+0000000000001264	movq	$0x0, (%rax)
+000000000000126b	movq	0x1dd6(%rip), %rax
+0000000000001272	movq	$0x0, 0x8(%rax)
+000000000000127a	movq	0x1dc7(%rip), %rax
+0000000000001281	movq	$0x0, 0x10(%rax)
+0000000000001289	movq	0x1db8(%rip), %rax
+0000000000001290	movl	$0x0, 0x18(%rax)
+0000000000001297	movq	0x1daa(%rip), %rax
+000000000000129e	movl	$0x1, 0x1c(%rax)
+00000000000012a5	movq	-0x10(%rbp), %rax
+00000000000012a9	movq	0x1d98(%rip), %rcx
+00000000000012b0	movq	%rax, 0x20(%rcx)
+00000000000012b4	movq	0x1d8d(%rip), %rax
+00000000000012bb	movq	$0x0, 0x28(%rax)
+00000000000012c3	movq	0x1d7e(%rip), %rax
+00000000000012ca	movq	%rax, -0x8(%rbp)
+00000000000012ce	movq	-0x8(%rbp), %rax
+00000000000012d2	addq	$0x20, %rsp
+00000000000012d6	popq	%rbp
+00000000000012d7	retq
+00000000000012d8	nopl	(%rax,%rax)
+_newmap:
+00000000000012e0	pushq	%rbp
+00000000000012e1	movq	%rsp, %rbp
+00000000000012e4	subq	$0x40, %rsp
+00000000000012e8	movq	%rdi, -0x10(%rbp)
+00000000000012ec	movl	%esi, -0x14(%rbp)
+00000000000012ef	movl	%edx, -0x18(%rbp)
+00000000000012f2	cmpl	$0x2, -0x14(%rbp)
+00000000000012f6	jb	0x130e
+00000000000012fc	movslq	-0x18(%rbp), %rax
+0000000000001300	addq	$0x20, %rax
+0000000000001304	movl	%eax, %ecx
+0000000000001306	movl	%ecx, -0x24(%rbp)
+0000000000001309	jmp	0x1350
+000000000000130e	cmpl	$0x0, -0x14(%rbp)
+0000000000001312	jne	0x1330
+0000000000001318	callq	0x2dd6
+000000000000131d	movl	$0x4, %ecx
+0000000000001322	cltd
+0000000000001323	idivl	%ecx
+0000000000001325	imull	$0x64, %eax, %eax
+0000000000001328	movl	%eax, -0x34(%rbp)
+000000000000132b	jmp	0x133e
+0000000000001330	callq	0x2dd6
+0000000000001335	imull	$0xa, %eax, %eax
+0000000000001338	imull	$0x64, %eax, %eax
+000000000000133b	movl	%eax, -0x34(%rbp)
+000000000000133e	movl	-0x34(%rbp), %eax
+0000000000001341	movslq	%eax, %rcx
+0000000000001344	addq	$0xc80, %rcx
+000000000000134b	movl	%ecx, %eax
+000000000000134d	movl	%eax, -0x24(%rbp)
+0000000000001350	xorl	%eax, %eax
+0000000000001352	movl	%eax, %edi
+0000000000001354	movl	$0x3, %edx
+0000000000001359	xorl	%ecx, %ecx
+000000000000135b	movslq	-0x24(%rbp), %rsi
+000000000000135f	addq	$0x30, %rsi
+0000000000001363	callq	0xea0
+0000000000001368	movq	$-0x1, %rsi
+000000000000136f	movq	%rax, -0x30(%rbp)
+0000000000001373	cmpq	%rsi, -0x30(%rbp)
+0000000000001377	jne	0x138a
+000000000000137d	movq	$0x0, -0x8(%rbp)
+0000000000001385	jmp	0x1442
+000000000000138a	movq	-0x30(%rbp), %rax
+000000000000138e	movq	%rax, -0x20(%rbp)
+0000000000001392	movq	-0x20(%rbp), %rax
+0000000000001396	movq	$0x0, 0x8(%rax)
+000000000000139e	movq	-0x10(%rbp), %rax
+00000000000013a2	movq	-0x20(%rbp), %rcx
+00000000000013a6	movq	%rax, 0x10(%rcx)
+00000000000013aa	cmpq	$0x0, -0x10(%rbp)
+00000000000013af	je	0x13c1
+00000000000013b5	movq	-0x20(%rbp), %rax
+00000000000013b9	movq	-0x10(%rbp), %rcx
+00000000000013bd	movq	%rax, 0x8(%rcx)
+00000000000013c1	movl	-0x14(%rbp), %eax
+00000000000013c4	movq	-0x20(%rbp), %rcx
+00000000000013c8	movl	%eax, 0x18(%rcx)
+00000000000013cb	movq	-0x20(%rbp), %rcx
+00000000000013cf	movl	$0x0, 0x1c(%rcx)
+00000000000013d6	movq	-0x30(%rbp), %rcx
+00000000000013da	addq	$0x30, %rcx
+00000000000013de	movl	-0x14(%rbp), %esi
+00000000000013e1	movslq	-0x18(%rbp), %rdx
+00000000000013e5	movq	%rcx, %rdi
+00000000000013e8	callq	0x1b20
+00000000000013ed	xorl	%esi, %esi
+00000000000013ef	movq	-0x30(%rbp), %rcx
+00000000000013f3	movq	-0x20(%rbp), %rdx
+00000000000013f7	movq	%rcx, 0x20(%rdx)
+00000000000013fb	movq	-0x20(%rbp), %rdi
+00000000000013ff	callq	0x1a90
+0000000000001404	movq	-0x20(%rbp), %rcx
+0000000000001408	movq	%rax, (%rcx)
+000000000000140b	movq	-0x20(%rbp), %rax
+000000000000140f	movq	$0x0, 0x28(%rax)
+0000000000001417	movq	-0x20(%rbp), %rax
+000000000000141b	cmpq	$0x0, (%rax)
+000000000000141f	jne	0x1432
+0000000000001425	xorl	%eax, %eax
+0000000000001427	movl	%eax, %ecx
+0000000000001429	movq	%rcx, -0x40(%rbp)
+000000000000142d	jmp	0x143a
+0000000000001432	movq	-0x20(%rbp), %rax
+0000000000001436	movq	%rax, -0x40(%rbp)
+000000000000143a	movq	-0x40(%rbp), %rax
+000000000000143e	movq	%rax, -0x8(%rbp)
+0000000000001442	movq	-0x8(%rbp), %rax
+0000000000001446	addq	$0x40, %rsp
+000000000000144a	popq	%rbp
+000000000000144b	retq
+000000000000144c	nopl	(%rax)
+_add_new_map:
+0000000000001450	pushq	%rbp
+0000000000001451	movq	%rsp, %rbp
+0000000000001454	subq	$0x20, %rsp
+0000000000001458	movl	%edi, -0xc(%rbp)
+000000000000145b	movl	%esi, -0x10(%rbp)
+000000000000145e	callq	0x11f0
+0000000000001463	movq	%rax, -0x20(%rbp)
+0000000000001467	cmpq	$0x0, %rax
+000000000000146b	jne	0x147e
+0000000000001471	movq	$0x0, -0x8(%rbp)
+0000000000001479	jmp	0x14e4
+000000000000147e	jmp	0x1483
+0000000000001483	movq	-0x20(%rbp), %rax
+0000000000001487	cmpq	$0x0, 0x8(%rax)
+000000000000148c	je	0x14a3
+0000000000001492	movq	-0x20(%rbp), %rax
+0000000000001496	movq	0x8(%rax), %rax
+000000000000149a	movq	%rax, -0x20(%rbp)
+000000000000149e	jmp	0x1483
+00000000000014a3	movq	-0x20(%rbp), %rdi
+00000000000014a7	movl	-0xc(%rbp), %esi
+00000000000014aa	movl	-0x10(%rbp), %edx
+00000000000014ad	callq	0x12e0
+00000000000014b2	movq	%rax, -0x18(%rbp)
+00000000000014b6	cmpq	$0x0, %rax
+00000000000014ba	jne	0x14cd
+00000000000014c0	movq	$0x0, -0x8(%rbp)
+00000000000014c8	jmp	0x14e4
+00000000000014cd	movslq	-0x10(%rbp), %rax
+00000000000014d1	movq	-0x18(%rbp), %rcx
+00000000000014d5	movq	(%rcx), %rcx
+00000000000014d8	movq	%rax, 0x8(%rcx)
+00000000000014dc	movq	-0x18(%rbp), %rax
+00000000000014e0	movq	%rax, -0x8(%rbp)
+00000000000014e4	movq	-0x8(%rbp), %rax
+00000000000014e8	addq	$0x20, %rsp
+00000000000014ec	popq	%rbp
+00000000000014ed	retq
+00000000000014ee	nop
+_haszone:
+00000000000014f0	pushq	%rbp
+00000000000014f1	movq	%rsp, %rbp
+00000000000014f4	subq	$0x10, %rsp
+00000000000014f8	movl	%edi, -0x8(%rbp)
+00000000000014fb	callq	0x11f0
+0000000000001500	movq	%rax, -0x10(%rbp)
+0000000000001504	cmpq	$0x0, -0x10(%rbp)
+0000000000001509	je	0x1558
+000000000000150f	movq	-0x10(%rbp), %rax
+0000000000001513	cmpl	$0x0, 0x1c(%rax)
+0000000000001517	jne	0x1547
+000000000000151d	movq	-0x10(%rbp), %rax
+0000000000001521	cmpl	$0x0, 0x1c(%rax)
+0000000000001525	jne	0x1547
+000000000000152b	movq	-0x10(%rbp), %rax
+000000000000152f	movl	0x18(%rax), %ecx
+0000000000001532	cmpl	-0x8(%rbp), %ecx
+0000000000001535	jne	0x1547
+000000000000153b	movl	$0x1, -0x4(%rbp)
+0000000000001542	jmp	0x155f
+0000000000001547	movq	-0x10(%rbp), %rax
+000000000000154b	movq	0x8(%rax), %rax
+000000000000154f	movq	%rax, -0x10(%rbp)
+0000000000001553	jmp	0x1504
+0000000000001558	movl	$0x0, -0x4(%rbp)
+000000000000155f	movl	-0x4(%rbp), %eax
+0000000000001562	addq	$0x10, %rsp
+0000000000001566	popq	%rbp
+0000000000001567	retq
+0000000000001568	nopl	(%rax,%rax)
+_getmap_by_zone:
+0000000000001570	pushq	%rbp
+0000000000001571	movq	%rsp, %rbp
+0000000000001574	subq	$0x20, %rsp
+0000000000001578	movl	%edi, -0xc(%rbp)
+000000000000157b	callq	0x11f0
+0000000000001580	movq	%rax, -0x18(%rbp)
+0000000000001584	cmpq	$0x0, -0x18(%rbp)
+0000000000001589	je	0x15cb
+000000000000158f	movq	-0x18(%rbp), %rax
+0000000000001593	cmpl	$0x0, 0x1c(%rax)
+0000000000001597	jne	0x15ba
+000000000000159d	movq	-0x18(%rbp), %rax
+00000000000015a1	movl	0x18(%rax), %ecx
+00000000000015a4	cmpl	-0xc(%rbp), %ecx
+00000000000015a7	jne	0x15ba
+00000000000015ad	movq	-0x18(%rbp), %rax
+00000000000015b1	movq	%rax, -0x8(%rbp)
+00000000000015b5	jmp	0x15d3
+00000000000015ba	movq	-0x18(%rbp), %rax
+00000000000015be	movq	0x8(%rax), %rax
+00000000000015c2	movq	%rax, -0x18(%rbp)
+00000000000015c6	jmp	0x1584
+00000000000015cb	movq	$0x0, -0x8(%rbp)
+00000000000015d3	movq	-0x8(%rbp), %rax
+00000000000015d7	addq	$0x20, %rsp
+00000000000015db	popq	%rbp
+00000000000015dc	retq
+00000000000015dd	nop
+00000000000015de	nop
+00000000000015df	nop
+_get_start_ptr_zone:
+00000000000015e0	pushq	%rbp
+00000000000015e1	movq	%rsp, %rbp
+00000000000015e4	movq	%rdi, -0x8(%rbp)
+00000000000015e8	movq	-0x8(%rbp), %rdi
+00000000000015ec	movq	0x20(%rdi), %rdi
+00000000000015f0	addq	$0x30, %rdi
+00000000000015f4	movq	%rdi, -0x10(%rbp)
+00000000000015f8	movq	-0x8(%rbp), %rdi
+00000000000015fc	cmpl	$0x2, 0x18(%rdi)
+0000000000001600	jne	0x1617
+0000000000001606	movq	-0x10(%rbp), %rax
+000000000000160a	addq	$0x20, %rax
+000000000000160e	movq	%rax, -0x10(%rbp)
+0000000000001612	jmp	0x1625
+0000000000001617	movq	-0x10(%rbp), %rax
+000000000000161b	addq	$0xc80, %rax
+0000000000001621	movq	%rax, -0x10(%rbp)
+0000000000001625	movq	-0x10(%rbp), %rax
+0000000000001629	popq	%rbp
+000000000000162a	retq
+000000000000162b	nopl	(%rax,%rax)
+_get_end_ptr_zone:
+0000000000001630	pushq	%rbp
+0000000000001631	movq	%rsp, %rbp
+0000000000001634	subq	$0x30, %rsp
+0000000000001638	movq	%rdi, -0x8(%rbp)
+000000000000163c	movq	%rsi, -0x10(%rbp)
+0000000000001640	movq	-0x10(%rbp), %rsi
+0000000000001644	cmpl	$0x2, 0x18(%rsi)
+0000000000001648	jne	0x1666
+000000000000164e	movq	-0x8(%rbp), %rax
+0000000000001652	movq	-0x10(%rbp), %rcx
+0000000000001656	movq	(%rcx), %rcx
+0000000000001659	addq	0x8(%rcx), %rax
+000000000000165d	movq	%rax, -0x18(%rbp)
+0000000000001661	jmp	0x16b3
+0000000000001666	movq	-0x8(%rbp), %rax
+000000000000166a	movq	-0x10(%rbp), %rcx
+000000000000166e	cmpl	$0x0, 0x18(%rcx)
+0000000000001672	movq	%rax, -0x20(%rbp)
+0000000000001676	jne	0x1694
+000000000000167c	callq	0x2dd6
+0000000000001681	movl	$0x4, %ecx
+0000000000001686	cltd
+0000000000001687	idivl	%ecx
+0000000000001689	imull	$0x64, %eax, %eax
+000000000000168c	movl	%eax, -0x24(%rbp)
+000000000000168f	jmp	0x16a2
+0000000000001694	callq	0x2dd6
+0000000000001699	imull	$0xa, %eax, %eax
+000000000000169c	imull	$0x64, %eax, %eax
+000000000000169f	movl	%eax, -0x24(%rbp)
+00000000000016a2	movl	-0x24(%rbp), %eax
+00000000000016a5	movslq	%eax, %rcx
+00000000000016a8	movq	-0x20(%rbp), %rdx
+00000000000016ac	addq	%rcx, %rdx
+00000000000016af	movq	%rdx, -0x18(%rbp)
+00000000000016b3	movq	-0x18(%rbp), %rax
+00000000000016b7	addq	$0x30, %rsp
+00000000000016bb	popq	%rbp
+00000000000016bc	retq
+00000000000016bd	nopl	(%rax)
+_free_shield:
+00000000000016c0	pushq	%rbp
+00000000000016c1	movq	%rsp, %rbp
+00000000000016c4	subq	$0x30, %rsp
+00000000000016c8	movq	%rdi, -0x10(%rbp)
+00000000000016cc	movq	%rsi, -0x18(%rbp)
+00000000000016d0	movq	-0x18(%rbp), %rsi
+00000000000016d4	movq	(%rsi), %rsi
+00000000000016d7	movq	%rsi, -0x20(%rbp)
+00000000000016db	movq	-0x18(%rbp), %rdi
+00000000000016df	callq	0x15e0
+00000000000016e4	movq	%rax, -0x28(%rbp)
+00000000000016e8	movq	-0x10(%rbp), %rax
+00000000000016ec	cmpq	-0x28(%rbp), %rax
+00000000000016f0	jb	0x1718
+00000000000016f6	movq	-0x10(%rbp), %rax
+00000000000016fa	movq	-0x28(%rbp), %rdi
+00000000000016fe	movq	-0x18(%rbp), %rsi
+0000000000001702	movq	%rax, -0x30(%rbp)
+0000000000001706	callq	0x1630
+000000000000170b	movq	-0x30(%rbp), %rsi
+000000000000170f	cmpq	%rax, %rsi
+0000000000001712	jbe	0x1724
+0000000000001718	movl	$0x0, -0x4(%rbp)
+000000000000171f	jmp	0x17aa
+0000000000001724	jmp	0x1729
+0000000000001729	cmpq	$0x0, -0x20(%rbp)
+000000000000172e	je	0x17a3
+0000000000001734	movq	-0x20(%rbp), %rax
+0000000000001738	movswl	0x18(%rax), %ecx
+000000000000173c	cmpl	$0x0, %ecx
+000000000000173f	jne	0x1785
+0000000000001745	movq	-0x20(%rbp), %rax
+0000000000001749	movq	0x10(%rax), %rax
+000000000000174d	cmpq	-0x10(%rbp), %rax
+0000000000001751	jne	0x1785
+0000000000001757	movq	-0x20(%rbp), %rax
+000000000000175b	movw	$0x1, 0x18(%rax)
+0000000000001761	movq	-0x18(%rbp), %rax
+0000000000001765	movl	0x18(%rax), %edi
+0000000000001768	callq	0x1e70
+000000000000176d	movq	-0x18(%rbp), %rcx
+0000000000001771	addq	0x28(%rcx), %rax
+0000000000001775	movq	%rax, 0x28(%rcx)
+0000000000001779	movl	$0x1, -0x4(%rbp)
+0000000000001780	jmp	0x17aa
+0000000000001785	movq	-0x18(%rbp), %rdi
+0000000000001789	movq	-0x20(%rbp), %rax
+000000000000178d	movswl	(%rax), %ecx
+0000000000001790	addl	$0x1, %ecx
+0000000000001793	movl	%ecx, %esi
+0000000000001795	callq	0x1a90
+000000000000179a	movq	%rax, -0x20(%rbp)
+000000000000179e	jmp	0x1729
+00000000000017a3	movl	$0x0, -0x4(%rbp)
+00000000000017aa	movl	-0x4(%rbp), %eax
+00000000000017ad	addq	$0x30, %rsp
+00000000000017b1	popq	%rbp
+00000000000017b2	retq
+00000000000017b3	nopw	%cs:(%rax,%rax)
+_free_map:
+00000000000017c0	pushq	%rbp
+00000000000017c1	movq	%rsp, %rbp
+00000000000017c4	subq	$0x30, %rsp
+00000000000017c8	movq	%rdi, -0x8(%rbp)
+00000000000017cc	movq	-0x8(%rbp), %rdi
+00000000000017d0	cmpq	$0x0, 0x10(%rdi)
+00000000000017d5	je	0x1818
+00000000000017db	movq	-0x8(%rbp), %rax
+00000000000017df	cmpq	$0x0, 0x8(%rax)
+00000000000017e4	je	0x17fb
+00000000000017ea	movq	-0x8(%rbp), %rax
+00000000000017ee	movq	0x8(%rax), %rax
+00000000000017f2	movq	%rax, -0x18(%rbp)
+00000000000017f6	jmp	0x1808
+00000000000017fb	xorl	%eax, %eax
+00000000000017fd	movl	%eax, %ecx
+00000000000017ff	movq	%rcx, -0x18(%rbp)
+0000000000001803	jmp	0x1808
+0000000000001808	movq	-0x18(%rbp), %rax
+000000000000180c	movq	-0x8(%rbp), %rcx
+0000000000001810	movq	0x10(%rcx), %rcx
+0000000000001814	movq	%rax, 0x8(%rcx)
+0000000000001818	movq	-0x8(%rbp), %rax
+000000000000181c	cmpq	$0x0, 0x8(%rax)
+0000000000001821	je	0x1864
+0000000000001827	movq	-0x8(%rbp), %rax
+000000000000182b	cmpq	$0x0, 0x10(%rax)
+0000000000001830	je	0x1847
+0000000000001836	movq	-0x8(%rbp), %rax
+000000000000183a	movq	0x10(%rax), %rax
+000000000000183e	movq	%rax, -0x20(%rbp)
+0000000000001842	jmp	0x1854
+0000000000001847	xorl	%eax, %eax
+0000000000001849	movl	%eax, %ecx
+000000000000184b	movq	%rcx, -0x20(%rbp)
+000000000000184f	jmp	0x1854
+0000000000001854	movq	-0x20(%rbp), %rax
+0000000000001858	movq	-0x8(%rbp), %rcx
+000000000000185c	movq	0x8(%rcx), %rcx
+0000000000001860	movq	%rax, 0x10(%rcx)
+0000000000001864	movq	-0x8(%rbp), %rax
+0000000000001868	cmpl	$0x2, 0x18(%rax)
+000000000000186c	jb	0x188a
+0000000000001872	movq	-0x8(%rbp), %rax
+0000000000001876	movq	(%rax), %rax
+0000000000001879	movq	0x8(%rax), %rax
+000000000000187d	addq	$0x20, %rax
+0000000000001881	movq	%rax, -0x10(%rbp)
+0000000000001885	jmp	0x18cf
+000000000000188a	movq	-0x8(%rbp), %rax
+000000000000188e	cmpl	$0x0, 0x18(%rax)
+0000000000001892	jne	0x18b0
+0000000000001898	callq	0x2dd6
+000000000000189d	movl	$0x4, %ecx
+00000000000018a2	cltd
+00000000000018a3	idivl	%ecx
+00000000000018a5	imull	$0x64, %eax, %eax
+00000000000018a8	movl	%eax, -0x24(%rbp)
+00000000000018ab	jmp	0x18be
+00000000000018b0	callq	0x2dd6
+00000000000018b5	imull	$0xa, %eax, %eax
+00000000000018b8	imull	$0x64, %eax, %eax
+00000000000018bb	movl	%eax, -0x24(%rbp)
+00000000000018be	movl	-0x24(%rbp), %eax
+00000000000018c1	movslq	%eax, %rcx
+00000000000018c4	addq	$0xc80, %rcx
+00000000000018cb	movq	%rcx, -0x10(%rbp)
+00000000000018cf	movq	-0x8(%rbp), %rax
+00000000000018d3	movq	0x20(%rax), %rdi
+00000000000018d7	movq	-0x10(%rbp), %rax
+00000000000018db	addq	$0x30, %rax
+00000000000018df	movq	%rax, %rsi
+00000000000018e2	callq	0x2de2
+00000000000018e7	movl	%eax, -0x28(%rbp)
+00000000000018ea	addq	$0x30, %rsp
+00000000000018ee	popq	%rbp
+00000000000018ef	retq
+_free_ptr:
+00000000000018f0	pushq	%rbp
+00000000000018f1	movq	%rsp, %rbp
+00000000000018f4	subq	$0x20, %rsp
+00000000000018f8	movq	%rdi, -0x8(%rbp)
+00000000000018fc	movl	%esi, -0xc(%rbp)
+00000000000018ff	callq	0x11f0
+0000000000001904	movq	%rax, -0x18(%rbp)
+0000000000001908	cmpq	$0x0, -0x18(%rbp)
+000000000000190d	je	0x19c0
+0000000000001913	movq	-0x18(%rbp), %rax
+0000000000001917	cmpl	$0x0, 0x1c(%rax)
+000000000000191b	jne	0x19af
+0000000000001921	movq	-0x8(%rbp), %rdi
+0000000000001925	movq	-0x18(%rbp), %rsi
+0000000000001929	callq	0x16c0
+000000000000192e	cmpl	$0x0, %eax
+0000000000001931	je	0x19af
+0000000000001937	movq	-0x18(%rbp), %rax
+000000000000193b	cmpl	$0x2, 0x18(%rax)
+000000000000193f	jne	0x1966
+0000000000001945	movq	-0x18(%rbp), %rdi
+0000000000001949	callq	0x1c60
+000000000000194e	cmpq	$0x0, %rax
+0000000000001952	jne	0x1966
+0000000000001958	movq	-0x18(%rbp), %rdi
+000000000000195c	callq	0x17c0
+0000000000001961	jmp	0x19aa
+0000000000001966	movq	-0x18(%rbp), %rax
+000000000000196a	cmpl	$0x2, 0x18(%rax)
+000000000000196e	je	0x19a5
+0000000000001974	movq	-0x18(%rbp), %rax
+0000000000001978	movl	0x18(%rax), %edi
+000000000000197b	callq	0x22e0
+0000000000001980	cmpl	$0x1, %eax
+0000000000001983	jle	0x19a5
+0000000000001989	movq	-0x18(%rbp), %rdi
+000000000000198d	callq	0x1c60
+0000000000001992	cmpq	$0x0, %rax
+0000000000001996	jne	0x19a5
+000000000000199c	movq	-0x18(%rbp), %rdi
+00000000000019a0	callq	0x17c0
+00000000000019a5	jmp	0x19aa
+00000000000019aa	jmp	0x19c0
+00000000000019af	movq	-0x18(%rbp), %rax
+00000000000019b3	movq	0x8(%rax), %rax
+00000000000019b7	movq	%rax, -0x18(%rbp)
+00000000000019bb	jmp	0x1908
+00000000000019c0	addq	$0x20, %rsp
+00000000000019c4	popq	%rbp
+00000000000019c5	retq
+00000000000019c6	nop
+00000000000019c7	nop
+00000000000019c8	nop
+00000000000019c9	nop
+00000000000019ca	nop
+00000000000019cb	nop
+00000000000019cc	nop
+00000000000019cd	nop
+00000000000019ce	nop
+00000000000019cf	nop
+_get_ptr_id:
+00000000000019d0	pushq	%rbp
+00000000000019d1	movq	%rsp, %rbp
+00000000000019d4	subq	$0x30, %rsp
+00000000000019d8	movq	%rdi, -0x8(%rbp)
+00000000000019dc	movl	%esi, -0xc(%rbp)
+00000000000019df	movl	$0x0, -0x1c(%rbp)
+00000000000019e6	movl	$0x0, -0x20(%rbp)
+00000000000019ed	xorl	%eax, %eax
+00000000000019ef	movb	%al, %cl
+00000000000019f1	movl	-0x1c(%rbp), %eax
+00000000000019f4	cmpl	-0xc(%rbp), %eax
+00000000000019f7	movb	%cl, -0x21(%rbp)
+00000000000019fa	jge	0x1a24
+0000000000001a00	movq	-0x8(%rbp), %rdi
+0000000000001a04	movl	-0x1c(%rbp), %eax
+0000000000001a07	movl	%eax, %ecx
+0000000000001a09	addl	$0x1, %ecx
+0000000000001a0c	movl	%ecx, -0x1c(%rbp)
+0000000000001a0f	movl	%eax, %esi
+0000000000001a11	callq	0x1a90
+0000000000001a16	movq	%rax, -0x18(%rbp)
+0000000000001a1a	cmpq	$0x0, %rax
+0000000000001a1e	setne	%dl
+0000000000001a21	movb	%dl, -0x21(%rbp)
+0000000000001a24	movb	-0x21(%rbp), %al
+0000000000001a27	testb	$0x1, %al
+0000000000001a29	jne	0x1a34
+0000000000001a2f	jmp	0x1a54
+0000000000001a34	movl	$0x1000, %eax
+0000000000001a39	movl	$0x400, %ecx
+0000000000001a3e	movq	-0x8(%rbp), %rdx
+0000000000001a42	cmpl	$0x0, 0x18(%rdx)
+0000000000001a46	cmovel	%ecx, %eax
+0000000000001a49	addl	-0x20(%rbp), %eax
+0000000000001a4c	movl	%eax, -0x20(%rbp)
+0000000000001a4f	jmp	0x19ed
+0000000000001a54	movl	$0x64, %eax
+0000000000001a59	movl	$0x1, %ecx
+0000000000001a5e	movq	-0x8(%rbp), %rdx
+0000000000001a62	movq	0x20(%rdx), %rdx
+0000000000001a66	addq	$0x30, %rdx
+0000000000001a6a	movq	-0x8(%rbp), %rsi
+0000000000001a6e	cmpl	$0x2, 0x18(%rsi)
+0000000000001a72	cmovel	%ecx, %eax
+0000000000001a75	movslq	%eax, %rsi
+0000000000001a78	shlq	$0x5, %rsi
+0000000000001a7c	addq	%rsi, %rdx
+0000000000001a7f	movslq	-0x20(%rbp), %rsi
+0000000000001a83	addq	%rsi, %rdx
+0000000000001a86	movq	%rdx, %rax
+0000000000001a89	addq	$0x30, %rsp
+0000000000001a8d	popq	%rbp
+0000000000001a8e	retq
+0000000000001a8f	nop
+_get_shield_id:
+0000000000001a90	pushq	%rbp
+0000000000001a91	movq	%rsp, %rbp
+0000000000001a94	subq	$0x20, %rsp
+0000000000001a98	movq	%rdi, -0x10(%rbp)
+0000000000001a9c	movl	%esi, -0x14(%rbp)
+0000000000001a9f	movq	-0x10(%rbp), %rdi
+0000000000001aa3	cmpl	$0x2, 0x18(%rdi)
+0000000000001aa7	jne	0x1ac4
+0000000000001aad	cmpl	$0x0, -0x14(%rbp)
+0000000000001ab1	jle	0x1ac4
+0000000000001ab7	movq	$0x0, -0x8(%rbp)
+0000000000001abf	jmp	0x1af6
+0000000000001ac4	cmpl	$0x64, -0x14(%rbp)
+0000000000001ac8	jl	0x1adb
+0000000000001ace	movq	$0x0, -0x8(%rbp)
+0000000000001ad6	jmp	0x1af6
+0000000000001adb	movq	-0x10(%rbp), %rax
+0000000000001adf	movq	0x20(%rax), %rax
+0000000000001ae3	addq	$0x30, %rax
+0000000000001ae7	movl	-0x14(%rbp), %esi
+0000000000001aea	movq	%rax, %rdi
+0000000000001aed	callq	0x1b00
+0000000000001af2	movq	%rax, -0x8(%rbp)
+0000000000001af6	movq	-0x8(%rbp), %rax
+0000000000001afa	addq	$0x20, %rsp
+0000000000001afe	popq	%rbp
+0000000000001aff	retq
+_get_shield_by_id:
+0000000000001b00	pushq	%rbp
+0000000000001b01	movq	%rsp, %rbp
+0000000000001b04	movq	%rdi, -0x8(%rbp)
+0000000000001b08	movl	%esi, -0xc(%rbp)
+0000000000001b0b	movq	-0x8(%rbp), %rdi
+0000000000001b0f	movslq	-0xc(%rbp), %rax
+0000000000001b13	shlq	$0x5, %rax
+0000000000001b17	addq	%rax, %rdi
+0000000000001b1a	movq	%rdi, %rax
+0000000000001b1d	popq	%rbp
+0000000000001b1e	retq
+0000000000001b1f	nop
+_create_shields:
+0000000000001b20	pushq	%rbp
+0000000000001b21	movq	%rsp, %rbp
+0000000000001b24	subq	$0x30, %rsp
+0000000000001b28	movq	%rdi, -0x8(%rbp)
+0000000000001b2c	movl	%esi, -0xc(%rbp)
+0000000000001b2f	movq	%rdx, -0x18(%rbp)
+0000000000001b33	cmpl	$0x2, -0xc(%rbp)
+0000000000001b37	jne	0x1b4b
+0000000000001b3d	movq	-0x18(%rbp), %rax
+0000000000001b41	movl	%eax, %ecx
+0000000000001b43	movl	%ecx, -0x20(%rbp)
+0000000000001b46	jmp	0x1b96
+0000000000001b4b	cmpl	$0x0, -0xc(%rbp)
+0000000000001b4f	jne	0x1b7b
+0000000000001b55	callq	0x2dd6
+0000000000001b5a	movl	$0x64, %ecx
+0000000000001b5f	movl	$0x4, %edx
+0000000000001b64	movl	%edx, -0x24(%rbp)
+0000000000001b67	cltd
+0000000000001b68	movl	-0x24(%rbp), %esi
+0000000000001b6b	idivl	%esi
+0000000000001b6d	imull	$0x64, %eax, %eax
+0000000000001b70	cltd
+0000000000001b71	idivl	%ecx
+0000000000001b73	movl	%eax, -0x20(%rbp)
+0000000000001b76	jmp	0x1b91
+0000000000001b7b	callq	0x2dd6
+0000000000001b80	movl	$0x64, %ecx
+0000000000001b85	imull	$0xa, %eax, %eax
+0000000000001b88	imull	$0x64, %eax, %eax
+0000000000001b8b	cltd
+0000000000001b8c	idivl	%ecx
+0000000000001b8e	movl	%eax, -0x20(%rbp)
+0000000000001b91	jmp	0x1b96
+0000000000001b96	movl	$0x0, -0x1c(%rbp)
+0000000000001b9d	movl	$0x64, %eax
+0000000000001ba2	movl	$0x1, %ecx
+0000000000001ba7	movl	-0x1c(%rbp), %edx
+0000000000001baa	cmpl	$0x2, -0xc(%rbp)
+0000000000001bae	cmovel	%ecx, %eax
+0000000000001bb1	cmpl	%eax, %edx
+0000000000001bb3	jge	0x1bd6
+0000000000001bb9	movq	-0x8(%rbp), %rdi
+0000000000001bbd	movl	-0x1c(%rbp), %esi
+0000000000001bc0	movl	-0x20(%rbp), %edx
+0000000000001bc3	callq	0x1be0
+0000000000001bc8	movl	-0x1c(%rbp), %edx
+0000000000001bcb	addl	$0x1, %edx
+0000000000001bce	movl	%edx, -0x1c(%rbp)
+0000000000001bd1	jmp	0x1b9d
+0000000000001bd6	addq	$0x30, %rsp
+0000000000001bda	popq	%rbp
+0000000000001bdb	retq
+0000000000001bdc	nopl	(%rax)
+_add_shield:
+0000000000001be0	pushq	%rbp
+0000000000001be1	movq	%rsp, %rbp
+0000000000001be4	movq	%rdi, -0x8(%rbp)
+0000000000001be8	movl	%esi, -0xc(%rbp)
+0000000000001beb	movl	%edx, -0x10(%rbp)
+0000000000001bee	movq	$0x0, -0x18(%rbp)
+0000000000001bf6	cmpq	$0x0, -0x18(%rbp)
+0000000000001bfb	jne	0x1c59
+0000000000001c01	movq	$-0x1, %rax
+0000000000001c08	movq	-0x8(%rbp), %rcx
+0000000000001c0c	movslq	-0xc(%rbp), %rdx
+0000000000001c10	shlq	$0x5, %rdx
+0000000000001c14	addq	%rdx, %rcx
+0000000000001c17	movq	%rcx, -0x18(%rbp)
+0000000000001c1b	cmpq	%rax, -0x18(%rbp)
+0000000000001c1f	jne	0x1c2a
+0000000000001c25	jmp	0x1c59
+0000000000001c2a	movl	-0xc(%rbp), %eax
+0000000000001c2d	movw	%ax, %cx
+0000000000001c30	movq	-0x18(%rbp), %rdx
+0000000000001c34	movw	%cx, (%rdx)
+0000000000001c37	movq	-0x18(%rbp), %rdx
+0000000000001c3b	movq	$0x0, 0x10(%rdx)
+0000000000001c43	movslq	-0x10(%rbp), %rdx
+0000000000001c47	movq	-0x18(%rbp), %rsi
+0000000000001c4b	movq	%rdx, 0x8(%rsi)
+0000000000001c4f	movq	-0x18(%rbp), %rdx
+0000000000001c53	movw	$0x1, 0x18(%rdx)
+0000000000001c59	popq	%rbp
+0000000000001c5a	retq
+0000000000001c5b	nop
+0000000000001c5c	nop
+0000000000001c5d	nop
+0000000000001c5e	nop
+0000000000001c5f	nop
+_get_used_size:
+0000000000001c60	pushq	%rbp
+0000000000001c61	movq	%rsp, %rbp
+0000000000001c64	subq	$0x20, %rsp
+0000000000001c68	movq	%rdi, -0x8(%rbp)
+0000000000001c6c	movq	$0x0, -0x18(%rbp)
+0000000000001c74	movq	-0x8(%rbp), %rdi
+0000000000001c78	movq	(%rdi), %rdi
+0000000000001c7b	movq	%rdi, -0x10(%rbp)
+0000000000001c7f	cmpq	$0x0, -0x10(%rbp)
+0000000000001c84	je	0x1cc9
+0000000000001c8a	movq	-0x10(%rbp), %rax
+0000000000001c8e	movswl	0x18(%rax), %ecx
+0000000000001c92	cmpl	$0x0, %ecx
+0000000000001c95	jne	0x1cab
+0000000000001c9b	movq	-0x10(%rbp), %rax
+0000000000001c9f	movq	0x8(%rax), %rax
+0000000000001ca3	addq	-0x18(%rbp), %rax
+0000000000001ca7	movq	%rax, -0x18(%rbp)
+0000000000001cab	movq	-0x8(%rbp), %rdi
+0000000000001caf	movq	-0x10(%rbp), %rax
+0000000000001cb3	movswl	(%rax), %ecx
+0000000000001cb6	addl	$0x1, %ecx
+0000000000001cb9	movl	%ecx, %esi
+0000000000001cbb	callq	0x1a90
+0000000000001cc0	movq	%rax, -0x10(%rbp)
+0000000000001cc4	jmp	0x1c7f
+0000000000001cc9	movq	-0x18(%rbp), %rax
+0000000000001ccd	addq	$0x20, %rsp
+0000000000001cd1	popq	%rbp
+0000000000001cd2	retq
+0000000000001cd3	nopw	%cs:(%rax,%rax)
+_get_free_size:
+0000000000001ce0	pushq	%rbp
+0000000000001ce1	movq	%rsp, %rbp
+0000000000001ce4	subq	$0x20, %rsp
+0000000000001ce8	movq	%rdi, -0x10(%rbp)
+0000000000001cec	movq	-0x10(%rbp), %rdi
+0000000000001cf0	callq	0x1c60
+0000000000001cf5	movq	%rax, -0x18(%rbp)
+0000000000001cf9	movq	-0x10(%rbp), %rax
+0000000000001cfd	cmpl	$0x0, 0x18(%rax)
+0000000000001d01	jne	0x1d27
+0000000000001d07	callq	0x2dd6
+0000000000001d0c	movl	$0x4, %ecx
+0000000000001d11	cltd
+0000000000001d12	idivl	%ecx
+0000000000001d14	imull	$0x64, %eax, %eax
+0000000000001d17	movslq	%eax, %rsi
+0000000000001d1a	subq	-0x18(%rbp), %rsi
+0000000000001d1e	movq	%rsi, -0x8(%rbp)
+0000000000001d22	jmp	0x1d58
+0000000000001d27	movq	-0x10(%rbp), %rax
+0000000000001d2b	cmpl	$0x1, 0x18(%rax)
+0000000000001d2f	jne	0x1d50
+0000000000001d35	callq	0x2dd6
+0000000000001d3a	imull	$0xa, %eax, %eax
+0000000000001d3d	imull	$0x64, %eax, %eax
+0000000000001d40	movslq	%eax, %rcx
+0000000000001d43	subq	-0x18(%rbp), %rcx
+0000000000001d47	movq	%rcx, -0x8(%rbp)
+0000000000001d4b	jmp	0x1d58
+0000000000001d50	movq	$0x0, -0x8(%rbp)
+0000000000001d58	movq	-0x8(%rbp), %rax
+0000000000001d5c	addq	$0x20, %rsp
+0000000000001d60	popq	%rbp
+0000000000001d61	retq
+0000000000001d62	nopw	%cs:(%rax,%rax)
+_get_free_number_places:
+0000000000001d70	pushq	%rbp
+0000000000001d71	movq	%rsp, %rbp
+0000000000001d74	subq	$0x20, %rsp
+0000000000001d78	movq	%rdi, -0x8(%rbp)
+0000000000001d7c	movq	$0x0, -0x18(%rbp)
+0000000000001d84	movq	-0x8(%rbp), %rdi
+0000000000001d88	movq	(%rdi), %rdi
+0000000000001d8b	movq	%rdi, -0x10(%rbp)
+0000000000001d8f	cmpq	$0x0, -0x10(%rbp)
+0000000000001d94	je	0x1dd5
+0000000000001d9a	movq	-0x10(%rbp), %rax
+0000000000001d9e	movswl	0x18(%rax), %ecx
+0000000000001da2	cmpl	$0x1, %ecx
+0000000000001da5	jne	0x1db7
+0000000000001dab	movq	-0x18(%rbp), %rax
+0000000000001daf	addq	$0x1, %rax
+0000000000001db3	movq	%rax, -0x18(%rbp)
+0000000000001db7	movq	-0x8(%rbp), %rdi
+0000000000001dbb	movq	-0x10(%rbp), %rax
+0000000000001dbf	movswl	(%rax), %ecx
+0000000000001dc2	addl	$0x1, %ecx
+0000000000001dc5	movl	%ecx, %esi
+0000000000001dc7	callq	0x1a90
+0000000000001dcc	movq	%rax, -0x10(%rbp)
+0000000000001dd0	jmp	0x1d8f
+0000000000001dd5	movq	-0x18(%rbp), %rax
+0000000000001dd9	addq	$0x20, %rsp
+0000000000001ddd	popq	%rbp
+0000000000001dde	retq
+0000000000001ddf	nop
+_get_free_shield:
+0000000000001de0	pushq	%rbp
+0000000000001de1	movq	%rsp, %rbp
+0000000000001de4	subq	$0x20, %rsp
+0000000000001de8	movq	%rdi, -0x10(%rbp)
+0000000000001dec	movq	%rsi, -0x18(%rbp)
+0000000000001df0	movq	-0x10(%rbp), %rsi
+0000000000001df4	movq	(%rsi), %rsi
+0000000000001df7	movq	%rsi, -0x20(%rbp)
+0000000000001dfb	cmpq	$0x0, -0x20(%rbp)
+0000000000001e00	je	0x1e54
+0000000000001e06	movq	-0x20(%rbp), %rax
+0000000000001e0a	movswl	0x18(%rax), %ecx
+0000000000001e0e	cmpl	$0x1, %ecx
+0000000000001e11	jne	0x1e36
+0000000000001e17	movq	-0x20(%rbp), %rax
+0000000000001e1b	movq	0x8(%rax), %rax
+0000000000001e1f	cmpq	-0x18(%rbp), %rax
+0000000000001e23	jb	0x1e36
+0000000000001e29	movq	-0x20(%rbp), %rax
+0000000000001e2d	movq	%rax, -0x8(%rbp)
+0000000000001e31	jmp	0x1e5c
+0000000000001e36	movq	-0x10(%rbp), %rdi
+0000000000001e3a	movq	-0x20(%rbp), %rax
+0000000000001e3e	movswl	(%rax), %ecx
+0000000000001e41	addl	$0x1, %ecx
+0000000000001e44	movl	%ecx, %esi
+0000000000001e46	callq	0x1a90
+0000000000001e4b	movq	%rax, -0x20(%rbp)
+0000000000001e4f	jmp	0x1dfb
+0000000000001e54	movq	$0x0, -0x8(%rbp)
+0000000000001e5c	movq	-0x8(%rbp), %rax
+0000000000001e60	addq	$0x20, %rsp
+0000000000001e64	popq	%rbp
+0000000000001e65	retq
+0000000000001e66	nopw	%cs:(%rax,%rax)
+_get_size_place:
+0000000000001e70	pushq	%rbp
+0000000000001e71	movq	%rsp, %rbp
+0000000000001e74	subq	$0x10, %rsp
+0000000000001e78	movl	%edi, -0xc(%rbp)
+0000000000001e7b	cmpl	$0x0, -0xc(%rbp)
+0000000000001e7f	jne	0x1eaf
+0000000000001e85	callq	0x2dd6
+0000000000001e8a	movl	$0x64, %ecx
+0000000000001e8f	movl	$0x4, %edx
+0000000000001e94	movl	%edx, -0x10(%rbp)
+0000000000001e97	cltd
+0000000000001e98	movl	-0x10(%rbp), %esi
+0000000000001e9b	idivl	%esi
+0000000000001e9d	imull	$0x64, %eax, %eax
+0000000000001ea0	cltd
+0000000000001ea1	idivl	%ecx
+0000000000001ea3	movslq	%eax, %rdi
+0000000000001ea6	movq	%rdi, -0x8(%rbp)
+0000000000001eaa	jmp	0x1ee0
+0000000000001eaf	cmpl	$0x0, -0xc(%rbp)
+0000000000001eb3	jne	0x1ed8
+0000000000001eb9	callq	0x2dd6
+0000000000001ebe	movl	$0x64, %ecx
+0000000000001ec3	imull	$0xa, %eax, %eax
+0000000000001ec6	imull	$0x64, %eax, %eax
+0000000000001ec9	cltd
+0000000000001eca	idivl	%ecx
+0000000000001ecc	movslq	%eax, %rsi
+0000000000001ecf	movq	%rsi, -0x8(%rbp)
+0000000000001ed3	jmp	0x1ee0
+0000000000001ed8	movq	$0x0, -0x8(%rbp)
+0000000000001ee0	movq	-0x8(%rbp), %rax
+0000000000001ee4	addq	$0x10, %rsp
+0000000000001ee8	popq	%rbp
+0000000000001ee9	retq
+0000000000001eea	nop
+0000000000001eeb	nop
+0000000000001eec	nop
+0000000000001eed	nop
+0000000000001eee	nop
+0000000000001eef	nop
+_realloc_memory:
+0000000000001ef0	pushq	%rbp
+0000000000001ef1	movq	%rsp, %rbp
+0000000000001ef4	subq	$0x50, %rsp
+0000000000001ef8	movq	%rdi, -0x10(%rbp)
+0000000000001efc	movq	%rsi, -0x18(%rbp)
+0000000000001f00	callq	0x11f0
+0000000000001f05	movq	%rax, -0x20(%rbp)
+0000000000001f09	cmpq	$0x0, -0x20(%rbp)
+0000000000001f0e	je	0x200d
+0000000000001f14	movq	-0x20(%rbp), %rax
+0000000000001f18	cmpl	$0x0, 0x1c(%rax)
+0000000000001f1c	jne	0x1f6a
+0000000000001f22	movq	-0x10(%rbp), %rax
+0000000000001f26	movq	-0x20(%rbp), %rdi
+0000000000001f2a	movq	%rax, -0x38(%rbp)
+0000000000001f2e	callq	0x15e0
+0000000000001f33	movq	-0x38(%rbp), %rdi
+0000000000001f37	cmpq	%rax, %rdi
+0000000000001f3a	jb	0x1f6a
+0000000000001f40	movq	-0x10(%rbp), %rax
+0000000000001f44	movq	-0x20(%rbp), %rdi
+0000000000001f48	movq	%rax, -0x40(%rbp)
+0000000000001f4c	callq	0x15e0
+0000000000001f51	movq	-0x20(%rbp), %rsi
+0000000000001f55	movq	%rax, %rdi
+0000000000001f58	callq	0x1630
+0000000000001f5d	movq	-0x40(%rbp), %rsi
+0000000000001f61	cmpq	%rax, %rsi
+0000000000001f64	jbe	0x1f7b
+0000000000001f6a	movq	-0x20(%rbp), %rax
+0000000000001f6e	movq	0x8(%rax), %rax
+0000000000001f72	movq	%rax, -0x20(%rbp)
+0000000000001f76	jmp	0x1f09
+0000000000001f7b	movq	-0x20(%rbp), %rdi
+0000000000001f7f	movq	-0x10(%rbp), %rsi
+0000000000001f83	movq	-0x18(%rbp), %rdx
+0000000000001f87	callq	0x2020
+0000000000001f8c	movq	%rax, -0x28(%rbp)
+0000000000001f90	cmpq	$0x0, -0x28(%rbp)
+0000000000001f95	jne	0x1fa8
+0000000000001f9b	movq	$0x0, -0x8(%rbp)
+0000000000001fa3	jmp	0x2015
+0000000000001fa8	movq	-0x18(%rbp), %rdi
+0000000000001fac	callq	0x10b0
+0000000000001fb1	movq	%rax, -0x30(%rbp)
+0000000000001fb5	cmpq	$0x0, %rax
+0000000000001fb9	jne	0x1fcc
+0000000000001fbf	movq	$0x0, -0x8(%rbp)
+0000000000001fc7	jmp	0x2015
+0000000000001fcc	movq	-0x30(%rbp), %rax
+0000000000001fd0	movq	0x10(%rax), %rdi
+0000000000001fd4	movq	-0x28(%rbp), %rax
+0000000000001fd8	movq	0x10(%rax), %rsi
+0000000000001fdc	movq	-0x28(%rbp), %rax
+0000000000001fe0	movq	0x8(%rax), %rdx
+0000000000001fe4	callq	0x20e0
+0000000000001fe9	xorl	%esi, %esi
+0000000000001feb	movq	-0x28(%rbp), %rdx
+0000000000001fef	movq	0x10(%rdx), %rdi
+0000000000001ff3	movq	%rax, -0x48(%rbp)
+0000000000001ff7	callq	0x18f0
+0000000000001ffc	movq	-0x30(%rbp), %rax
+0000000000002000	movq	0x10(%rax), %rax
+0000000000002004	movq	%rax, -0x8(%rbp)
+0000000000002008	jmp	0x2015
+000000000000200d	movq	$0x0, -0x8(%rbp)
+0000000000002015	movq	-0x8(%rbp), %rax
+0000000000002019	addq	$0x50, %rsp
+000000000000201d	popq	%rbp
+000000000000201e	retq
+000000000000201f	nop
+_get_shield_r:
+0000000000002020	pushq	%rbp
+0000000000002021	movq	%rsp, %rbp
+0000000000002024	subq	$0x30, %rsp
+0000000000002028	movq	%rdi, -0x10(%rbp)
+000000000000202c	movq	%rsi, -0x18(%rbp)
+0000000000002030	movq	%rdx, -0x20(%rbp)
+0000000000002034	movq	-0x10(%rbp), %rdx
+0000000000002038	movq	(%rdx), %rdx
+000000000000203b	movq	%rdx, -0x28(%rbp)
+000000000000203f	cmpq	$0x0, -0x28(%rbp)
+0000000000002044	je	0x207f
+000000000000204a	movq	-0x28(%rbp), %rax
+000000000000204e	movq	0x10(%rax), %rax
+0000000000002052	cmpq	-0x18(%rbp), %rax
+0000000000002056	jne	0x2061
+000000000000205c	jmp	0x207f
+0000000000002061	movq	-0x10(%rbp), %rdi
+0000000000002065	movq	-0x28(%rbp), %rax
+0000000000002069	movswl	(%rax), %ecx
+000000000000206c	addl	$0x1, %ecx
+000000000000206f	movl	%ecx, %esi
+0000000000002071	callq	0x1a90
+0000000000002076	movq	%rax, -0x28(%rbp)
+000000000000207a	jmp	0x203f
+000000000000207f	cmpq	$0x0, -0x28(%rbp)
+0000000000002084	je	0x20c8
+000000000000208a	movq	-0x20(%rbp), %rax
+000000000000208e	movq	-0x10(%rbp), %rcx
+0000000000002092	movl	0x18(%rcx), %edi
+0000000000002095	movq	%rax, -0x30(%rbp)
+0000000000002099	callq	0x1e70
+000000000000209e	movq	-0x30(%rbp), %rcx
+00000000000020a2	cmpq	%rax, %rcx
+00000000000020a5	ja	0x20c8
+00000000000020ab	movq	-0x20(%rbp), %rax
+00000000000020af	movq	-0x28(%rbp), %rcx
+00000000000020b3	movq	%rax, 0x8(%rcx)
+00000000000020b7	movq	-0x28(%rbp), %rax
+00000000000020bb	movq	0x10(%rax), %rax
+00000000000020bf	movq	%rax, -0x8(%rbp)
+00000000000020c3	jmp	0x20d0
+00000000000020c8	movq	-0x28(%rbp), %rax
+00000000000020cc	movq	%rax, -0x8(%rbp)
+00000000000020d0	movq	-0x8(%rbp), %rax
+00000000000020d4	addq	$0x30, %rsp
+00000000000020d8	popq	%rbp
+00000000000020d9	retq
+00000000000020da	nopw	(%rax,%rax)
+_ft_memcpy:
+00000000000020e0	pushq	%rbp
+00000000000020e1	movq	%rsp, %rbp
+00000000000020e4	movq	%rdi, -0x8(%rbp)
+00000000000020e8	movq	%rsi, -0x10(%rbp)
+00000000000020ec	movq	%rdx, -0x18(%rbp)
+00000000000020f0	movq	-0x8(%rbp), %rdx
+00000000000020f4	movq	%rdx, -0x20(%rbp)
+00000000000020f8	movq	-0x10(%rbp), %rdx
+00000000000020fc	movq	%rdx, -0x28(%rbp)
+0000000000002100	movq	$0x0, -0x30(%rbp)
+0000000000002108	movq	-0x30(%rbp), %rax
+000000000000210c	cmpq	-0x18(%rbp), %rax
+0000000000002110	jae	0x2149
+0000000000002116	movq	-0x28(%rbp), %rax
+000000000000211a	movq	%rax, %rcx
+000000000000211d	addq	$0x1, %rcx
+0000000000002121	movq	%rcx, -0x28(%rbp)
+0000000000002125	movb	(%rax), %dl
+0000000000002127	movq	-0x20(%rbp), %rax
+000000000000212b	movq	%rax, %rcx
+000000000000212e	addq	$0x1, %rcx
+0000000000002132	movq	%rcx, -0x20(%rbp)
+0000000000002136	movb	%dl, (%rax)
+0000000000002138	movq	-0x30(%rbp), %rax
+000000000000213c	addq	$0x1, %rax
+0000000000002140	movq	%rax, -0x30(%rbp)
+0000000000002144	jmp	0x2108
+0000000000002149	movq	-0x8(%rbp), %rax
+000000000000214d	popq	%rbp
+000000000000214e	retq
+000000000000214f	nop
+_search_ptr_shield:
+0000000000002150	pushq	%rbp
+0000000000002151	movq	%rsp, %rbp
+0000000000002154	subq	$0x30, %rsp
+0000000000002158	movq	%rdi, -0x10(%rbp)
+000000000000215c	movq	%rsi, -0x18(%rbp)
+0000000000002160	movq	-0x18(%rbp), %rsi
+0000000000002164	movq	(%rsi), %rsi
+0000000000002167	movq	%rsi, -0x20(%rbp)
+000000000000216b	movq	-0x18(%rbp), %rdi
+000000000000216f	callq	0x15e0
+0000000000002174	movq	%rax, -0x28(%rbp)
+0000000000002178	movq	-0x10(%rbp), %rax
+000000000000217c	cmpq	-0x28(%rbp), %rax
+0000000000002180	jb	0x21a8
+0000000000002186	movq	-0x10(%rbp), %rax
+000000000000218a	movq	-0x28(%rbp), %rdi
+000000000000218e	movq	-0x18(%rbp), %rsi
+0000000000002192	movq	%rax, -0x30(%rbp)
+0000000000002196	callq	0x1630
+000000000000219b	movq	-0x30(%rbp), %rsi
+000000000000219f	cmpq	%rax, %rsi
+00000000000021a2	jbe	0x21b5
+00000000000021a8	movq	$0x0, -0x8(%rbp)
+00000000000021b0	jmp	0x220a
+00000000000021b5	jmp	0x21ba
+00000000000021ba	cmpq	$0x0, -0x20(%rbp)
+00000000000021bf	je	0x2202
+00000000000021c5	movq	-0x20(%rbp), %rax
+00000000000021c9	movq	0x10(%rax), %rax
+00000000000021cd	cmpq	-0x10(%rbp), %rax
+00000000000021d1	jne	0x21e4
+00000000000021d7	movq	-0x20(%rbp), %rax
+00000000000021db	movq	%rax, -0x8(%rbp)
+00000000000021df	jmp	0x220a
+00000000000021e4	movq	-0x18(%rbp), %rdi
+00000000000021e8	movq	-0x20(%rbp), %rax
+00000000000021ec	movswl	(%rax), %ecx
+00000000000021ef	addl	$0x1, %ecx
+00000000000021f2	movl	%ecx, %esi
+00000000000021f4	callq	0x1a90
+00000000000021f9	movq	%rax, -0x20(%rbp)
+00000000000021fd	jmp	0x21ba
+0000000000002202	movq	$0x0, -0x8(%rbp)
+000000000000220a	movq	-0x8(%rbp), %rax
+000000000000220e	addq	$0x30, %rsp
+0000000000002212	popq	%rbp
+0000000000002213	retq
+0000000000002214	nopw	%cs:(%rax,%rax)
+_search_ptr:
+0000000000002220	pushq	%rbp
+0000000000002221	movq	%rsp, %rbp
+0000000000002224	subq	$0x20, %rsp
+0000000000002228	movq	%rdi, -0x10(%rbp)
+000000000000222c	callq	0x11f0
+0000000000002231	movq	%rax, -0x18(%rbp)
+0000000000002235	cmpq	$0x0, -0x18(%rbp)
+000000000000223a	je	0x228d
+0000000000002240	movq	-0x18(%rbp), %rax
+0000000000002244	cmpl	$0x0, 0x1c(%rax)
+0000000000002248	jne	0x227c
+000000000000224e	movq	-0x10(%rbp), %rdi
+0000000000002252	movq	-0x18(%rbp), %rsi
+0000000000002256	callq	0x2150
+000000000000225b	movq	%rax, -0x20(%rbp)
+000000000000225f	cmpq	$0x0, -0x20(%rbp)
+0000000000002264	je	0x2277
+000000000000226a	movq	-0x20(%rbp), %rax
+000000000000226e	movq	%rax, -0x8(%rbp)
+0000000000002272	jmp	0x2295
+0000000000002277	jmp	0x227c
+000000000000227c	movq	-0x18(%rbp), %rax
+0000000000002280	movq	0x8(%rax), %rax
+0000000000002284	movq	%rax, -0x18(%rbp)
+0000000000002288	jmp	0x2235
+000000000000228d	movq	$0x0, -0x8(%rbp)
+0000000000002295	movq	-0x8(%rbp), %rax
+0000000000002299	addq	$0x20, %rsp
+000000000000229d	popq	%rbp
+000000000000229e	retq
+000000000000229f	nop
+_show_hexa_pointer:
+00000000000022a0	pushq	%rbp
+00000000000022a1	movq	%rsp, %rbp
+00000000000022a4	subq	$0x10, %rsp
+00000000000022a8	movq	%rdi, -0x8(%rbp)
+00000000000022ac	movq	-0x8(%rbp), %rdi
+00000000000022b0	callq	0x2220
+00000000000022b5	movq	%rax, -0x10(%rbp)
+00000000000022b9	cmpq	$0x0, -0x10(%rbp)
+00000000000022be	jne	0x22c9
+00000000000022c4	jmp	0x22d2
+00000000000022c9	movq	-0x10(%rbp), %rdi
+00000000000022cd	callq	0x2af0
+00000000000022d2	addq	$0x10, %rsp
+00000000000022d6	popq	%rbp
+00000000000022d7	retq
+00000000000022d8	nop
+00000000000022d9	nop
+00000000000022da	nop
+00000000000022db	nop
+00000000000022dc	nop
+00000000000022dd	nop
+00000000000022de	nop
+00000000000022df	nop
+_get_count_zone:
+00000000000022e0	pushq	%rbp
+00000000000022e1	movq	%rsp, %rbp
+00000000000022e4	subq	$0x20, %rsp
+00000000000022e8	movl	%edi, -0x4(%rbp)
+00000000000022eb	callq	0x11f0
+00000000000022f0	movq	%rax, -0x10(%rbp)
+00000000000022f4	movl	$0x0, -0x14(%rbp)
+00000000000022fb	cmpq	$0x0, -0x10(%rbp)
+0000000000002300	je	0x233e
+0000000000002306	movq	-0x10(%rbp), %rax
+000000000000230a	cmpl	$0x0, 0x1c(%rax)
+000000000000230e	jne	0x232d
+0000000000002314	movq	-0x10(%rbp), %rax
+0000000000002318	movl	0x18(%rax), %ecx
+000000000000231b	cmpl	-0x4(%rbp), %ecx
+000000000000231e	jne	0x232d
+0000000000002324	movl	-0x14(%rbp), %eax
+0000000000002327	addl	$0x1, %eax
+000000000000232a	movl	%eax, -0x14(%rbp)
+000000000000232d	movq	-0x10(%rbp), %rax
+0000000000002331	movq	0x8(%rax), %rax
+0000000000002335	movq	%rax, -0x10(%rbp)
+0000000000002339	jmp	0x22fb
+000000000000233e	movl	-0x14(%rbp), %eax
+0000000000002341	addq	$0x20, %rsp
+0000000000002345	popq	%rbp
+0000000000002346	retq
+0000000000002347	nop
+0000000000002348	nop
+0000000000002349	nop
+000000000000234a	nop
+000000000000234b	nop
+000000000000234c	nop
+000000000000234d	nop
+000000000000234e	nop
+000000000000234f	nop
+_print_pointer:
+0000000000002350	pushq	%rbp
+0000000000002351	movq	%rsp, %rbp
+0000000000002354	subq	$0x10, %rsp
+0000000000002358	leaq	0xbbd(%rip), %rax
+000000000000235f	movq	%rdi, -0x8(%rbp)
+0000000000002363	movq	$0x0, -0x10(%rbp)
+000000000000236b	movq	%rax, %rdi
+000000000000236e	callq	0x29b0
+0000000000002373	cmpq	$0x0, -0x8(%rbp)
+0000000000002378	je	0x23d2
+000000000000237e	cmpq	$0x0, -0x8(%rbp)
+0000000000002383	je	0x23d2
+0000000000002389	leaq	0xb8f(%rip), %rsi
+0000000000002390	movq	-0x8(%rbp), %rdi
+0000000000002394	callq	0x26f0
+0000000000002399	movq	%rax, -0x10(%rbp)
+000000000000239d	cmpq	$0x0, -0x10(%rbp)
+00000000000023a2	je	0x23c1
+00000000000023a8	movq	-0x10(%rbp), %rdi
+00000000000023ac	callq	0x29b0
+00000000000023b1	xorl	%esi, %esi
+00000000000023b3	movq	-0x10(%rbp), %rdi
+00000000000023b7	callq	0x18f0
+00000000000023bc	jmp	0x23cd
+00000000000023c1	leaq	0xb68(%rip), %rdi
+00000000000023c8	callq	0x29b0
+00000000000023cd	jmp	0x23de
+00000000000023d2	leaq	0xb57(%rip), %rdi
+00000000000023d9	callq	0x29b0
+00000000000023de	addq	$0x10, %rsp
+00000000000023e2	popq	%rbp
+00000000000023e3	retq
+00000000000023e4	nopw	%cs:(%rax,%rax)
+_print_shield:
+00000000000023f0	pushq	%rbp
+00000000000023f1	movq	%rsp, %rbp
+00000000000023f4	subq	$0x10, %rsp
+00000000000023f8	movq	%rdi, -0x8(%rbp)
+00000000000023fc	movq	-0x8(%rbp), %rdi
+0000000000002400	movswl	0x18(%rdi), %eax
+0000000000002404	cmpl	$0x0, %eax
+0000000000002407	jne	0x241e
+000000000000240d	leaq	0xb1e(%rip), %rdi
+0000000000002414	callq	0x29b0
+0000000000002419	jmp	0x2423
+000000000000241e	jmp	0x2479
+0000000000002423	movq	-0x8(%rbp), %rax
+0000000000002427	movq	0x10(%rax), %rdi
+000000000000242b	callq	0x2350
+0000000000002430	leaq	0xafc(%rip), %rdi
+0000000000002437	callq	0x29b0
+000000000000243c	movq	-0x8(%rbp), %rax
+0000000000002440	movq	0x10(%rax), %rax
+0000000000002444	movq	-0x8(%rbp), %rdi
+0000000000002448	addq	0x8(%rdi), %rax
+000000000000244c	movq	%rax, %rdi
+000000000000244f	callq	0x2350
+0000000000002454	leaq	0xadc(%rip), %rdi
+000000000000245b	callq	0x29b0
+0000000000002460	movq	-0x8(%rbp), %rax
+0000000000002464	movq	0x8(%rax), %rdi
+0000000000002468	callq	0x28d0
+000000000000246d	leaq	0x9eb(%rip), %rdi
+0000000000002474	callq	0x29b0
+0000000000002479	addq	$0x10, %rsp
+000000000000247d	popq	%rbp
+000000000000247e	retq
+000000000000247f	nop
+_print_zone:
+0000000000002480	pushq	%rbp
+0000000000002481	movq	%rsp, %rbp
+0000000000002484	subq	$0x30, %rsp
+0000000000002488	movq	%rdi, -0x8(%rbp)
+000000000000248c	movq	%rsi, -0x10(%rbp)
+0000000000002490	movl	%edx, -0x14(%rbp)
+0000000000002493	movq	$0x0, -0x28(%rbp)
+000000000000249b	movq	-0x10(%rbp), %rsi
+000000000000249f	movq	(%rsi), %rsi
+00000000000024a2	movq	%rsi, -0x20(%rbp)
+00000000000024a6	cmpl	$0x1, -0x14(%rbp)
+00000000000024aa	jne	0x24de
+00000000000024b0	movq	-0x8(%rbp), %rdi
+00000000000024b4	callq	0x29b0
+00000000000024b9	leaq	0xa77(%rip), %rdi
+00000000000024c0	callq	0x29b0
+00000000000024c5	movq	-0x10(%rbp), %rdi
+00000000000024c9	movq	0x20(%rdi), %rdi
+00000000000024cd	callq	0x2350
+00000000000024d2	leaq	0xa62(%rip), %rdi
+00000000000024d9	callq	0x29b0
+00000000000024de	jmp	0x24e3
+00000000000024e3	cmpq	$0x0, -0x20(%rbp)
+00000000000024e8	je	0x2536
+00000000000024ee	movq	-0x20(%rbp), %rdi
+00000000000024f2	callq	0x23f0
+00000000000024f7	movq	-0x20(%rbp), %rdi
+00000000000024fb	movswl	0x18(%rdi), %eax
+00000000000024ff	cmpl	$0x0, %eax
+0000000000002502	jne	0x2518
+0000000000002508	movq	-0x20(%rbp), %rax
+000000000000250c	movq	0x8(%rax), %rax
+0000000000002510	addq	-0x28(%rbp), %rax
+0000000000002514	movq	%rax, -0x28(%rbp)
+0000000000002518	movq	-0x10(%rbp), %rdi
+000000000000251c	movq	-0x20(%rbp), %rax
+0000000000002520	movswl	(%rax), %ecx
+0000000000002523	addl	$0x1, %ecx
+0000000000002526	movl	%ecx, %esi
+0000000000002528	callq	0x1a90
+000000000000252d	movq	%rax, -0x20(%rbp)
+0000000000002531	jmp	0x24e3
+0000000000002536	movq	-0x28(%rbp), %rax
+000000000000253a	addq	$0x30, %rsp
+000000000000253e	popq	%rbp
+000000000000253f	retq
+_print_tiny:
+0000000000002540	pushq	%rbp
+0000000000002541	movq	%rsp, %rbp
+0000000000002544	subq	$0x20, %rsp
+0000000000002548	callq	0x11f0
+000000000000254d	movq	%rax, -0x8(%rbp)
+0000000000002551	movq	$0x0, -0x10(%rbp)
+0000000000002559	movl	$0x1, -0x14(%rbp)
+0000000000002560	cmpq	$0x0, -0x8(%rbp)
+0000000000002565	je	0x25ba
+000000000000256b	movq	-0x8(%rbp), %rax
+000000000000256f	cmpl	$0x0, 0x1c(%rax)
+0000000000002573	jne	0x25a9
+0000000000002579	movq	-0x8(%rbp), %rax
+000000000000257d	cmpl	$0x0, 0x18(%rax)
+0000000000002581	jne	0x25a9
+0000000000002587	leaq	0x9af(%rip), %rdi
+000000000000258e	movq	-0x8(%rbp), %rsi
+0000000000002592	movl	-0x14(%rbp), %edx
+0000000000002595	callq	0x2480
+000000000000259a	addq	-0x10(%rbp), %rax
+000000000000259e	movq	%rax, -0x10(%rbp)
+00000000000025a2	movl	$0x0, -0x14(%rbp)
+00000000000025a9	movq	-0x8(%rbp), %rax
+00000000000025ad	movq	0x8(%rax), %rax
+00000000000025b1	movq	%rax, -0x8(%rbp)
+00000000000025b5	jmp	0x2560
+00000000000025ba	movq	-0x10(%rbp), %rax
+00000000000025be	addq	$0x20, %rsp
+00000000000025c2	popq	%rbp
+00000000000025c3	retq
+00000000000025c4	nopw	%cs:(%rax,%rax)
+_print_small:
+00000000000025d0	pushq	%rbp
+00000000000025d1	movq	%rsp, %rbp
+00000000000025d4	subq	$0x20, %rsp
+00000000000025d8	callq	0x11f0
+00000000000025dd	movq	%rax, -0x8(%rbp)
+00000000000025e1	movq	$0x0, -0x10(%rbp)
+00000000000025e9	movl	$0x1, -0x14(%rbp)
+00000000000025f0	cmpq	$0x0, -0x8(%rbp)
+00000000000025f5	je	0x264a
+00000000000025fb	movq	-0x8(%rbp), %rax
+00000000000025ff	cmpl	$0x0, 0x1c(%rax)
+0000000000002603	jne	0x2639
+0000000000002609	movq	-0x8(%rbp), %rax
+000000000000260d	cmpl	$0x1, 0x18(%rax)
+0000000000002611	jne	0x2639
+0000000000002617	leaq	0x924(%rip), %rdi
+000000000000261e	movq	-0x8(%rbp), %rsi
+0000000000002622	movl	-0x14(%rbp), %edx
+0000000000002625	callq	0x2480
+000000000000262a	addq	-0x10(%rbp), %rax
+000000000000262e	movq	%rax, -0x10(%rbp)
+0000000000002632	movl	$0x0, -0x14(%rbp)
+0000000000002639	movq	-0x8(%rbp), %rax
+000000000000263d	movq	0x8(%rax), %rax
+0000000000002641	movq	%rax, -0x8(%rbp)
+0000000000002645	jmp	0x25f0
+000000000000264a	movq	-0x10(%rbp), %rax
+000000000000264e	addq	$0x20, %rsp
+0000000000002652	popq	%rbp
+0000000000002653	retq
+0000000000002654	nopw	%cs:(%rax,%rax)
+_print_large:
+0000000000002660	pushq	%rbp
+0000000000002661	movq	%rsp, %rbp
+0000000000002664	subq	$0x20, %rsp
+0000000000002668	callq	0x11f0
+000000000000266d	movq	%rax, -0x8(%rbp)
+0000000000002671	movq	$0x0, -0x10(%rbp)
+0000000000002679	movl	$0x1, -0x14(%rbp)
+0000000000002680	cmpq	$0x0, -0x8(%rbp)
+0000000000002685	je	0x26da
+000000000000268b	movq	-0x8(%rbp), %rax
+000000000000268f	cmpl	$0x0, 0x1c(%rax)
+0000000000002693	jne	0x26c9
+0000000000002699	movq	-0x8(%rbp), %rax
+000000000000269d	cmpl	$0x2, 0x18(%rax)
+00000000000026a1	jne	0x26c9
+00000000000026a7	leaq	0x89a(%rip), %rdi
+00000000000026ae	movq	-0x8(%rbp), %rsi
+00000000000026b2	movl	-0x14(%rbp), %edx
+00000000000026b5	callq	0x2480
+00000000000026ba	addq	-0x10(%rbp), %rax
+00000000000026be	movq	%rax, -0x10(%rbp)
+00000000000026c2	movl	$0x0, -0x14(%rbp)
+00000000000026c9	movq	-0x8(%rbp), %rax
+00000000000026cd	movq	0x8(%rax), %rax
+00000000000026d1	movq	%rax, -0x8(%rbp)
+00000000000026d5	jmp	0x2680
+00000000000026da	movq	-0x10(%rbp), %rax
+00000000000026de	addq	$0x20, %rsp
+00000000000026e2	popq	%rbp
+00000000000026e3	retq
+00000000000026e4	nop
+00000000000026e5	nop
+00000000000026e6	nop
+00000000000026e7	nop
+00000000000026e8	nop
+00000000000026e9	nop
+00000000000026ea	nop
+00000000000026eb	nop
+00000000000026ec	nop
+00000000000026ed	nop
+00000000000026ee	nop
+00000000000026ef	nop
+_ft_itoabase:
+00000000000026f0	pushq	%rbp
+00000000000026f1	movq	%rsp, %rbp
+00000000000026f4	subq	$0x50, %rsp
+00000000000026f8	movq	%rdi, -0x8(%rbp)
+00000000000026fc	movq	%rsi, -0x10(%rbp)
+0000000000002700	movq	-0x8(%rbp), %rsi
+0000000000002704	movq	%rsi, -0x30(%rbp)
+0000000000002708	movq	$0x1, -0x28(%rbp)
+0000000000002710	movl	$0x0, -0x1c(%rbp)
+0000000000002717	movq	-0x30(%rbp), %rax
+000000000000271b	movq	-0x10(%rbp), %rdi
+000000000000271f	movq	%rax, -0x38(%rbp)
+0000000000002723	callq	0x2970
+0000000000002728	movslq	%eax, %rdi
+000000000000272b	movq	-0x38(%rbp), %rax
+000000000000272f	cqto
+0000000000002731	idivq	%rdi
+0000000000002734	movq	%rax, -0x30(%rbp)
+0000000000002738	cmpq	$0x0, %rax
+000000000000273c	je	0x2770
+0000000000002742	movq	-0x28(%rbp), %rax
+0000000000002746	movq	-0x10(%rbp), %rdi
+000000000000274a	movq	%rax, -0x40(%rbp)
+000000000000274e	callq	0x2970
+0000000000002753	movslq	%eax, %rdi
+0000000000002756	movq	-0x40(%rbp), %rcx
+000000000000275a	imulq	%rdi, %rcx
+000000000000275e	movq	%rcx, -0x28(%rbp)
+0000000000002762	movl	-0x1c(%rbp), %eax
+0000000000002765	addl	$0x1, %eax
+0000000000002768	movl	%eax, -0x1c(%rbp)
+000000000000276b	jmp	0x2717
+0000000000002770	movq	-0x8(%rbp), %rax
+0000000000002774	movq	%rax, -0x30(%rbp)
+0000000000002778	movl	-0x1c(%rbp), %ecx
+000000000000277b	addl	$0x1, %ecx
+000000000000277e	movslq	%ecx, %rax
+0000000000002781	shlq	$0x0, %rax
+0000000000002785	movq	%rax, %rdi
+0000000000002788	callq	0x2830
+000000000000278d	movq	%rax, -0x18(%rbp)
+0000000000002791	movl	$0x0, -0x1c(%rbp)
+0000000000002798	cmpq	$0x0, -0x28(%rbp)
+000000000000279d	je	0x2818
+00000000000027a3	movq	-0x30(%rbp), %rax
+00000000000027a7	cqto
+00000000000027a9	idivq	-0x28(%rbp)
+00000000000027ad	movq	-0x10(%rbp), %rcx
+00000000000027b1	movb	(%rcx,%rax), %sil
+00000000000027b5	movslq	-0x1c(%rbp), %rax
+00000000000027b9	movq	-0x18(%rbp), %rcx
+00000000000027bd	movb	%sil, (%rcx,%rax)
+00000000000027c1	movq	-0x30(%rbp), %rax
+00000000000027c5	movq	-0x30(%rbp), %rcx
+00000000000027c9	movq	%rax, -0x48(%rbp)
+00000000000027cd	movq	%rcx, %rax
+00000000000027d0	cqto
+00000000000027d2	idivq	-0x28(%rbp)
+00000000000027d6	imulq	-0x28(%rbp), %rax
+00000000000027db	movq	-0x48(%rbp), %rcx
+00000000000027df	subq	%rax, %rcx
+00000000000027e2	movq	%rcx, -0x30(%rbp)
+00000000000027e6	movq	-0x28(%rbp), %rax
+00000000000027ea	movq	-0x10(%rbp), %rdi
+00000000000027ee	movq	%rax, -0x50(%rbp)
+00000000000027f2	callq	0x2970
+00000000000027f7	movslq	%eax, %rcx
+00000000000027fa	movq	-0x50(%rbp), %rax
+00000000000027fe	cqto
+0000000000002800	idivq	%rcx
+0000000000002803	movq	%rax, -0x28(%rbp)
+0000000000002807	movl	-0x1c(%rbp), %r8d
+000000000000280b	addl	$0x1, %r8d
+000000000000280f	movl	%r8d, -0x1c(%rbp)
+0000000000002813	jmp	0x2798
+0000000000002818	movslq	-0x1c(%rbp), %rax
+000000000000281c	movq	-0x18(%rbp), %rcx
+0000000000002820	movb	$0x0, (%rcx,%rax)
+0000000000002824	movq	-0x18(%rbp), %rax
+0000000000002828	addq	$0x50, %rsp
+000000000000282c	popq	%rbp
+000000000000282d	retq
+000000000000282e	nop
+_itoa_malloc:
+0000000000002830	pushq	%rbp
+0000000000002831	movq	%rsp, %rbp
+0000000000002834	subq	$0x20, %rsp
+0000000000002838	movq	%rdi, -0x10(%rbp)
+000000000000283c	cmpq	$0x1, -0x10(%rbp)
+0000000000002841	jae	0x2854
+0000000000002847	movq	$0x0, -0x8(%rbp)
+000000000000284f	jmp	0x288e
+0000000000002854	movq	-0x10(%rbp), %rdi
+0000000000002858	callq	0x10b0
+000000000000285d	movq	%rax, -0x18(%rbp)
+0000000000002861	cmpq	$0x0, %rax
+0000000000002865	jne	0x2878
+000000000000286b	movq	$0x0, -0x8(%rbp)
+0000000000002873	jmp	0x288e
+0000000000002878	movq	-0x18(%rbp), %rax
+000000000000287c	movw	$0x0, 0x18(%rax)
+0000000000002882	movq	-0x18(%rbp), %rax
+0000000000002886	movq	0x10(%rax), %rax
+000000000000288a	movq	%rax, -0x8(%rbp)
+000000000000288e	movq	-0x8(%rbp), %rax
+0000000000002892	addq	$0x20, %rsp
+0000000000002896	popq	%rbp
+0000000000002897	retq
+0000000000002898	nop
+0000000000002899	nop
+000000000000289a	nop
+000000000000289b	nop
+000000000000289c	nop
+000000000000289d	nop
+000000000000289e	nop
+000000000000289f	nop
+_ft_putchar:
+00000000000028a0	pushq	%rbp
+00000000000028a1	movq	%rsp, %rbp
+00000000000028a4	subq	$0x10, %rsp
+00000000000028a8	movb	%dil, %al
+00000000000028ab	movl	$0x1, %edi
+00000000000028b0	leaq	-0x1(%rbp), %rsi
+00000000000028b4	movl	$0x1, %ecx
+00000000000028b9	movl	%ecx, %edx
+00000000000028bb	movb	%al, -0x1(%rbp)
+00000000000028be	callq	0x2dfa
+00000000000028c3	movq	%rax, -0x10(%rbp)
+00000000000028c7	addq	$0x10, %rsp
+00000000000028cb	popq	%rbp
+00000000000028cc	retq
+00000000000028cd	nop
+00000000000028ce	nop
+00000000000028cf	nop
+_ft_putnbr:
+00000000000028d0	pushq	%rbp
+00000000000028d1	movq	%rsp, %rbp
+00000000000028d4	subq	$0x10, %rsp
+00000000000028d8	movq	%rdi, -0x8(%rbp)
+00000000000028dc	cmpq	$0x0, -0x8(%rbp)
+00000000000028e1	jge	0x28fd
+00000000000028e7	movl	$0x2d, %edi
+00000000000028ec	callq	0x28a0
+00000000000028f1	xorl	%edi, %edi
+00000000000028f3	movl	%edi, %eax
+00000000000028f5	subq	-0x8(%rbp), %rax
+00000000000028f9	movq	%rax, -0x8(%rbp)
+00000000000028fd	cmpq	$0xa, -0x8(%rbp)
+0000000000002902	jl	0x2950
+0000000000002908	movl	$0xa, %eax
+000000000000290d	movl	%eax, %ecx
+000000000000290f	movq	-0x8(%rbp), %rax
+0000000000002913	cqto
+0000000000002915	idivq	%rcx
+0000000000002918	movq	%rax, %rdi
+000000000000291b	callq	0x28d0
+0000000000002920	movl	$0xa, %esi
+0000000000002925	movl	%esi, %eax
+0000000000002927	movq	-0x8(%rbp), %rcx
+000000000000292b	movq	%rax, -0x10(%rbp)
+000000000000292f	movq	%rcx, %rax
+0000000000002932	cqto
+0000000000002934	movq	-0x10(%rbp), %rcx
+0000000000002938	idivq	%rcx
+000000000000293b	addq	$0x30, %rdx
+000000000000293f	movb	%dl, %r8b
+0000000000002942	movsbl	%r8b, %edi
+0000000000002946	callq	0x28a0
+000000000000294b	jmp	0x2962
+0000000000002950	movq	-0x8(%rbp), %rax
+0000000000002954	addq	$0x30, %rax
+0000000000002958	movb	%al, %cl
+000000000000295a	movsbl	%cl, %edi
+000000000000295d	callq	0x28a0
+0000000000002962	addq	$0x10, %rsp
+0000000000002966	popq	%rbp
+0000000000002967	retq
+0000000000002968	nop
+0000000000002969	nop
+000000000000296a	nop
+000000000000296b	nop
+000000000000296c	nop
+000000000000296d	nop
+000000000000296e	nop
+000000000000296f	nop
+_ft_strlen:
+0000000000002970	pushq	%rbp
+0000000000002971	movq	%rsp, %rbp
+0000000000002974	movq	%rdi, -0x8(%rbp)
+0000000000002978	movl	$0x0, -0xc(%rbp)
+000000000000297f	movslq	-0xc(%rbp), %rax
+0000000000002983	movq	-0x8(%rbp), %rcx
+0000000000002987	cmpb	$0x0, (%rcx,%rax)
+000000000000298b	je	0x299f
+0000000000002991	movl	-0xc(%rbp), %eax
+0000000000002994	addl	$0x1, %eax
+0000000000002997	movl	%eax, -0xc(%rbp)
+000000000000299a	jmp	0x297f
+000000000000299f	movl	-0xc(%rbp), %eax
+00000000000029a2	popq	%rbp
+00000000000029a3	retq
+00000000000029a4	nop
+00000000000029a5	nop
+00000000000029a6	nop
+00000000000029a7	nop
+00000000000029a8	nop
+00000000000029a9	nop
+00000000000029aa	nop
+00000000000029ab	nop
+00000000000029ac	nop
+00000000000029ad	nop
+00000000000029ae	nop
+00000000000029af	nop
+_ft_putstr:
+00000000000029b0	pushq	%rbp
+00000000000029b1	movq	%rsp, %rbp
+00000000000029b4	subq	$0x20, %rsp
+00000000000029b8	movq	%rdi, -0x8(%rbp)
+00000000000029bc	movl	$0x0, -0xc(%rbp)
+00000000000029c3	movslq	-0xc(%rbp), %rax
+00000000000029c7	movq	-0x8(%rbp), %rcx
+00000000000029cb	cmpb	$0x0, (%rcx,%rax)
+00000000000029cf	je	0x29e3
+00000000000029d5	movl	-0xc(%rbp), %eax
+00000000000029d8	addl	$0x1, %eax
+00000000000029db	movl	%eax, -0xc(%rbp)
+00000000000029de	jmp	0x29c3
+00000000000029e3	movl	$0x1, %edi
+00000000000029e8	movq	-0x8(%rbp), %rsi
+00000000000029ec	movslq	-0xc(%rbp), %rdx
+00000000000029f0	callq	0x2dfa
+00000000000029f5	movq	%rax, -0x18(%rbp)
+00000000000029f9	addq	$0x20, %rsp
+00000000000029fd	popq	%rbp
+00000000000029fe	retq
+00000000000029ff	nop
+_print_hexa_shield:
+0000000000002a00	pushq	%rbp
+0000000000002a01	movq	%rsp, %rbp
+0000000000002a04	subq	$0x20, %rsp
+0000000000002a08	movq	%rdi, -0x8(%rbp)
+0000000000002a0c	movq	-0x8(%rbp), %rdi
+0000000000002a10	movq	0x10(%rdi), %rdi
+0000000000002a14	movq	%rdi, -0x10(%rbp)
+0000000000002a18	movq	$0x0, -0x18(%rbp)
+0000000000002a20	movq	$0x0, -0x20(%rbp)
+0000000000002a28	movq	-0x18(%rbp), %rax
+0000000000002a2c	movq	-0x8(%rbp), %rcx
+0000000000002a30	cmpq	0x8(%rcx), %rax
+0000000000002a34	jae	0x2ad2
+0000000000002a3a	movq	-0x8(%rbp), %rax
+0000000000002a3e	movswl	0x18(%rax), %ecx
+0000000000002a42	cmpl	$0x0, %ecx
+0000000000002a45	jne	0x2ab5
+0000000000002a4b	movq	-0x10(%rbp), %rax
+0000000000002a4f	movsbl	(%rax), %ecx
+0000000000002a52	sarl	$0x4, %ecx
+0000000000002a55	movl	%ecx, %edi
+0000000000002a57	callq	0x2cb0
+0000000000002a5c	movq	-0x10(%rbp), %rax
+0000000000002a60	movsbl	(%rax), %ecx
+0000000000002a63	movq	-0x10(%rbp), %rax
+0000000000002a67	movsbl	(%rax), %edi
+0000000000002a6a	sarl	$0x4, %edi
+0000000000002a6d	shll	$0x4, %edi
+0000000000002a70	subl	%edi, %ecx
+0000000000002a72	movl	%ecx, %edi
+0000000000002a74	callq	0x2cb0
+0000000000002a79	leaq	0x4ce(%rip), %rdi
+0000000000002a80	callq	0x29b0
+0000000000002a85	movq	-0x20(%rbp), %rax
+0000000000002a89	addq	$0x1, %rax
+0000000000002a8d	movq	%rax, -0x20(%rbp)
+0000000000002a91	cmpq	$0x10, -0x20(%rbp)
+0000000000002a96	jb	0x2ab0
+0000000000002a9c	movq	-0x20(%rbp), %rdi
+0000000000002aa0	movq	-0x10(%rbp), %rsi
+0000000000002aa4	callq	0x2d10
+0000000000002aa9	movslq	%eax, %rsi
+0000000000002aac	movq	%rsi, -0x20(%rbp)
+0000000000002ab0	jmp	0x2ab5
+0000000000002ab5	movq	-0x10(%rbp), %rax
+0000000000002ab9	addq	$0x1, %rax
+0000000000002abd	movq	%rax, -0x10(%rbp)
+0000000000002ac1	movq	-0x18(%rbp), %rax
+0000000000002ac5	addq	$0x1, %rax
+0000000000002ac9	movq	%rax, -0x18(%rbp)
+0000000000002acd	jmp	0x2a28
+0000000000002ad2	movq	-0x20(%rbp), %rdi
+0000000000002ad6	movq	-0x10(%rbp), %rsi
+0000000000002ada	callq	0x2d10
+0000000000002adf	addq	$0x20, %rsp
+0000000000002ae3	popq	%rbp
+0000000000002ae4	retq
+0000000000002ae5	nopw	%cs:(%rax,%rax)
+_print_preshexa_shield:
+0000000000002af0	pushq	%rbp
+0000000000002af1	movq	%rsp, %rbp
+0000000000002af4	subq	$0x10, %rsp
+0000000000002af8	movq	%rdi, -0x8(%rbp)
+0000000000002afc	movq	-0x8(%rbp), %rdi
+0000000000002b00	callq	0x23f0
+0000000000002b05	leaq	0x444(%rip), %rdi
+0000000000002b0c	callq	0x29b0
+0000000000002b11	leaq	0x468(%rip), %rdi
+0000000000002b18	callq	0x29b0
+0000000000002b1d	movq	-0x8(%rbp), %rdi
+0000000000002b21	callq	0x2a00
+0000000000002b26	movslq	%eax, %rdi
+0000000000002b29	movq	%rdi, -0x10(%rbp)
+0000000000002b2d	cmpq	$0x0, -0x10(%rbp)
+0000000000002b32	jbe	0x2b44
+0000000000002b38	leaq	0x3fc(%rip), %rdi
+0000000000002b3f	callq	0x29b0
+0000000000002b44	addq	$0x10, %rsp
+0000000000002b48	popq	%rbp
+0000000000002b49	retq
+0000000000002b4a	nopw	(%rax,%rax)
+_print_hexa_map:
+0000000000002b50	pushq	%rbp
+0000000000002b51	movq	%rsp, %rbp
+0000000000002b54	subq	$0x10, %rsp
+0000000000002b58	movq	%rdi, -0x8(%rbp)
+0000000000002b5c	movq	-0x8(%rbp), %rdi
+0000000000002b60	movq	(%rdi), %rdi
+0000000000002b63	movq	%rdi, -0x10(%rbp)
+0000000000002b67	cmpq	$0x0, -0x10(%rbp)
+0000000000002b6c	je	0x2baa
+0000000000002b72	movq	-0x10(%rbp), %rax
+0000000000002b76	movswl	0x18(%rax), %ecx
+0000000000002b7a	cmpl	$0x0, %ecx
+0000000000002b7d	jne	0x2b8c
+0000000000002b83	movq	-0x10(%rbp), %rdi
+0000000000002b87	callq	0x2af0
+0000000000002b8c	movq	-0x8(%rbp), %rdi
+0000000000002b90	movq	-0x10(%rbp), %rax
+0000000000002b94	movswl	(%rax), %ecx
+0000000000002b97	addl	$0x1, %ecx
+0000000000002b9a	movl	%ecx, %esi
+0000000000002b9c	callq	0x1a90
+0000000000002ba1	movq	%rax, -0x10(%rbp)
+0000000000002ba5	jmp	0x2b67
+0000000000002baa	addq	$0x10, %rsp
+0000000000002bae	popq	%rbp
+0000000000002baf	retq
+_print_hexa_zone:
+0000000000002bb0	pushq	%rbp
+0000000000002bb1	movq	%rsp, %rbp
+0000000000002bb4	subq	$0x10, %rsp
+0000000000002bb8	movl	%edi, -0x4(%rbp)
+0000000000002bbb	callq	0x11f0
+0000000000002bc0	movq	%rax, -0x10(%rbp)
+0000000000002bc4	cmpq	$0x0, -0x10(%rbp)
+0000000000002bc9	je	0x2c07
+0000000000002bcf	movq	-0x10(%rbp), %rax
+0000000000002bd3	cmpl	$0x0, 0x1c(%rax)
+0000000000002bd7	jne	0x2bf6
+0000000000002bdd	movq	-0x10(%rbp), %rax
+0000000000002be1	movl	0x18(%rax), %ecx
+0000000000002be4	cmpl	-0x4(%rbp), %ecx
+0000000000002be7	jne	0x2bf6
+0000000000002bed	movq	-0x10(%rbp), %rdi
+0000000000002bf1	callq	0x2b50
+0000000000002bf6	movq	-0x10(%rbp), %rax
+0000000000002bfa	movq	0x8(%rax), %rax
+0000000000002bfe	movq	%rax, -0x10(%rbp)
+0000000000002c02	jmp	0x2bc4
+0000000000002c07	addq	$0x10, %rsp
+0000000000002c0b	popq	%rbp
+0000000000002c0c	retq
+0000000000002c0d	nop
+0000000000002c0e	nop
+0000000000002c0f	nop
+_print_ascii_sixten_shield:
+0000000000002c10	pushq	%rbp
+0000000000002c11	movq	%rsp, %rbp
+0000000000002c14	subq	$0x20, %rsp
+0000000000002c18	movl	%edi, -0x4(%rbp)
+0000000000002c1b	movq	%rsi, -0x10(%rbp)
+0000000000002c1f	movl	$0x0, -0x14(%rbp)
+0000000000002c26	xorl	%eax, %eax
+0000000000002c28	movb	%al, %cl
+0000000000002c2a	movl	-0x14(%rbp), %eax
+0000000000002c2d	cmpl	-0x4(%rbp), %eax
+0000000000002c30	movb	%cl, -0x15(%rbp)
+0000000000002c33	jge	0x2c43
+0000000000002c39	cmpl	$0x10, -0x14(%rbp)
+0000000000002c3d	setl	%al
+0000000000002c40	movb	%al, -0x15(%rbp)
+0000000000002c43	movb	-0x15(%rbp), %al
+0000000000002c46	testb	$0x1, %al
+0000000000002c48	jne	0x2c53
+0000000000002c4e	jmp	0x2ca8
+0000000000002c53	movq	-0x10(%rbp), %rax
+0000000000002c57	movsbl	(%rax), %ecx
+0000000000002c5a	cmpl	$0x21, %ecx
+0000000000002c5d	jle	0x2c84
+0000000000002c63	movq	-0x10(%rbp), %rax
+0000000000002c67	movsbl	(%rax), %ecx
+0000000000002c6a	cmpl	$0x7f, %ecx
+0000000000002c6d	jge	0x2c84
+0000000000002c73	movq	-0x10(%rbp), %rax
+0000000000002c77	movsbl	(%rax), %edi
+0000000000002c7a	callq	0x28a0
+0000000000002c7f	jmp	0x2c8e
+0000000000002c84	movl	$0x2e, %edi
+0000000000002c89	callq	0x28a0
+0000000000002c8e	movq	-0x10(%rbp), %rax
+0000000000002c92	addq	$0x1, %rax
+0000000000002c96	movq	%rax, -0x10(%rbp)
+0000000000002c9a	movl	-0x14(%rbp), %ecx
+0000000000002c9d	addl	$0x1, %ecx
+0000000000002ca0	movl	%ecx, -0x14(%rbp)
+0000000000002ca3	jmp	0x2c26
+0000000000002ca8	addq	$0x20, %rsp
+0000000000002cac	popq	%rbp
+0000000000002cad	retq
+0000000000002cae	nop
+_print_itoa_val:
+0000000000002cb0	pushq	%rbp
+0000000000002cb1	movq	%rsp, %rbp
+0000000000002cb4	subq	$0x10, %rsp
+0000000000002cb8	leaq	0x2d7(%rip), %rsi
+0000000000002cbf	movl	%edi, -0x4(%rbp)
+0000000000002cc2	movslq	-0x4(%rbp), %rdi
+0000000000002cc6	callq	0x26f0
+0000000000002ccb	movq	%rax, -0x10(%rbp)
+0000000000002ccf	cmpq	$0x0, -0x10(%rbp)
+0000000000002cd4	je	0x2cf1
+0000000000002cda	movq	-0x10(%rbp), %rdi
+0000000000002cde	callq	0x29b0
+0000000000002ce3	movq	-0x10(%rbp), %rdi
+0000000000002ce7	callq	0xcc0
+0000000000002cec	jmp	0x2cfd
+0000000000002cf1	leaq	0x238(%rip), %rdi
+0000000000002cf8	callq	0x29b0
+0000000000002cfd	addq	$0x10, %rsp
+0000000000002d01	popq	%rbp
+0000000000002d02	retq
+0000000000002d03	nopw	%cs:(%rax,%rax)
+_print_ended_hexa_line:
+0000000000002d10	pushq	%rbp
+0000000000002d11	movq	%rsp, %rbp
+0000000000002d14	subq	$0x20, %rsp
+0000000000002d18	movq	%rdi, -0x10(%rbp)
+0000000000002d1c	movq	%rsi, -0x18(%rbp)
+0000000000002d20	movl	$0x0, -0x1c(%rbp)
+0000000000002d27	cmpq	$0x0, -0x10(%rbp)
+0000000000002d2c	ja	0x2d3e
+0000000000002d32	movl	$0x0, -0x4(%rbp)
+0000000000002d39	jmp	0x2dcd
+0000000000002d3e	jmp	0x2d43
+0000000000002d43	movslq	-0x1c(%rbp), %rax
+0000000000002d47	addq	-0x10(%rbp), %rax
+0000000000002d4b	cmpq	$0x10, %rax
+0000000000002d4f	jae	0x2d6f
+0000000000002d55	leaq	0x24b(%rip), %rdi
+0000000000002d5c	callq	0x29b0
+0000000000002d61	movl	-0x1c(%rbp), %eax
+0000000000002d64	addl	$0x1, %eax
+0000000000002d67	movl	%eax, -0x1c(%rbp)
+0000000000002d6a	jmp	0x2d43
+0000000000002d6f	leaq	0x235(%rip), %rdi
+0000000000002d76	callq	0x29b0
+0000000000002d7b	xorl	%eax, %eax
+0000000000002d7d	movl	%eax, %edi
+0000000000002d7f	movq	-0x10(%rbp), %rcx
+0000000000002d83	movl	%ecx, %eax
+0000000000002d85	movq	-0x18(%rbp), %rcx
+0000000000002d89	movq	-0x10(%rbp), %rdx
+0000000000002d8d	subq	$0x1, %rdx
+0000000000002d91	subq	%rdx, %rdi
+0000000000002d94	addq	%rdi, %rcx
+0000000000002d97	movl	%eax, %edi
+0000000000002d99	movq	%rcx, %rsi
+0000000000002d9c	callq	0x2c10
+0000000000002da1	cmpq	$0x10, -0x10(%rbp)
+0000000000002da6	jb	0x2dc4
+0000000000002dac	leaq	0x188(%rip), %rdi
+0000000000002db3	callq	0x29b0
+0000000000002db8	movl	$0x0, -0x4(%rbp)
+0000000000002dbf	jmp	0x2dcd
+0000000000002dc4	movq	-0x10(%rbp), %rax
+0000000000002dc8	movl	%eax, %ecx
+0000000000002dca	movl	%ecx, -0x4(%rbp)
+0000000000002dcd	movl	-0x4(%rbp), %eax
+0000000000002dd0	addq	$0x20, %rsp
+0000000000002dd4	popq	%rbp
+0000000000002dd5	retq

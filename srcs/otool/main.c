@@ -32,6 +32,8 @@ int		check_flags(int argc, char **argv, int *flags)
 				*flags += flag_t;
 			if (IS_FLAG_A && !(*flags & flag_a))
 				*flags += flag_a;
+			if (IS_FLAG_V && !(*flags & flag_v))
+				*flags += flag_v;
 			o++;
 		}
 		if (IS_FLAG_VERSION && !(*flags & flag_version))
@@ -64,8 +66,10 @@ int		inspect_file(char *file, int flags, char *prog)
 	ofile->flags = flags;
 	if (ofile->flags & flag_h)
 		select_function_by_os(ofile, print_header_64, print_header_32);
-	if (ofile->flags & flag_t)
+	if ((ofile->flags & flag_t) && !(ofile->flags & flag_v))
 		select_function_by_os(ofile, ft_otool64, ft_otool32);
+	if ((ofile->flags & flag_t) && (ofile->flags & flag_v))
+		select_function_by_os(ofile, ftv_otool64, ftv_otool32);
 	free_ofile(ofile);
 	return (0);
 }
