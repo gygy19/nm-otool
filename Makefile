@@ -45,6 +45,7 @@ SRCOTOOL	=	\
 				srcs/otool/errors.c											\
 				srcs/lib/ofile/process_ofile.c								\
 				srcs/lib/ofile/load_nsections.c								\
+				srcs/lib/ofile/fat_arch_selector.c							\
 				srcs/lib/ofile/select_function_by_os.c						\
 				srcs/lib/ofile/free_ofile.c									\
 				srcs/lib/ofile/ofile_sections.c								\
@@ -98,6 +99,7 @@ SRCNM		=	\
 				srcs/nm/x.c													\
 				srcs/lib/ofile/process_ofile.c								\
 				srcs/lib/ofile/load_nsections.c								\
+				srcs/lib/ofile/fat_arch_selector.c							\
 				srcs/lib/ofile/select_function_by_os.c						\
 				srcs/lib/ofile/free_ofile.c									\
 				srcs/lib/ofile/ofile_sections.c								\

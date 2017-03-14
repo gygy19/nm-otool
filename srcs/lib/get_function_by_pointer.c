@@ -20,8 +20,8 @@ int			get_function_name_by_pointer_64(int ptr, t_ofile *ofile)
 	i = 0;
 	while (i < (int)ofile->symtab->nsyms)
 	{
-		if (ofile->arraylist_64[i].n_un.n_strx >= 1 
-			&& ofile->arraylist_64[i].n_sect >= 0)
+		if (ofile->arraylist_64[i].n_un.n_strx >= 1 &&\
+			ofile->arraylist_64[i].n_sect >= 0)
 		{
 			if ((int)ofile->arraylist_64[i].n_value == ptr)
 			{
@@ -47,8 +47,8 @@ int			get_function_name_by_pointer_32(int ptr, t_ofile *ofile)
 	i = 0;
 	while (i < (int)ofile->symtab->nsyms)
 	{
-		if (ofile->arraylist_32[i].n_un.n_strx >= 1 
-			&& ofile->arraylist_32[i].n_sect >= 0)
+		if (ofile->arraylist_32[i].n_un.n_strx >= 1 &&\
+			ofile->arraylist_32[i].n_sect >= 0)
 		{
 			if ((int)ofile->arraylist_32[i].n_value == ptr)
 			{

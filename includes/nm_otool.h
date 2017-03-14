@@ -149,6 +149,10 @@ int								load_section_name_64(t_ofile *ofile,\
 								char *sectname, char *segname);
 int								load_section_name_32(t_ofile *ofile,\
 								char *sectname, char *segname);
+struct fat_arch 				*select_fat_arch_i386(t_ofile *ofile, int nfat,\
+								int current);
+struct fat_arch					*select_fat_arch_x86_64(t_ofile *ofile,\
+								int nfat, int current);
 /*
 ** lib
 */

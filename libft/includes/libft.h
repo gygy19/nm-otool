@@ -146,6 +146,7 @@ char				*ft_uitoa(unsigned long long int c);
 
 void				ft_qsort(void *base, size_t mmemb, char *type,\
 					int(*compar)(const void *, const void *));
+size_t				array_length(char **array);
 
 # define ___N0		STDERR_FILENO, "{bold}{red}ERROR{white} %s:%i:{reset}\t"
 # define ___N1		__FILE__, __LINE__

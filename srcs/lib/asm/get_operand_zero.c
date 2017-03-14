@@ -13,18 +13,17 @@
 #include "nm_otool.h"
 #include "asm_i386.h"
 
-void			get_s_i_b(t_ofile *ofile, int *s_i_b,\
-	unsigned long *ss, unsigned long *base, unsigned long *index)
+BOOLEAN			get_s_i_b(t_ofile *ofile, unsigned long *ss,\
+	unsigned long *base, unsigned long *index)
 {
 	if (ofile->r_m == ESP && ofile->mode != REG_ONLY && ofile->addr16 == false)
 	{
-		*s_i_b = true;
 		ofile->length++;
 		ofile->byte = get_value(sizeof(char), ofile->ptr, ofile->length);
 		modrm_byte(ss, index, base, ofile->byte);
+		return (true);
 	}
-	else
-		*s_i_b = false;
+	return (false);
 }
 
 void			load_result(t_ofile *ofile)
@@ -66,7 +65,7 @@ void			get_operand_zero(t_ofile *ofile)
 	ofile->value0 = 0;
 	ofile->value0_size = 0;
 	ofile->result = ft_strnew(0);
-	get_s_i_b(ofile, &s_i_b, &ss, &base, &index);
+	s_i_b = get_s_i_b(ofile, &ss, &base, &index);
 	if (ofile->addr16)
 		ofile->value0_size = g_dispsize16[ofile->r_m][ofile->mode];
 	else

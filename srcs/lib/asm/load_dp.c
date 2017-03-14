@@ -23,7 +23,7 @@ void		load_dp(t_ofile *ofile)
 		ofile->byte = get_value(sizeof(char), ofile->ptr, ofile->length);
 		ofile->opcode1 = ofile->byte >> 4 & 0xf;
 		ofile->opcode2 = ofile->byte & 0xf;
-		ofile->dp = &asmtab[ofile->opcode1][ofile->opcode2];
+		ofile->dp = &asmtab[ofile->opcode1 % 16][ofile->opcode2 % 16];
 		if (ofile->dp->adr_mode == PREFIX)
 			ft_printf("%s\n", ofile->dp->name);
 		else if (ofile->dp->adr_mode == AM)

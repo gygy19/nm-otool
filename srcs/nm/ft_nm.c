@@ -20,7 +20,7 @@ void		select_sort(t_ofile *ofile, char **list)
 	if ((ofile->flags & flag_o) != 0)
 		g_cmp += ft_strlen(ofile->name) + 2;
 	if (ofile->is_64)
-		g_cmp += 9;
+		g_cmp += 8;
 	ft_qsort(list, ofile->symtab->nsyms, "char*", cmp_nm);
 }
 

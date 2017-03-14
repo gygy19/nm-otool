@@ -101,11 +101,17 @@ static void	load_universal_ofile(t_ofile *ofile)
 		ofile->error = true;
 		return ;
 	}
-	ofile->arch32 = ofile->map + sizeof(struct fat_header);
-	ofile->arch64 = ofile->map + sizeof(struct fat_header)\
-		+ sizeof(struct fat_arch);
 	ofile->ptr = ofile->map;
-	ofile->map = ofile->map + ofile->swap(ofile, ofile->arch64->offset);
+	ofile->arch64 = select_fat_arch_x86_64(ofile,\
+		ofile->swap(ofile, ofile->fat->nfat_arch), 0);
+	ofile->arch32 = select_fat_arch_i386(ofile,\
+		ofile->swap(ofile, ofile->fat->nfat_arch), 0);
+	if (ofile->arch64 != NULL)
+		ofile->map = ofile->map + ofile->swap(ofile, ofile->arch64->offset);
+	else if (ofile->arch32 != NULL)
+		ofile->map = ofile->map + ofile->swap(ofile, ofile->arch32->offset);
+	else
+		ofile->error = true;
 }
 
 t_ofile		*process_ofile(char *file, int fd, struct stat st, char *prog)
@@ -128,11 +134,11 @@ t_ofile		*process_ofile(char *file, int fd, struct stat st, char *prog)
 	ofile->is_swap = should_swap_bytes(magic);
 	ofile->swap = ft_osswapconstint32;
 	load_universal_ofile(ofile);
+	close(fd);
 	if (load_ofile(ofile) == false)
 	{
 		permission_denied(file, prog);
 		return (NULL);
 	}
-	close(fd);
 	return (ofile);
 }
